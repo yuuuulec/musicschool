@@ -1,0 +1,40 @@
+# ログファイル除外
+*.log
+
+# macOSの不要な隠しファイル
+.DS_Store
+
+# Windows生成ファイル除外
+Thumbs.db
+.DS_store
+
+# VSCodeの個人設定フォルダ
+.vscode
+
+# アプリケーションファイル除外
+*.app
+*.exe
+*.war
+
+# サイズが大きいメディアファイル除外
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+
+# node_modulesフォルダを除外
+node_modules
+
+# ビルドファイル除外
+dist
+assets
+
+# cssフォルダ除外（SCSSの場合）
+css
+
+# cssフォルダの「style.css」と「style.css.map」を除外（SCSSの場合）
+# パスは開発環境によって変更してください
+css/**/style.css
+css/**/style.css.map
