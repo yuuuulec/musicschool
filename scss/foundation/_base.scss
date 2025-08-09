@@ -1,3 +1,13 @@
+@mixin sp {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+$red: #CB0000;
+$black: #000000;
+$white: #FFFFFF;
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,14 +17,14 @@
 html {
     line-height: 1.15;
     scroll-behavior: smooth;
-        font-size: 62.5%;
+    font-size: 62.5%;
 
 }
 
 body {
     color: #000000;
     font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
-    "游ゴシック", "Yu Gothic", sans-serif;
+        "游ゴシック", "Yu Gothic", sans-serif;
     font-size: 1.8rem;
     font-weight: 500;
 }
@@ -29,3 +39,37 @@ img {
 li {
     list-style: none;
 }
+
+a {
+    text-decoration: none;
+}
+
+
+pc-only {
+    display: block;
+
+    @include sp {
+        display: none;
+    }
+}
+
+sp-only {
+    display: block;
+
+    @include pc {
+        display: none;
+    }
+}
+
+
+.inner {
+    max-width: 98rem;
+    margin-inline: auto;
+    padding: 0 2rem;
+    width: 100%;
+    box-sizing: border-box;
+  
+    @include sp {
+      max-width: none;
+    }
+  }
