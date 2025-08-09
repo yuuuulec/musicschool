@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./_normalize.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./scss/foundation/_normalize.scss">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 
@@ -16,14 +16,13 @@
                 <source media="(max-width: 768px)"srcset="./img/logo-sp.svg">
                 <img src="./img/logo.svg" alt="logo">
             </picture>
-            
         </h1>
         <div class="header__nav">
             <ul class="header__nav-list">
                 <li class="header__nav-item"><a href="#price">料金</a></li>
-                <li><a href="#blog">ブログ</a></li>
+                <li class="header__nav-item"><a href="#blog">ブログ</a></l>
                 <li><a href="#result">卒業実績</a></li>
-                <li><a href="#contact">お問い合わせ</a></li>
+                <li class="header__nav-item btn-red header__nav-item--contact"><a href="#contact ">お問い合わせ</a></li>
             </ul>
         </div>
     </header>
@@ -40,7 +39,7 @@
         </div>
     </div>
 
-    <section class="fv-message">
+    <section class="fv-message inner">
         <h2 class="fv-message__title">全人類、ミュージシャン計画。</h2>
         <p class="fv-message__text">私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。</p>
         <div class="semicircle">
@@ -49,31 +48,31 @@
                 <img src="./img/semicircle.svg" alt="fv-message">
             </picture>
         </div>
-    </section>
+        <div class="message-box">
+            <div class="message-box__col--left">
+                <p class="message-box__text-en">Enthusiasm</p>
+                <p class="message-box__text-en">Envision</p>
+                <p class="message-box__text-en">Effulgent</p>
+            </div>
+    
+            <div class="message-box__col--center">
+                <img src="./img/fv-message2.svg" alt="" class="arrow-icon">
+                <div class="dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
 
-
-    <div class="message-box">
-        <div class="col left">
-            <p class="message-box__text-en">Enthusiasm</p>
-            <p class="message-box__text-en">Envision</p>
-            <p class="message-box__text-en">Effulgent</p>
-        </div>
-
-        <div class="col center">
-            <img src="./img/fv-message2.svg" alt="" class="arrow-icon">
-            <div class="dots">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+            <div class="message-box__col--right">
+                <p class="message-box__text-ja">熱狂し</p>
+                <p class="message-box__text-ja">想像し</p>
+                <p class="message-box__text-ja">輝く存在へ</p>
             </div>
         </div>
+            
+    </section>
 
-        <div class="col right">
-            <p class="message-box__text-ja">熱狂し</p>
-            <p class="message-box__text-ja">想像し</p>
-            <p class="message-box__text-ja">輝く存在へ</p>
-        </div>
-    </div>
 
     <section class="promotion">
         <h2 class="promotion__title">音楽業界初！</h2>
@@ -315,7 +314,7 @@
         </div>
 
         <div class="footer__logo">
-            <img src="./img/footer-logo.svg" alt="logo">
+            <img src="./img/logo-white.svg" alt="logo">
         </div>
 
         <p class="footer__copyright">©Copyright &copy; 0000 KITAMURA music school Inc. All Rights</p>
@@ -335,9 +334,6 @@
             </a>
         </div>
     </footer>
-
-
-
 </body>
 
 </html>

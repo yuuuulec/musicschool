@@ -1,0 +1,89 @@
+/* ===========================
+   fv
+   =========================== */
+.fv {
+    position: relative;
+}
+
+.fv::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(80, 80, 80, 0.502);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
+
+.fv::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
+.catchcopy {
+    position: absolute;
+    top: calc(185 / 470 * 100vw);
+    left: calc(30 / 1080 * 100vw);
+    font-size: calc(40 / 1080 * 100vw);
+    font-weight: 700;
+    line-height: calc(60 / 40);
+    color: $white;
+}
+
+/* ===========================
+   fv-message
+   =========================== */
+.fv-message {
+    padding: 6.6rem 0 5.5rem;
+}
+
+.fv-message__title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: calc(50 / 35);
+    color: $red;
+    text-align: center;
+}
+
+.fv-message__text {
+    line-height: calc(30 / 18);
+    color: $black;
+    text-align: center;
+    margin-top: 1.7rem;
+}
+
+.semicircle {
+    width: 85.8rem;
+    margin: 0 auto;
+    margin-top: 3.4rem;
+}
+
+.message-box {
+    margin-top: 0;
+}
+
+.message-box__text-en {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: calc(50 /25);
+    color: $red;
+    margin-top: 2rem;
+    margin-right: 2.4rem;
+}
+
+.message-box__text-en::after {
+    content: "⚫︎";
+    color: $red;
+    width: 2rem;
+    height: 2rem;
+}
+
+.message-box__col--right {
+    font-size: 2.3rem;
+    line-height: calc(50 / 23);
+}
+
