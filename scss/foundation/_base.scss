@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    line-height: 1.15;
+    scroll-behavior: smooth;
+        font-size: 62.5%;
+
+}
+
+body {
+    color: #000000;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+    "游ゴシック", "Yu Gothic", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+li {
+    list-style: none;
+}
