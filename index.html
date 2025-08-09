@@ -4,13 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./_normalize.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <h1 class="header__logo"><img src="./img/header-logo.svg" alt="logo">きたむら
-            <span class="pc-only-br">ミュージックスクール</span>
+    <header id="header" class="header inner">
+        <h1 class="header__logo">
+            <picture>
+                <source media="(max-width: 768px)"srcset="./img/logo-sp.svg">
+                <img src="./img/logo.svg" alt="logo">
+            </picture>
+            
         </h1>
         <div class="header__nav">
             <ul class="header__nav-list">
@@ -313,7 +319,7 @@
         </div>
 
         <p class="footer__copyright">©Copyright &copy; 0000 KITAMURA music school Inc. All Rights</p>
-        
+
         <div class="sns-icons">
             <a href="https://twitter.com">
                 <img src="./img/icon-twitter.svg" alt="twitter">
