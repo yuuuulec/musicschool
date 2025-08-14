@@ -1,0 +1,36 @@
+@use "../../foundation/all" as *;
+@use "../component/component" as *;
+
+.voice {
+    padding: 4.4rem 0 8rem;
+    background-color: $red;
+    color: $white;
+    text-align: center;
+}
+
+.voice__inner {
+    margin-top: 3.6rem;
+}
+.voice__list {
+    display: flex;
+    gap: calc(35 / 1080 * 100vw);
+}
+
+.voice__item {
+    max-width: calc(270/ 1080 * 100vw);
+    width: 100%;
+    color: $white;
+}
+
+.voice__title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: calc(33 / 22);
+    margin-bottom: 1rem;
+}
+
+.voice__text {
+    text-align: left;
+    line-height: calc(30 / 18);
+}
+

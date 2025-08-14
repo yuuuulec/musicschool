@@ -1,0 +1,13 @@
+@use "../../foundation/all" as *;
+
+.btn-red {
+    background-color: $red;
+    color: $white;
+}
+
+.c-section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: calc(50 / 30);
+    text-align: center;
+}

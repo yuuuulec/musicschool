@@ -1,3 +1,4 @@
+@use "../../foundation/all" as *;
 /* ===========================
    fv
    =========================== */
@@ -14,7 +15,6 @@
     pointer-events: none;
 }
 
-
 .fv::after {
     content: "";
     position: absolute;
@@ -24,10 +24,10 @@
     pointer-events: none;
 }
 
-.catchcopy {
+.catchphrase {
     position: absolute;
-    top: calc(185 / 470 * 100vw);
-    left: calc(30 / 1080 * 100vw);
+    top: calc(185 / 1080 * 100vw);
+    left: calc(300 / 1080 * 100vw);
     font-size: calc(40 / 1080 * 100vw);
     font-weight: 700;
     line-height: calc(60 / 40);
@@ -64,6 +64,7 @@
 
 .message-box {
     margin-top: 0;
+    display: flex; 
 }
 
 .message-box__text-en {
@@ -73,17 +74,68 @@
     color: $red;
     margin-top: 2rem;
     margin-right: 2.4rem;
+    text-align: right;
+    padding-left: calc(256 / 1080 * 100vw);
 }
 
-.message-box__text-en::after {
-    content: "⚫︎";
-    color: $red;
+.message-box__col--center {
+    position: relative;
+    width: 3.16rem;
+}
+.dot {
+    position: absolute;
     width: 2rem;
     height: 2rem;
+    border-radius: 50%;
+    background-color: $red;
+}
+
+.dot1 {
+    top: 3.8rem;
+    left: 0.5rem;
+}
+.dot2 {
+    top: 50%;
+    left: 0.5rem;
+}
+.dot3 {
+    bottom: 1.7rem;
+    left: 0.5rem;
 }
 
 .message-box__col--right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     font-size: 2.3rem;
     line-height: calc(50 / 23);
+    margin-top: 2.5rem;
+    margin-left: 2.3rem;
+    row-gap: 1.5rem;
 }
 
+/* ===========================
+promotion
+=========================== */
+.promotion {
+    padding: 6.8rem 0 6rem;
+    background-color: $red;
+    color: $white;
+}
+
+.promotion__title {
+    font-size: 3rem;
+    line-height: calc(50 / 30);
+    text-align: center;
+    font-weight: 700;
+}
+
+.promotion__text {
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+    text-align: center;
+    // margin-top: 3rem;
+}
+.promotion__text:first-of-type {
+    margin-top: 3rem;
+}

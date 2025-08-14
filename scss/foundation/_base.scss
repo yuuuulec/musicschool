@@ -1,12 +1,6 @@
-@mixin sp {
-    @media (max-width: 767px) {
-        @content;
-    }
-}
+@use "variable" as *; 
+@use "normalize" as *; 
 
-$red: #CB0000;
-$black: #000000;
-$white: #FFFFFF;
 
 * {
     box-sizing: border-box;
@@ -36,13 +30,15 @@ img {
 
 li {
     list-style: none;
+    color: $black;
 }
 
 a {
     text-decoration: none;
+    color: $black;
 }
 
-pc-only {
+.pc-only {
     display: block;
 
     @include sp {
@@ -50,11 +46,11 @@ pc-only {
     }
 }
 
-sp-only {
-    display: block;
+.sp-only {
+    display: none;
 
-    @include pc {
-        display: none;
+    @include sp {
+        display: block;
     }
 }
 
@@ -69,8 +65,3 @@ sp-only {
       max-width: none;
     }
   }
-
-.btn-red {
-    background-color: $red;
-    color: $white;
-}

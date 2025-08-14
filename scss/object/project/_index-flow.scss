@@ -1,0 +1,48 @@
+@use "../../foundation/all" as *;
+@use "../component/component" as *;
+
+.flow {
+    padding: 3.4rem 0 9rem;
+}
+
+.flow__wrapper {
+    display: flex;
+    margin-top: 5.3rem;
+}
+.flow__side {
+    width: 3.2rem;
+}
+
+.flow__content {
+    display: grid;
+    grid-template-columns: minmax(0, 210px) 1fr;
+}
+
+.flow__heading {
+    color: $red;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: calc(33 / 22);
+    margin-left: 5rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color: $red;
+        position: absolute;
+        top: 0;
+        left: -7.5rem;
+    }
+}
+
+.flow__step {
+    margin-bottom: 5.8rem;
+}
+
+.flow__text {
+    margin-left: 5rem;
+display: 1;}

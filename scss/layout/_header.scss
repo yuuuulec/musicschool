@@ -1,19 +1,39 @@
+@use "../foundation/all" as *;
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
 .header__logo {
-   height: 10rem;
    width: 19.2rem; 
 }
 
-.header__nav {
+.header__nav-list {
    display: flex;
    align-items: center;
    justify-content: center;
-   column-gap: 3.3rem;
+   column-gap: 2.3rem;
    font-size: 1.7rem;
    font-weight: 700;
 }
 
+.header__nav-list a{
+   padding: 1rem;
+}
+
 .header__nav-item--contact {
+   color: $white;
+   font-size: 1.5rem;
+   line-height: calc(33 / 15);
+   font-weight: 700;
+   padding: 0.7rem 3rem 0.5rem;
+}
+
+.header__nav-item--contact a{
+   color: $white;
    font-size: 1.5rem;
    font-weight: 700;
-   padding: 7rem 3rem 5rem;
+   padding: 0.7rem 3rem 0.5rem;
 }
