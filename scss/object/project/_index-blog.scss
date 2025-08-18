@@ -1,0 +1,48 @@
+@use "../../foundation/all" as *;
+@use "../component/component" as *;
+
+
+.blog {
+    padding: 7.45rem 0 14.5rem;
+}
+
+.blog__list {
+    margin-top: 3.8rem;
+    display: flex;
+    gap: calc(50 / 1080 * 100vw);
+}
+
+.blog__item {
+    max-width: calc(260 / 1080 * 100vw);
+    width: 100%;
+    position: relative;
+}
+
+.blog__label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: calc(25 / 15);
+    background-color: $red;
+    color: $white;
+    padding: 0.3rem 2.4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.blog__title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: calc(25 / 20);
+    margin-top: 2rem;
+}
+
+data {
+    font-size: 1.5rem;
+    line-height: calc(30 / 15);
+    margin-top: 1rem;
+    display: block;
+    text-align: right;
+}
+   

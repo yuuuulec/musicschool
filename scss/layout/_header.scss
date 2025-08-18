@@ -10,13 +10,17 @@
    width: 19.2rem; 
 }
 
-.header__nav-list {
+.header__nav {
    display: flex;
    align-items: center;
    justify-content: center;
    column-gap: 2.3rem;
    font-size: 1.7rem;
    font-weight: 700;
+}
+
+.header__nav-list {
+   display: flex;
 }
 
 .header__nav-list a{
