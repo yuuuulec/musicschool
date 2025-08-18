@@ -1,0 +1,63 @@
+@use "../../foundation/all" as *;
+@use "../component/component" as *;
+
+.faq {
+    padding: 3.6rem 0 7.4rem;
+}
+
+.faq__list {
+    margin-top: 3.6rem;
+}
+
+.faq__item {
+    all: unset;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    padding: 2rem 0 1.5rem 1.95rem;
+
+&::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 88rem;
+    width: 100%;
+    height: 0.05rem;
+    background-color: rgba(0, 0, 0, 1);
+    margin-left: 1rem;
+}
+}
+
+.faq__question {
+    all: unset;
+
+}
+
+
+
+
+
+.faq__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    margin-right: 0.8rem;
+  }
+  
+  .faq__icon--q {
+    background-color: $black;
+    color: #fff;
+  }
+  
+  .faq__icon--a {
+    background-color: $red;
+    color: #fff;
+  }
+}
