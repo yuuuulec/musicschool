@@ -45,4 +45,16 @@ data {
     display: block;
     text-align: right;
 }
-   
+
+
+.more-link {
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+    margin-top: 3.7rem;
+    text-align: right;
+}
+
+.more-link a {
+    display: inline-block;
+    border-bottom: 1px solid $black;
+}
