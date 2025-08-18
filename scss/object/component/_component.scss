@@ -1,13 +1,45 @@
 @use "../../foundation/all" as *;
-
+// 背景が赤いボタン
 .c-btn-red {
     background-color: $red;
-    color: $white;
-}
 
+    a {
+    color: $white;
+    display: inline-block;
+}
+}
+// お問い合わせボタン
+.c-contact__btn {
+font-size: 2rem;
+font-weight: bold;
+line-height: calc(33 / 20);
+padding: 1.7rem 8.4rem 1rem 8rem;
+display: inline-block;
+position: fixed;
+bottom: 0rem;
+right: 0;
+}
+// 各セクションタイトル
 .c-section-title {
     font-size: 3rem;
     font-weight: 700;
     line-height: calc(50 / 30);
     text-align: center;
+}
+// 戻るボタン
+.c-btn-to-top {
+    background-color: rgba(0, 0, 0, 0.502);
+    border-radius: 50%;
+    width: 6.8rem;
+    height: 6.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 6.1rem;
+    right: 0;
+
+    img {
+        width: 2.3rem;
+    }
 }
