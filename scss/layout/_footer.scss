@@ -1,0 +1,56 @@
+@use "../foundation/all" as *;
+@use "../object/component/component" as *;
+
+.footer {
+    padding: 4.4rem 0 5.1rem;
+    background-color: $red;
+    color: $white;
+}
+
+.footer__nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
+.footer__nav-item {
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: calc(33 / 17);
+    text-align: center;
+
+    a {
+        color: $white;
+        padding: 1rem;
+    }
+}
+
+.footer__logo {
+    margin-top: 2.2rem;
+    display: flex;
+    justify-content: center;
+
+    img {
+        display: block;
+        width: 3.2rem;
+    }
+}
+
+.footer__copyright {
+    margin-top: 2.3rem;
+    font-size: 1.5rem;
+    line-height: calc(33 / 15);
+    text-align: center;
+}
+
+.sns-icons {
+    margin-top: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+
+    a {
+        padding: 1rem 0.5rem;
+    }
+}
