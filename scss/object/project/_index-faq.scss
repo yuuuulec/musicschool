@@ -3,10 +3,18 @@
 
 .faq {
     padding: 3.6rem 0 7.4rem;
+
+    @include sp {
+        padding: 3.6rem 0 2.5rem;
+    }
 }
 
 .faq__list {
     margin-top: 3.6rem;
+
+    @include sp {
+        margin-top: 3.9rem;
+    }
 }
 
 .faq__item {
@@ -15,6 +23,11 @@
     cursor: pointer;
     display: block;
     padding: 2rem 0 1.5rem 1.95rem;
+
+    @include sp {
+        padding: 1.7rem 0 0.9rem 2.1rem;
+        display: flex;
+    }
 
 &::after {
     content: "";
@@ -31,15 +44,12 @@
 
 .faq__question {
     all: unset;
+    display: flex;
 
 }
 
-
-
-
-
 .faq__icon {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 3.5rem;
@@ -59,4 +69,14 @@
   .faq__icon--a {
     background-color: $red;
     color: #fff;
+  }
+
+  .faq__text {
+    font-size: 1.7rem;
+    line-height: calc(30 / 17);
+    
+    @include sp {
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+    }
   }

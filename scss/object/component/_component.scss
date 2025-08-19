@@ -18,6 +18,14 @@ display: inline-block;
 position: fixed;
 bottom: 32rem;
 right: 0;
+
+    @include sp {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        padding: 1.3rem 8rem 1rem 8rem;
+        max-width: 33.5rem;
+    }
 }
 // 各セクションタイトル
 .c-section-title {
