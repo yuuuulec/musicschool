@@ -24,7 +24,8 @@
                 <li class="header__nav-item"><a href="#blog">ブログ</a></l>
                 <li><a href="#result">卒業実績</a></li>
             </ul>
-                <div class="header__nav-item c-btn-red header__nav-item--contact pc-only"><a href="#contact ">お問い合わせ</a></div>
+            <div class="header__nav-item c-btn-red header__nav-item--contact pc-only"><a href="#contact ">お問い合わせ</a>
+            </div>
         </nav>
     </header>
 
@@ -186,7 +187,10 @@
         <h2 class="c-section-title">ご利用の流れ</h2>
         <div class="flow__wrapper inner">
             <div class="flow__side">
-                <img src="./img/flow.svg" alt="縦矢印" class="flow__arrow">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="./img/flow-sp.svg">
+                    <img src="./img/flow.svg" alt="flow" class="flow__img">
+                </picture>
             </div>
 
             <ol class="flow__list">
@@ -328,14 +332,14 @@
         </div>
     </section>
 
-<div class="inner">
-    <div class="c-btn-to-top">
-        <a href="#">
-            <img src="./img/btn-to-top.svg" alt="to-top">
-        </a>
+    <div class="inner">
+        <div class="c-btn-to-top">
+            <a href="#">
+                <img src="./img/btn-to-top.svg" alt="to-top">
+            </a>
+        </div>
     </div>
-</div>
-    
+
 
     <div class="c-contact__btn c-btn-red">
         <a href="#contact">お問い合わせ</a>
@@ -344,36 +348,37 @@
     <footer id="footer" class="footer">
         <div class="inner">
             <div class="footer__nav">
-            <ul class="footer__nav-list">
-                <li class="footer__nav-item"><a href="#">ホーム</a></li>
-                <li class="footer__nav-item"><a href="#price">料金</a></li>
-                <li class="footer__nav-item"><a href="#blog">ブログ</a></li>
-                <li class="footer__nav-item"><a href="#result">卒業実績</a></li>
-            </ul>
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="#">ホーム</a></li>
+                    <li class="footer__nav-item"><a href="#price">料金</a></li>
+                    <li class="footer__nav-item"><a href="#blog">ブログ</a></li>
+                    <li class="footer__nav-item"><a href="#result">卒業実績</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__logo">
+                <img src="./img/logo-white.svg" alt="logo">
+            </div>
+
+            <p class="footer__copyright">©Copyright &copy; 0000 KITAMURA music school Inc. <br class="sp-only">All
+                Rights</p>
+
+            <div class="sns-icons">
+                <a href="https://twitter.com">
+                    <img src="./img/icon-twitter.svg" alt="twitter">
+                </a>
+                <a href="https://www.facebook.com">
+                    <img src="./img/icon-facebook.svg" alt="facebook">
+                </a>
+                <a href="https://www.youtube.com">
+                    <img src="./img/icon-youtube.svg" alt="youtube">
+                </a>
+                <a href="https://www.instagram.com">
+                    <img src="./img/icon-instagram.svg" alt="instagram">
+                </a>
+            </div>
         </div>
 
-        <div class="footer__logo">
-            <img src="./img/logo-white.svg" alt="logo">
-        </div>
-
-        <p class="footer__copyright">©Copyright &copy; 0000 KITAMURA music school Inc. <br class="sp-only">All Rights</p>
-
-        <div class="sns-icons">
-            <a href="https://twitter.com">
-                <img src="./img/icon-twitter.svg" alt="twitter">
-            </a>
-            <a href="https://www.facebook.com">
-                <img src="./img/icon-facebook.svg" alt="facebook">
-            </a>
-            <a href="https://www.youtube.com">
-                <img src="./img/icon-youtube.svg" alt="youtube">
-            </a>
-            <a href="https://www.instagram.com">
-                <img src="./img/icon-instagram.svg" alt="instagram">
-            </a>
-        </div>
-        </div>
-        
     </footer>
 </body>
 
