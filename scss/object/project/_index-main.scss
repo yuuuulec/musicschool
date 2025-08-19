@@ -23,6 +23,14 @@
     line-height: calc(60 / 40);
     color: $white;
     z-index: 10;
+
+    @include sp {
+        top: calc(208 / 375 * 100vw);
+        left: calc(20 / 375 * 100vw);
+        font-size: calc(30 / 375 * 100vw);
+        line-height: calc(50 / 30);
+        text-align: center;
+    }
 }
 
 /* ===========================
@@ -38,6 +46,11 @@
     line-height: calc(50 / 35);
     color: $red;
     text-align: center;
+
+    @include sp {
+        font-size: 2.5rem;
+        line-height: calc(40 / 25);
+    }
 }
 
 .fv-message__text {
@@ -45,17 +58,36 @@
     color: $black;
     text-align: center;
     margin-top: 1.7rem;
+
+    @include sp {
+        font-size: 1.8rem;
+        text-align: left;
+    }
 }
 
 .semicircle {
     width: 85.8rem;
     margin: 0 auto;
     margin-top: 3.4rem;
+
+    img {
+        width: 100%;
+    }
+
+    @include sp {
+        width: 33.5rem;
+    }
 }
 
 .message-box {
     margin-top: 0;
     display: flex; 
+    justify-content: center;
+    align-self: start;
+
+    @include sp {
+margin-top: 1.1rem;    
+}
 }
 
 .message-box__text-en {
@@ -66,7 +98,11 @@
     margin-top: 2rem;
     margin-right: 2.4rem;
     text-align: right;
-    padding-left: calc(256 / 1080 * 100vw);
+
+    @include sp {
+        font-size: 2rem;
+        line-height: calc(50 / 20);
+    }
 }
 
 .message-box__col--center {
@@ -103,6 +139,11 @@
     margin-top: 2.5rem;
     margin-left: 2.3rem;
     row-gap: 1.5rem;
+
+    @include sp {
+        font-size: 2rem;
+        line-height: calc(50 / 20);
+    }
 }
 
 /* ===========================
@@ -112,21 +153,34 @@ promotion
     padding: 6.8rem 0 6rem;
     background-color: $red;
     color: $white;
+
+    @include sp {
+        padding: 4.9rem 0 4rem;
+    }
 }
 
 .promotion__title {
-    font-size: 3rem;
-    line-height: calc(50 / 30);
+    font-size: 2.5rem;
+    line-height: calc(40 / 25);
     text-align: center;
     font-weight: 700;
+
+    @include sp {
+        font-size: 2.5rem;
+        line-height: calc(50 / 25);
+    }
 }
 
 .promotion__text {
     font-size: 1.8rem;
     line-height: calc(30 / 18);
     text-align: center;
-    // margin-top: 3rem;
 }
+
 .promotion__text:first-of-type {
     margin-top: 3rem;
+
+    @include sp {
+        margin-top: 1.4rem;
+    }
 }
