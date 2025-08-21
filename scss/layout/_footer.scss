@@ -5,12 +5,20 @@
     padding: 4.4rem 0 5.1rem;
     background-color: $red;
     color: $white;
+
+    @include sp {
+        padding: 4.4rem 0 5.1rem;
+    }
 }
 
 .footer__nav-list {
     display: flex;
     justify-content: center;
     gap: 3.2rem;
+
+    @include sp {
+        gap: 1rem;
+    }
 }
 
 .footer__nav-item {
@@ -41,7 +49,15 @@
     font-size: 1.5rem;
     line-height: calc(33 / 15);
     text-align: center;
+    white-space: nowrap;
+
+    @include sp {
+        margin-top: 2.9rem;
+        font-size: 1.5rem;
+        line-height: calc(20 / 15);}
 }
+
+
 
 .sns-icons {
     margin-top: 2.2rem;
@@ -52,5 +68,10 @@
 
     a {
         padding: 1rem 0.5rem;
+    }
+
+    @include sp {
+        margin-top: 2.6rem;
+        gap: 0.2rem;
     }
 }
