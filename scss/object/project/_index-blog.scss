@@ -27,6 +27,16 @@
     width: 100%;
     position: relative;
 
+    a {
+        display: block;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
     @include sp {
         max-width: none;
     }
