@@ -7,7 +7,12 @@
 }
 
 .header__logo {
-   width: 19.2rem; 
+   width: 19.2rem;
+   transition: all 0.3s ease;
+
+   &:hover {
+      opacity: 0.5;
+   }
 }
 
 .header__nav {
@@ -23,8 +28,35 @@
    display: flex;
 }
 
-.header__nav-list a{
+.header__nav-list a {
+   transition: all 0.3s ease;
    padding: 1rem;
+   position: relative;
+
+   &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 0.2rem;
+      background-color: $red;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      transform: scaleX(0);   
+      transform-origin: right;
+      transition: all 0.3s ease;
+   }
+
+   &:hover {
+      opacity: 0.5;
+
+      &::after {
+         transform: scaleX(1); 
+         transform-origin: left;  
+         opacity: 1;    
+      }
+   }
 }
 
 .header__nav-item--contact {
@@ -35,7 +67,7 @@
    padding: 0.7rem 3rem 0.5rem;
 }
 
-.header__nav-item--contact a{
+.header__nav-item--contact a {
    color: $white;
    font-size: 1.5rem;
    font-weight: 700;
