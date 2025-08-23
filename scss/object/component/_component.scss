@@ -89,3 +89,12 @@ a {
         height: 0.4rem;
     }
 }
+
+//赤丸
+.c-dot {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: $red;
+}

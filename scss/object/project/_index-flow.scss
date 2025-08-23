@@ -12,12 +12,31 @@
 .flow__wrapper {
     display: flex;
     margin-top: 5.3rem;
+    position: relative;
 
     @include sp {
-        
         margin-top: 3.9rem;
     }
 }
+
+.flow__side {
+    position: relative;
+}
+
+.dot-1 {
+    top: 0;
+    left: 0.5rem;
+}.dot-2 {
+    top: 9.7rem;
+    left: 0.5rem;
+}.dot-3 {
+    top: 20.7rem;
+    left: 0.5rem;
+}.dot-4 {
+    bottom: 7rem;
+    left: 0.5rem;
+}
+
 .flow__side img{
     width: 3.2rem;
 
@@ -44,18 +63,6 @@
 
     @include sp {
         margin-left: 0;
-    }
-
-    &::before {
-        content: "";
-        display: inline-block;
-        width: 2rem;
-        height: 2rem;
-        border-radius: 50%;
-        background-color: $red;
-        position: absolute;
-        top: 0;
-        left: -7.5rem;
     }
 }
 
