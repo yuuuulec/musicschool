@@ -39,18 +39,18 @@ a {
 }
 
 .pc-only {
-    display: block;
+    display: block !important;
 
     @include sp {
-        display: none;
+        display: none !important;
     }
 }
 
 .sp-only {
-    display: none;
+    display: none !important;
 
     @include sp {
-        display: block;
+        display: block !important;
     }
 }
 
