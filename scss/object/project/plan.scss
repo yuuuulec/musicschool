@@ -1,6 +1,10 @@
 @use "../../foundation/all" as *;
 @use "../component/component" as *;
 
+.price {
+    background-color: blue;
+}
+
 //以下１セクションはコード自動生成しました
 .plan {
     width: 100%;
