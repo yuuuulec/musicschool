@@ -21,21 +21,51 @@
 
 .flow__side {
     position: relative;
+
+    @include sp {
+        padding-left: 0.5rem;
+    }
 }
+
+// .flow__side .dots {
+//     position: absolute;
+//     top: 0;
+//     left: 0.5rem;
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center; 
+
+//     @include sp {
+//         left: -0.3rem;
+//     }
+// }
 
 .dot-1 {
     top: 0;
     left: 0.5rem;
-}.dot-2 {
+
+    @include sp {
+        left: -0.3rem;
+    }
+}
+.dot-2 {
     top: 9.7rem;
     left: 0.5rem;
-}.dot-3 {
+    @include sp {
+        left: -0.3rem;
+}
+}
+.dot-3 {
     top: 20.7rem;
     left: 0.5rem;
 }.dot-4 {
     bottom: 7rem;
     left: 0.5rem;
 }
+
 
 .flow__side img{
     width: 3.2rem;

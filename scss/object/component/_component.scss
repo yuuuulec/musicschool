@@ -1,43 +1,45 @@
 @use "../../foundation/all" as *;
+
 // 背景が赤いボタン
 .c-btn-red {
     background-color: $red;
 
     a {
-    color: $white;
-    display: inline-block;
+        color: $white;
+        display: inline-block;
+    }
 }
-}
+
 // お問い合わせボタン
 .c-contact__btn {
-font-size: 2rem;
-font-weight: bold;
-line-height: calc(33 / 20);
-display: inline-block;
-position: fixed;
-bottom: 32rem;
-right: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: calc(33 / 20);
+    display: inline-block;
+    position: fixed;
+    bottom: 32rem;
+    right: 0;
 
-a {
-    padding: 1.7rem 8.4rem 1rem 8rem;
-    color: $white;
-    display: block;
-}
+    a {
+        padding: 1.7rem 8.4rem 1rem 8rem;
+        color: $white;
+        display: block;
+    }
 
     @include sp {
-    right: 50%;
-    transform: translateX(50%);
-
+        right: 50%;
+        transform: translateX(50%);
         bottom: 40rem;
         right: 0;
         max-width: 33.5rem;
-    
+
         a {
             padding: 1.3rem 8rem 1rem 8rem;
-           
+
         }
     }
 }
+
 // 各セクションタイトル
 .c-section-title {
     font-size: 3rem;
@@ -50,6 +52,7 @@ a {
         line-height: calc(40 / 25);
     }
 }
+
 // 動くボタン（お問い合わせ・送信・ホームへ戻る
 .c-btn-to-top {
     background-color: rgba(0, 0, 0, 0.502);
@@ -63,7 +66,7 @@ a {
     bottom: 6.1rem;
     right: 50%;
     right: calc((100% - 940px) / 2);
-    bottom: calc(27.4rem + 15.1rem); 
+    bottom: calc(27.4rem + 15.1rem);
 
 
     img {
@@ -82,11 +85,19 @@ a {
     z-index: 100;
     background-color: $red;
     color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
 
     span {
-        color: $white;
+        display: block;
+        background-color: $white;
         width: 3.2rem;
         height: 0.4rem;
+        margin: 0 auto;
+        border-radius: 4px;
     }
 }
 
