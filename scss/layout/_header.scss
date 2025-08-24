@@ -4,6 +4,7 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
+   height: 8rem;
 
    @include sp {
       height: 5rem;
@@ -30,6 +31,7 @@
 
 .header__nav-list {
    display: flex;
+   column-gap: 1.3rem;
 }
 
 .header__nav-list a {
@@ -68,12 +70,9 @@
    font-size: 1.5rem;
    line-height: calc(33 / 15);
    font-weight: 700;
-   padding: 0.7rem 3rem 0.5rem;
-}
 
-.header__nav-item--contact a {
-   color: $white;
-   font-size: 1.5rem;
-   font-weight: 700;
-   padding: 0.7rem 3rem 0.5rem;
+   a {
+      padding: 0.7rem 3rem 0.5rem;
+
+   }
 }

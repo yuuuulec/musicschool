@@ -53,7 +53,7 @@
     }
 }
 
-// 動くボタン（お問い合わせ・送信・ホームへ戻る
+// トップに戻るボタン
 .c-btn-to-top {
     background-color: rgba(0, 0, 0, 0.502);
     border-radius: 50%;
@@ -67,6 +67,11 @@
     right: 50%;
     right: calc((100% - 940px) / 2);
     bottom: calc(27.4rem + 15.1rem);
+
+    @include sp {
+        right: 2rem;
+        bottom: 10rem;
+    }
 
 
     img {
@@ -109,3 +114,27 @@
     border-radius: 50%;
     background-color: $red;
 }
+
+
+  //下層ページ　FVタイトル
+  .c-fv__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: calc(60 / 25);
+    text-align: center;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  //パンくずリスト
+  .c-breadcrumbs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.6rem;
+    line-height: calc(33 / 16);
+    background-color: rgba(232, 232, 232, 1);
+  }

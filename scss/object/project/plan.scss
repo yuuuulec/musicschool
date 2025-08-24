@@ -1,0 +1,63 @@
+@use "../../foundation/all" as *;
+@use "../component/component" as *;
+
+//以下１セクションはコード自動生成しました
+.plan {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    font-family: 'Noto Sans JP', sans-serif;
+
+    &__title {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    &__table {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-top: 2px solid #ccc;
+        border-left: 2px solid #ccc;
+
+        .plan__header,
+        .plan__row {
+            display: contents;
+        }
+
+        &__cell {
+            border-right: 2px solid #ccc;
+            border-bottom: 2px solid #ccc;
+            padding: 1rem;
+            text-align: center;
+
+            &--type {
+                background-color: #f5f5f5;
+                font-weight: bold;
+            }
+
+            &--basic {
+                color: #fff;
+                font-weight: bold;
+            }
+
+            &--standard {
+                background-color: $red;
+                color: #fff;
+                font-weight: bold;
+            }
+
+            &--premium {
+                background-color: #f0f0f0;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__note {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #666;
+        text-align: center;
+    }
+}
