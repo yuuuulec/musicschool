@@ -81,29 +81,58 @@
 
 // ハンバーガーメニュー
 .c-hamburger {
+    cursor: pointer;
+    width: 7.2rem;
+    height: 5rem;
+    background-color: $red;
     position: fixed;
     top: 0;
     right: 0;
-    width: 7.1rem;
-    height: 5rem;
-    cursor: pointer;
-    z-index: 100;
-    background-color: $red;
-    color: $white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.8rem;
+    display: none;
+    box-sizing: border-box;
+    z-index: 100001;
 
-    span {
+    @include sp {
         display: block;
-        background-color: $white;
-        width: 3.2rem;
-        height: 0.4rem;
-        margin: 0 auto;
-        border-radius: 4px;
     }
+}
+
+.c-hamburger span {
+    width: 3.2rem;
+    height: 0.4rem;
+    border-radius: 4px;
+    background-color: $white;
+    display: inline-block;
+    position: absolute;
+    left: 2rem;
+    transition: all 0.8s;
+
+    &:nth-of-type(1) {
+        top: 1.1rem;
+    }
+
+    &:nth-of-type(2) {
+        top: 2.3rem;
+    }
+
+    &:nth-of-type(3) {
+        top: 3.5rem;
+    }
+}
+
+// 開いた時のばつ印
+.c-hamburger.active span:nth-of-type(1) {
+    top: 2.3rem;
+    transform: rotate(45deg);
+}
+
+.c-hamburger.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.c-hamburger.active span:nth-of-type(3) {
+    top: 2.3rem;
+    transform: rotate(-45deg);
 }
 
 //赤丸
@@ -116,17 +145,17 @@
 }
 
 
-  //下層ページ　FVの背景
-  .c-fv__overlay--sub {
+//下層ページ　FVの背景
+.c-fv__overlay--sub {
     position: absolute;
     inset: 0;
-    background-color:rgba(80, 80, 80, 0.4863);
+    background-color: rgba(80, 80, 80, 0.4863);
     mix-blend-mode: multiply;
     pointer-events: none;
- }
+}
 
-  //下層ページ　FVタイトル
-  .c-fv__title {
+//下層ページ　FVタイトル
+.c-fv__title {
     font-size: 2.5rem;
     font-weight: 700;
     line-height: calc(60 / 25);
@@ -135,43 +164,50 @@
     position: absolute;
     top: calc(74 / 1080 * 100vw);
     left: 50%;
-    transform: translateX(-50%);}
+    transform: translateX(-50%);
 
-  //パンくずリスト
-  .c-breadcrumb {
+    @include sp {
+        top: calc(124 / 375 * 100vw);
+    }
+}
+
+//パンくずリスト
+.c-breadcrumb {
     font-size: 1.6rem;
     line-height: calc(33 / 16);
-    background-color:#E8E8E8;
-  }
+    background-color: rgba(232, 232, 232, 1);
+}
 
-  .c-breadcrumb__list {
+.c-breadcrumb__list {
     display: flex;
     justify-content: left;
     align-items: center;
     gap: 4.9rem;
     height: 5rem;
-  }
+}
 
-  .c-breadcrumb__item {
+.c-breadcrumb__item {
     position: relative;
 
     &::after {
         content: ">";
         position: absolute;
         right: -1.8rem;
-  }
-
-  &:last-child {
-    &::after {
-        display: none;
     }
-  }
-  a {
-transition: all 0.3s ease;
 
-    &:hover {
-        opacity: 0.5;}
-  }
+    &:last-child {
+        &::after {
+            display: none;
+        }
+    }
+
+    a {
+        transition: all 0.3s ease;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
 }
 
 //下層ページ　セクションタイトル
