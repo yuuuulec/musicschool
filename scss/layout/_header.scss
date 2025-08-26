@@ -1,4 +1,4 @@
-@use "../heafoundation/all" as *;
+@use "../foundation/all" as *;
 
 .header {
    display: flex;
@@ -21,10 +21,15 @@
    }
 }
 
+.header__nav-inner {
+   display: flex;
+   align-items: center;
+}
+
 .header__nav {
    display: flex;
    align-items: center;
-   justify-content: center;
+   // justify-content: center;
    column-gap: 2.3rem;
    font-size: 1.7rem;
    font-weight: 700;

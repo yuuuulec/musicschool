@@ -115,6 +115,16 @@
     background-color: $red;
 }
 
+
+  //下層ページ　FVの背景
+  .c-fv__overlay--sub {
+    position: absolute;
+    inset: 0;
+    background-color:rgba(80, 80, 80, 0.4863);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+ }
+
   //下層ページ　FVタイトル
   .c-fv__title {
     font-size: 2.5rem;
@@ -122,18 +132,51 @@
     line-height: calc(60 / 25);
     text-align: center;
     color: $white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    position: absolute;
+    top: calc(74 / 1080 * 100vw);
+    left: 50%;
+    transform: translateX(-50%);}
 
   //パンくずリスト
-  .c-breadcrumbs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.8rem;
+  .c-breadcrumb {
     font-size: 1.6rem;
     line-height: calc(33 / 16);
-    background-color: rgba(232, 232, 232, 1);
+    background-color:#E8E8E8;
   }
+
+  .c-breadcrumb__list {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 4.9rem;
+    height: 5rem;
+  }
+
+  .c-breadcrumb__item {
+    position: relative;
+
+    &::after {
+        content: ">";
+        position: absolute;
+        right: -1.8rem;
+  }
+
+  &:last-child {
+    &::after {
+        display: none;
+    }
+  }
+  a {
+transition: all 0.3s ease;
+
+    &:hover {
+        opacity: 0.5;}
+  }
+}
+
+//下層ページ　セクションタイトル
+.c-section-title--sub {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
