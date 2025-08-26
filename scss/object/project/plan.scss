@@ -24,36 +24,37 @@
     padding: 1.4rem 3rem 1.3rem 3.1rem;
 }
 
- .price__plus {
+.price__plus {
     position: relative;
     width: 1.85rem;
     height: 1.85rem;
     display: inline-block;
 
 
-    &::before, &::after {
+    &::before,
+    &::after {
         content: "";
         position: absolute;
         background-color: $black;
-}
+    }
 
-  // 横線
-  &::before {
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 0.3rem;   
-    transform: translateY(-50%);
-  }
+    // 横線
+    &::before {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 0.3rem;
+        transform: translateY(-50%);
+    }
 
-  // 縦線
-  &::after {
-    top: 0;
-    left: 50%;
-    width: 0.3rem;    
-    height: 100%;
-    transform: translateX(-50%);
-  }
+    // 縦線
+    &::after {
+        top: 0;
+        left: 50%;
+        width: 0.3rem;
+        height: 100%;
+        transform: translateX(-50%);
+    }
 }
 
 .price__text {
@@ -69,49 +70,44 @@
 // ==============================
 // Plan Table (SCSS)
 // ==============================
-$red: #d82323 !default;
-$black: #111 !default;
-$white: #fff !default;
-$gray-100: #f5f5f5 !default;
-$gray-300: #e6e6e6 !default;
-$txt: #222 !default;
-
-$bp-sp: 768px !default;
-
 .plan {
-  padding: 4rem 0 22rem;
+    padding: 4rem 0 22rem;
+}
 
-  .c-section-title {
-    text-align: center;
-    font-weight: 700;
-    letter-spacing: .05em;
-    margin-bottom: 2rem;
-  }
-
-  &__scroll {
+.plan__scroll {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-  }
+}
 
-  &__note {
-    margin-top: 1rem;
-    font-size: clamp(12px, 1.3vw, 14px);
-    color: #666;
-    text-align: center;
-  }
+.plan__note {
+    margin-top: 2.8rem;
+    font-size: 1.7rem;
+    line-height: calc(25 / 17);
+    text-align: left;
 }
 
 .plan-table {
-  width: 100%;
-  min-width: 820px;
-  border-collapse: separate;
-  border-spacing: 0;
-  color: $txt;
+    width: 100%;
+    min-width: 820px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 6.1rem;
+}
 
-  &__col--feature { width: 28%; }
-  &__col--plan { width: calc((72%)/3); }
+.plan-table__cell {
+    text-align: center;
+    vertical-align: middle;
+}
 
-  &__heading {
+.plan-table__col--feature {
+    width: 28%;
+}
+
+.plan-table__col--plan {
+    width: calc((72%)/3);
+}
+
+.plan-table__heading {
     background: $black;
     color: $white;
     text-align: center;
@@ -119,115 +115,142 @@ $bp-sp: 768px !default;
     position: relative;
     font-weight: 700;
     letter-spacing: .06em;
+}
 
-    &--blank { background: transparent; }
-    &--featured { background: $red; }
-  }
+.plan-table__heading--blank {
+    background: transparent;
+}
 
-  &__badge {
+.plan-table__heading--featured {
+    background: $red;
+    padding: 1.1rem 1rem;
+}
+
+.plan-table__badge {
     position: absolute;
     top: -0.9rem;
     left: 50%;
     transform: translateX(-50%);
     display: inline-block;
-    font-size: 12px;
-    line-height: 1;
-    padding: .35rem .6rem;
-    border-radius: 999px;
-    background: $white;
-    color: $red;
+    font-size: 1.7rem;
+    line-height: calc(33 / 17);
+    padding: .1rem .6rem;
     font-weight: 700;
-    box-shadow: 0 1px 4px rgba(0,0,0,.12);
-  }
+}
 
-  &__plan-name {
+.plan-table__plan-name {
     display: block;
-    font-size: clamp(14px, 1.6vw, 18px);
-  }
+    font-size: 2rem;
+    line-height: calc(33 / 20);
+}
 
-  &__price-row {
-    th, td { background: $white; }
-  }
+.plan-table__price-row th,
+.plan-table__price-row td {
+    background: $white;
+    border-top: 1px solid $gray;
+}
 
-  &__label {
+.plan-table__label {
     text-align: left;
-    padding: 1.2rem 1rem 1.2rem 1.4rem;
+    padding: 3.2rem 2rem 2.8rem;
     font-weight: 700;
     white-space: nowrap;
-    border-bottom: 1px solid $gray-300;
-  }
+    border-bottom: 1px solid $gray;
+}
 
-  &__price {
+.plan-table__price {
     text-align: center;
     font-weight: 800;
     font-size: clamp(18px, 2.1vw, 24px);
-    padding: 1.2rem 1rem;
-    border-bottom: 1px solid $gray-300;
+    padding: 3.2rem 2rem 2.8rem;
+    border-bottom: 1px solid $gray;
+}
 
-    &--featured { color: $red; }
-  }
+.plan-table__price span {
+    font-size: 2.2rem;
+    line-height: calc(33 / 20);
+}
 
-  tbody tr {
-    background: $gray-100;
+.plan-table__price--featured {
+    color: $red;
+    padding: 2.2rem 1rem;
+}
 
-    &:not(:last-child) {
-      border-bottom: 1px solid $gray-300;
-    }
-  }
+.plan-table__top {
+    font-weight: 700;
+}
 
-  &__cell {
+.plan-table__heading--tall {
+    padding: 2.2rem 1rem;
+}
+
+tbody tr:nth-child(odd) {
+    background: $gray;
+}
+
+tbody tr:not(:last-child) {
+    border-bottom: 1px solid $gray;
+}
+
+tbody tr__cell {
     text-align: center;
     padding: 1.1rem 1rem;
-    border-bottom: 1px solid $gray-300;
+    border-bottom: 1px solid $gray;
+}
 
-    .u-dot + .plan-table__note {
-      margin-left: .6rem;
-    }
-  }
-
-  &__note {
+tbody tr__note {
     display: inline-block;
     font-size: clamp(12px, 1.4vw, 14px);
     white-space: nowrap;
-  }
+}
 
-  &__dash {
+tbody tr__dash {
     display: inline-block;
     opacity: .5;
     font-weight: 700;
-  }
+    color: #707070;
 }
 
-// ドット（●）
+/* ドット（●） */
 .u-dot {
-  --size: 12px;
-  display: inline-block;
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  background: $black;
-  vertical-align: middle;
-
-  &--red { background: $red; }
+    --size: 12px;
+    display: inline-block;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: $black;
+    vertical-align: middle;
 }
 
-// 罫線
+.u-dot--red {
+    background: $red;
+}
+
+/* 罫線 */
 .plan-table th,
 .plan-table td {
-  border-right: 1px solid $gray-300;
-
-  &:last-child { border-right: 0; }
+    border-right: 0.5px solid $black;
+    font-size: 1.7rem;
+    line-height: calc(25 / 17);
+    font-weight: normal;
 }
 
-// SP調整
-@media (max-width: $bp-sp) {
-  .plan {
-    padding: 3rem 0;
-    .c-section-title { margin-bottom: 1.2rem; }
-  }
+.plan-table th:last-child,
+.plan-table td:last-child {
+    border-right: 0;
+}
 
-  .plan-table {
-    min-width: 720px;
-    &__badge { top: -0.8rem; }
-  }
+/* SP調整 */
+@include sp {
+    .plan {
+        padding: 3rem 0;
+    }
+
+    .plan-table {
+        min-width: 720px;
+    }
+
+    .plan-table__badge {
+        top: -0.8rem;
+    }
 }

@@ -1,5 +1,5 @@
-@use "variable" as *; 
-@use "normalize" as *; 
+@use "variable" as *;
+@use "normalize" as *;
 
 
 * {
@@ -57,11 +57,12 @@ a {
 .inner {
     max-width: 92rem;
     margin-inline: auto;
-    padding: 0 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     width: 100%;
     box-sizing: border-box;
-  
+
     @include sp {
-      max-width: none;
+        max-width: none;
     }
-  }
+}
