@@ -276,26 +276,61 @@ tbody tr__dash {
 
     .plan-table__badge {
         top: -0.8rem;
-      }
+    }
 }
+
+//スクロールバー
 
 /* 横スクロールのトラック */
 .simplebar-track.simplebar-horizontal {
     background: rgba(80, 80, 80, 0.149) !important;
     height: 2.5rem !important;
     border-radius: 0 !important;
-  }
-  
-  /* 横スクロールのつまみ */
-  .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+}
+
+/* 横スクロールのつまみ */
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
     background: rgba(80, 80, 80, 0.251) !important;
     height: 100% !important;
     border-radius: 0 !important;
     width: 10rem;
-  }
-  
+}
 
 /* ホバー時 */
 .simplebar-scrollbar:hover:before {
     background: #a00;
 }
+
+
+
+//居酒屋源のスクロールバー
+// .contact__privacy-box .simplebar-track.simplebar-vertical {
+//     top: 1rem;
+//     bottom: 1rem;
+//     height: auto;
+//   }
+
+//   /* SimpleBar のスクロールバー本体 */
+//   .contact__privacy-box .simplebar-scrollbar {
+//     width: 10px;
+//   }
+
+//   /* スクロールバーのつまみ */
+//   .contact__privacy-box .simplebar-scrollbar::before {
+//     background-color: rgba(155, 155, 155, 1);
+//     right: 0;
+//     left: 0;
+//     top: 0;
+//     bottom: 0;
+//     height: 3rem;
+//     border-radius: 0;
+//     opacity: 1 !important;
+//     transition: none !important;
+//   }
+
+//   /* スクロールバーのトラック背景 */
+//   .contact__privacy-box .simplebar-track.simplebar-vertical {
+//     right: 10px;
+//     background-color: rgba(227, 227, 227, 1);
+//     width: 10px;
+//   }
