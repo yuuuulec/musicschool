@@ -51,6 +51,15 @@
         color: $white;
         display: block;
     }
+
+    @include sp {
+        font-size: 2rem;
+        line-height: calc(26 / 20);
+        max-width: 33.5rem;
+        a {
+            padding: 1.2rem 10.7;
+        }
+    }
 }
 
 // 各セクションタイトル
