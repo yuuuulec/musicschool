@@ -12,6 +12,7 @@
 }
 
 .header__logo {
+   cursor: pointer;
    width: 19.2rem;
    transition: all 0.3s ease;
    margin: 0;
@@ -72,13 +73,24 @@
 }
 
 .header__nav-item--contact {
+   cursor: pointer;
    color: $white;
    font-size: 1.5rem;
    line-height: calc(33 / 15);
    font-weight: 700;
+   padding: 0.7rem 3rem 0.5rem;
+   transition: all 0.8s ease;
 
    a {
-      padding: 0.7rem 3rem 0.5rem;
+      color: inherit;
+   }
 
+   &:hover {
+      background-color: white;
+      color: $red;
+
+      a {
+         color: inherit;
+      }
    }
 }

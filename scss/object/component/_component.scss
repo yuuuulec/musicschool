@@ -3,6 +3,7 @@
 // 背景が赤いボタン
 .c-btn-red {
     background-color: $red;
+    border: 1px solid $red;
 
     a {
         color: $white;
@@ -12,6 +13,7 @@
 
 // お問い合わせボタン
 .c-contact__btn {
+    cursor: pointer;
     font-size: 2rem;
     font-weight: bold;
     line-height: calc(33 / 20);
@@ -19,11 +21,20 @@
     position: fixed;
     bottom: 32rem;
     right: 0;
+    padding: 1.7rem 8.4rem 1rem 8rem;
+    color: $white;
+    display: block;
+    transition: all 0.8s ease;
+
+
+    &:hover {
+        background-color: white;
+        color: $red;    
+        border: 1px solid $red;
+    }
 
     a {
-        padding: 1.7rem 8.4rem 1rem 8rem;
-        color: $white;
-        display: block;
+        color: inherit;
     }
 
     @include sp {
@@ -31,13 +42,14 @@
         transform: translateX(50%);
         bottom: 30rem;
         max-width: 33.5rem;
+        padding: 1.3rem 8rem 1rem 8rem;
 
         a {
-            padding: 1.3rem 8rem 1rem 8rem;
-
+            color: inherit;
         }
     }
 }
+
 //ホームに戻るボタン
 .c-to-home {
     font-size: 2.5rem;
@@ -45,19 +57,31 @@
     line-height: calc(33 / 25);
     display: inline-block;
     text-align: center;
+    padding: 1rem 5rem;
+    color: $white;
+    display: block;
+    max-width: 26rem;
+    margin-inline: auto;
+    transition: all 0.8s ease;
 
     a {
-        padding: 1rem 5rem 0.7rem 5.1rem;
-        color: $white;
-        display: block;
+        color: inherit;
     }
 
     @include sp {
         font-size: 2rem;
         line-height: calc(26 / 20);
+        padding: 1.2rem 10.7rem;
         max-width: 33.5rem;
+        padding: 1.2rem 10.7;
+    }
+
+    &:hover {
+        background-color: white;
+        color: $red;
+
         a {
-            padding: 1.2rem 10.7;
+            color: inherit;
         }
     }
 }
@@ -81,6 +105,7 @@
     bottom: 6.1rem;
     right: 0;
     bottom: 20rem;
+    transition: all 0.8s ease;
 
     @include sp {
         right: 2rem;
@@ -89,6 +114,10 @@
 
     img {
         width: 6.8rem;
+    }
+
+    &:hover {
+        opacity: 0.7;
     }
 }
 

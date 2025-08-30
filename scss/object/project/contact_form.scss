@@ -10,11 +10,23 @@
     margin-bottom: 6.5rem;
     text-align: center;
 
+    @include sp {
+        text-align: left;
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+        margin-bottom: 3.2rem;
+    }
+
 }
 
 .form-item {
     display: flex;
     margin-bottom: 3rem;
+
+    @include sp {
+        flex-direction: column;
+        margin-bottom: 1.4rem;
+    }
 }
 
 .form-item input[type="text"],
@@ -55,17 +67,61 @@ label {
 
 .contact-form__form-item--label {
     width: 18rem;
+
+    @include sp {
+        margin-bottom: 0.8rem;
+    }
 }
 
 .checkbox-group {
+    
     input[type="checkbox"] {
-        margin-right: 2rem; 
+        appearance: none;
+        cursor: pointer;
+        margin-right: 2rem;
+        margin-bottom: 0.9rem;
+        border: 0.5px solid $black;
+        width: 2rem;
+        height: 2rem;
+        align-items: center;
+        position: relative;
+
+        @include sp {
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        &::after {
+            content: "✔";
+            position: absolute;
+            top: -0.6rem;
+            left: 0.3rem;
+            margin: auto;
+            pointer-events: none;
+            color: $black;
+            opacity: 0;
+            font-size: 1.5rem;
+            line-height: calc(33 / 15);
+            transition: opacity 0.3s ease
+        }
+
+        &:checked {
+            background-color: $white;
+            border: 0.5px solid $black;
+
+            &::after {
+                opacity: 1;
+            }
+        }
     }
 
- label {
-    display: inline-block;
-    width: 100%;
-}
+    label {
+        cursor: pointer;
+        display: flex;
+        width: fit-content;
+        margin-right: 0;
+        line-height: 1;
+    }
 }
 
 .form-item textarea {
@@ -89,6 +145,26 @@ label {
     text-align: center;
     margin: 0 auto;
     cursor: pointer;
-    padding: 1rem 9.5rem  0.7rem 9.7rem;
-    border: none;
+    padding: 1rem 9.5rem 0.7rem 9.7rem;
+    border: 1px solid $red;
+
+    @include sp {
+        font-size: 2rem;
+        line-height: calc(26 / 20);
+        padding: 1.2rem 14.4rem;
+    }
+
+    &:hover {
+        background-color: white;
+        color: $red;
+    }
+}
+
+.form-item:last-of-type {
+    margin-top: 2.7rem;
+    margin-bottom: 5rem;
+
+    @include sp {
+        margin-top: 0.6rem;
+    }
 }
