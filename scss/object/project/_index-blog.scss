@@ -75,10 +75,15 @@ data {
     line-height: calc(30 / 18);
     margin-top: 3.7rem;
     text-align: right;
+    transition: all 0.3s ease;
 
     @include sp {
         margin-top: 3.7rem;
         text-align: center;
+    }
+
+    &:hover {
+        opacity: 0.5;
     }
 }
 
@@ -86,3 +91,4 @@ data {
     display: inline-block;
     border-bottom: 1px solid $black;
 }
+

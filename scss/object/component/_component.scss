@@ -279,3 +279,40 @@
         padding: 0.3rem 2.9rem;
     }
 }
+
+
+//背景が黒
+.c-back-black {
+    background-color: $black;
+    color: $white;
+}
+
+// 前の記事　次の記事
+.c-prev-next {
+    display: flex;
+}
+.c-prev-text {
+    font-size: 1.7rem;
+    line-height: calc(30 / 17);
+    margin-bottom: 1.6rem;
+    padding: 0.4rem 15rem 0.3rem 2rem;
+    display: inline-block;
+}
+
+.c-prev--inner {
+    display: inline-block;
+    display: flex;
+    font-size: 1.6rem;
+    line-height: calc(25 / 16);
+    font-weight: 700;
+
+    img {
+        max-width: 9.8rem;
+    }
+}
+
+//関連記事
+.c-title {
+padding: 0.9rem 50rem 0.8rem 3rem;
+max-width: 62rem;
+}
