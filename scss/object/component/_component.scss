@@ -259,3 +259,23 @@
     font-weight: 700;
     text-align: center;
 }
+
+//ブログ　写真の赤いラベル
+.c-blog__label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: calc(25 / 15);
+    background-color: $red;
+    color: $white;
+    padding: 0.3rem 2.4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    @include sp {
+        font-size: 1.5rem;
+        line-height: calc(25 / 15);
+        padding: 0.3rem 2.9rem;
+    }
+}
