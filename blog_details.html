@@ -15,12 +15,12 @@
 <body>
     <header id="header" class="header inner">
         <h1 class="header__logo">
-            <picture>
-                <a href="./index.html">
-                    <source media="(max-width: 768px)" srcset="./img/logo-sp.svg">
-                    <img src="./img/logo.svg" alt="logo">
-                </a>
-            </picture>
+            <a href="./index.html">
+                <picture>
+                        <source media="(max-width: 768px)" srcset="./img/logo-sp.svg">
+                        <img src="./img/logo.svg" alt="logo">
+                </picture>
+            </a>
         </h1>
         <div class="header__nav-inner">
             <nav class="header__nav pc-only">
@@ -54,145 +54,187 @@
         <span></span>
     </div>
 
-    <section class="blog-details inner">
-        <div class="blog-details__img">
-            <picture>
-                <source media="(max-width: 768px)" srcset="./img/blog03-sp.jpg">
-                <img src="./img/blog03.jpg" alt="">
-            </picture>
-        </div>
-        <span class="c-blog__label">ギター</span>
-
-        <p class="blog-details__title">アルペジオが劇的に向上する３つの習慣</p>
-        <data value="">0000.00.00</data>
-        <ul class="blog-details__sns-list">
-            <li class="blog-details__sns-item">
-                <a href="">
-                    <img src="./img/blog_details/facebook.svg" alt="facebook">
-                </a>
-            </li>
-            <li class="blog-details__sns-item">
-                <a href="">
-                    <img src="./img/blog_details/twitter.svg" alt="twitter">
-                </a>
-            </li>
-            <li class="blog-details__sns-item">
-                <a href="">
-                    <img src="./img/blog_details/hatena.svg" alt="youtube">
-                </a>
-            </li>
-            <li class="blog-details__sns-item">
-                <a href="">
-                    <img src="./img/blog_details/line.svg" alt="instagram">
-                </a>
-            </li>
-            <li class="blog-details__sns-item">
-                <a href="">
-                    <img src="./img/blog_details/pocket.svg" alt="pocket">
-                </a>
-            </li>
-        </ul>
-        </div>
-        <div class="blog-details__text">
-            <p class="blog-details__text--text">
-                本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
-
-            <h2 class="blog-details__text--subtitle">H2見出しが入ります。H2見出しが入ります。</h2>
-
-            <p class="blog-details__text--text">
-                本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
-
-            <picture>
-                <source media="(max-width: 768px)" srcset="./img/reason01-sp.jpg">
-                <img src="./img/reason01.jpg" alt="">
-            </picture>
-
-            <ul class="blog-details__text--list">
-                <li class="blog-details__text--list-item">
-                    <a href="">・リストが入ります</a>
-                </li>
-                <li class="blog-details__text--list-item">
-                    <a href="">・リストが入ります</a>
-                </li>
-                <li class="blog-details__text--list-item">
-                    <a href="">・リストが入ります</a>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="blog-details__link inner">
-        <h3 class="blog-details__link--title">H3見出しが入ります。H3見出しが入ります。</h3>
-        <p class="blog-details__link--text">
-            本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
-
-        <div class="link">
-            <a href="">テキストリンク</a>
-        </div>
-
-        <div class="c-prev-next">
-            <div class="c-prev">
-                <p class="c-prev-text c-back-black">◀︎ 前の記事</p>
-                <div class="c-prev--inner">
-                    <img src="./img/blog_details/blog_details.jpg" alt="">
-                    <p>タイトルが入ります。タイトルが入ります。タイトルが入</p>
+    <div class="blog-details__container inner">
+        <div class="blog-details__main">
+            <section class="blog-details">
+                <div class="blog-details__img">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./img/blog03-sp.jpg">
+                        <img src="./img/blog03.jpg" alt="">
+                    </picture>
                 </div>
-            </div>
-            <div class="c-prev">
-                <p class="c-prev-text c-back-black">次の記事 ▶︎</p>
-                <div class="c-prev--inner">
-                    <img src="./img/blog_details/blog_details.jpg" alt="">
-                    <p>タイトルが入ります。タイトルが入ります。タイトルが入</p>
+                <span class="c-blog__label">ギター</span>
+
+                <p class="blog-details__title">アルペジオが劇的に向上する３つの習慣</p>
+                <data value="">0000.00.00</data>
+                <ul class="blog-details__sns-list">
+                    <li class="blog-details__sns-item">
+                        <a href="">
+                            <img src="./img/blog_details/facebook.svg" alt="facebook">
+                        </a>
+                    </li>
+                    <li class="blog-details__sns-item">
+                        <a href="">
+                            <img src="./img/blog_details/twitter.svg" alt="twitter">
+                        </a>
+                    </li>
+                    <li class="blog-details__sns-item">
+                        <a href="">
+                            <img src="./img/blog_details/hatena.svg" alt="youtube">
+                        </a>
+                    </li>
+                    <li class="blog-details__sns-item">
+                        <a href="">
+                            <img src="./img/blog_details/line.svg" alt="instagram">
+                        </a>
+                    </li>
+                    <li class="blog-details__sns-item">
+                        <a href="">
+                            <img src="./img/blog_details/pocket.svg" alt="pocket">
+                        </a>
+                    </li>
+                </ul>
+                <div class="blog-details__text">
+                    <p class="blog-details__text--text">
+                        本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+
+                    <h2 class="blog-details__text--subtitle">H2見出しが入ります。H2見出しが入ります。</h2>
+
+                    <p class="blog-details__text--text">
+                        本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./img/reason01-sp.jpg">
+                        <img src="./img/reason01.jpg" alt="">
+                    </picture>
+
+                    <ul class="blog-details__text--list">
+                        <li class="blog-details__text--list-item">
+                            <a href="">・リストが入ります</a>
+                        </li>
+                        <li class="blog-details__text--list-item">
+                            <a href="">・リストが入ります</a>
+                        </li>
+                        <li class="blog-details__text--list-item">
+                            <a href="">・リストが入ります</a>
+                        </li>
+                    </ul>
                 </div>
+            </section>
+
+            <section class="blog-details__link">
+                <h3 class="blog-details__link--title">H3見出しが入ります。H3見出しが入ります。</h3>
+                <p class="blog-details__link--text">
+                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
+
+                <div class="link">
+                    <a href="">テキストリンク</a>
+                </div>
+
+                <div class="c-prev-next">
+                    <div class="c-prev">
+                        <p class="c-prev-text c-back-black">◀︎ 前の記事</p>
+                        <div class="c-prev--inner">
+                            <img src="./img/blog_details/blog_details.jpg" alt="">
+                            <p>タイトルが入ります。タイトルが入ります。タイトルが入</p>
+                        </div>
+                    </div>
+                    <div class="c-prev">
+                        <p class="c-prev-text c-back-black">次の記事 ▶︎</p>
+                        <div class="c-prev--inner">
+                            <img src="./img/blog_details/blog_details.jpg" alt="">
+                            <p>タイトルが入ります。タイトルが入ります。タイトルが入</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="blog-details__related">
+                <p class="c-back-black c-title">関連記事</p>
+                <ul class="blog__list c-blog__list--related">
+                    <li class="c-blog__item c-blog__item--related">
+                        <a href="">
+                            <img src="./img/blog_details/blog_details-big.jpg" alt="">
+                            <span class="c-blog__label">ギター</span>
+                            <div class="blog__text">
+                                <p class="blog__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+                                <data value="0000.00.00">0000.00.00</data>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="c-blog__item c-blog__item--related">
+                        <a href="">
+                            <img src="./img/blog_details/blog_details-big.jpg" alt="">
+                            <span class="c-blog__label">ギター</span>
+                            <div class="blog__text">
+
+                                <p class="blog__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+                                <data value="0000.00.00">0000.00.00</data>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="c-blog__item c-blog__item--related">
+                        <a href="">
+                            <img src="./img/blog_details/blog_details-big.jpg" alt="">
+                            <span class="c-blog__label">ギター</span>
+                            <div class="blog__text">
+
+                                <p class="blog__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+                                <data value="0000.00.00">0000.00.00</data>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="blog-details__sidebar">
+            <div class="sidebar__newsletter">
+                <p class="title sidebar__newsletter-title c-back-black">無料メールマガジン</p>
+                <img src="./img/sidebar/newsletter.jpg" alt="バナー広告">
+                <span>バナー広告</span>
             </div>
-        </div>
-    </section>
 
-    <section class="blog-details__related inner">
-        <p class="c-back-black c-title">関連記事</p>
-        <ul class="blog__list c-blog__list--related">
-            <li class="c-blog__item c-blog__item--related">
-                <a href="">
-                    <img src="./img/blog_details/blog_details-big.jpg" alt="">
-                    <span class="c-blog__label">ギター</span>
-                    <div class="blog__text">
-                        <p class="blog__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
-                        <data value="0000.00.00">0000.00.00</data>
-                    </div>
-                </a>
-            </li>
-            <li class="c-blog__item c-blog__item--related">
-                <a href="">
-                    <img src="./img/blog_details/blog_details-big.jpg" alt="">
-                    <span class="c-blog__label">ギター</span>
-                    <div class="blog__text">
+            <div class="sidebar__search">
+                <p class="title c-back-black">ブログ内を検索</p>
+                <form class="sidebar__search-form" action="#" method="get">
+                    <input type="search" name="search">
+                    <button type="submit">
+                        <img src="./img/sidebar/search.svg" alt="検索">
+                    </button>
+                </form>
+            </div>
 
-                        <p class="blog__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
-                        <data value="0000.00.00">0000.00.00</data>
-                    </div>
-                </a>
-            </li>
-            <li class="c-blog__item c-blog__item--related">
-                <a href="">
-                    <img src="./img/blog_details/blog_details-big.jpg" alt="">
-                    <span class="c-blog__label">ギター</span>
-                    <div class="blog__text">
+            <div class="sidebar__recommend">
+                <p class="title sidebar__recommend-title c-back-black">おすすめの記事</p>
+                <ul class="sidebar__recommend-list">
+                    <li class="sidebar__recommend-item">
+                        <img src="./img/sidebar/recommend.jpg" alt="おすすめ記事">
+                        <p class="sidebar__recommend-title">タイトルが入ります。タイトル</p>
+                    </li>
+                    <li class="sidebar__recommend-item">
+                        <img src="./img/sidebar/recommend.jpg" alt="おすすめ記事">
+                        <p class="sidebar__recommend-title">タイトルが入ります。タイトル</p>
+                    </li>
+                    <li class="sidebar__recommend-item">
+                        <img src="./img/sidebar/recommend.jpg" alt="おすすめ記事">
+                        <p class="sidebar__recommend-title">タイトルが入ります。タイトル</p>
+                    </li>
+                </ul>
+            </div>
 
-                        <p class="blog__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
-                        <data value="0000.00.00">0000.00.00</data>
-                    </div>
-                </a>
-            </li>
-        </ul>
-    </section>
-
-    <section class="blog-details__sidebar">
-        <div>
-            <p>無料メールマガジン</p>
-            
-        </div>
-
-    </section>
+            <div class="sidebar__category">
+                <p class="title sidebar__category-title c-back-black">カテゴリー</p>
+                <ul class="sidebar__category-list">
+                    <li class="sidebar__category-item"><a href="#">カテゴリー</a></li>
+                    <li class="sidebar__category-item"><a href="#">カテゴリー</a></li>
+                    <li class="sidebar__category-item"><a href="#">カテゴリー</a></li>
+                    <li class="sidebar__category-item"><a href="#">カテゴリー</a></li>
+                    <li class="sidebar__category-item"><a href="#">カテゴリー</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
 
 
     <div class="c-to-top inner">
@@ -205,7 +247,7 @@
         <a href="./contact_form.html">お問い合わせ</a>
     </div>
 
-    
+
     <footer id="footer" class="footer">
         <div class="inner">
             <div class="footer__nav">
