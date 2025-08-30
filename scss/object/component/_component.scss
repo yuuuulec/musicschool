@@ -72,7 +72,7 @@
         font-size: 2rem;
         line-height: calc(26 / 20);
         padding: 1.2rem 10.7rem;
-        max-width: 33.5rem;
+        // max-width: 33.5rem;
         padding: 1.2rem 10.7;
     }
 
@@ -260,7 +260,10 @@
     text-align: center;
 }
 
-//ブログ　写真の赤いラベル
+//ブログ　写真の中の赤いラベル
+.c-blog__item {
+    position: relative;
+}
 .c-blog__label {
     font-size: 1.5rem;
     font-weight: 700;
@@ -290,6 +293,7 @@
 // 前の記事　次の記事
 .c-prev-next {
     display: flex;
+    gap: 8rem;
 }
 .c-prev-text {
     font-size: 1.7rem;
@@ -309,10 +313,51 @@
     img {
         max-width: 9.8rem;
     }
+
+    p {
+        max-width: calc(147 / 1080 * 100vw);
+    }
 }
 
 //関連記事
 .c-title {
 padding: 0.9rem 50rem 0.8rem 3rem;
-max-width: 62rem;
+// max-width: 62rem;
+}
+
+//関連記事のリスト
+.c-blog__item {
+    display: flex;
+}
+.c-blog__list--related {
+display: block;
+
+.blog__title {
+    margin-top: 0;
+}
+
+data {
+    font-size: 1.7rem;
+    line-height: calc(30 / 17);
+    text-align: left;
+    margin-top: 1.3rem;
+}
+}
+
+.c-blog__item--related {
+
+margin-bottom: 3rem;
+
+ a{
+    display: flex;
+    gap: 2.7%;
+}
+
+img {
+    // max-width: 20rem;
+}
+
+.blog__text {
+    // max-width: calc(359 / 1080 * 100vw);
+}
 }
