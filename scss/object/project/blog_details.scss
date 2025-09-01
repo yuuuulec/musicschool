@@ -121,6 +121,8 @@
     font-weight: 700;
     line-height: calc(33 / 18);
     text-align: center;
+    padding: 0;
+    width: 100%;
 }
 
 .blog-details__sidebar {
@@ -150,6 +152,7 @@
     background-color: rgba(232, 232, 232, 1);
     border: none;
     height: 4rem;
+    padding: 1rem;
 }
 
 .sidebar__search-form button {
@@ -157,6 +160,10 @@
     background: none;
     padding: 0; 
     cursor: pointer; 
+
+    img {
+        width: 4rem;
+    }
   }
   
 
@@ -181,6 +188,7 @@
     padding-bottom: 0.7rem;
     padding-top: 1.2rem;
 }
+
 
 /* ===========================
 2カラム
