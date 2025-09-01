@@ -304,7 +304,6 @@
 }
 
 .c-prev--inner {
-    display: inline-block;
     display: flex;
     font-size: 1.6rem;
     line-height: calc(25 / 16);
@@ -312,10 +311,19 @@
 
     img {
         max-width: 9.8rem;
+
+        @include sp {
+            display: none;
+            max-width: none;
+        }
     }
 
     p {
         max-width: calc(147 / 1080 * 100vw);
+
+        @include sp {
+            max-width: 100%;
+        }
     }
 }
 
