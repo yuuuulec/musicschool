@@ -21,20 +21,20 @@
     position: fixed;
     bottom: 32rem;
     right: 0;
-    padding: 1.7rem 8.4rem 1rem 8rem;
     color: $white;
     display: block;
     transition: all 0.8s ease;
 
-
     &:hover {
         background-color: white;
-        color: $red;    
+        color: $red;
         border: 1px solid $red;
+        opacity: 1;
     }
 
     a {
         color: inherit;
+        padding: 1.7rem 8.4rem 1rem 8rem;
     }
 
     @include sp {
@@ -42,13 +42,22 @@
         transform: translateX(50%);
         bottom: 30rem;
         max-width: 33.5rem;
-        padding: 1.3rem 8rem 1rem 8rem;
 
         a {
             color: inherit;
+            padding: 1.3rem 8rem 1rem 8rem;
         }
     }
 }
+
+.c-contact__btn a {
+    transition: none;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
 
 //ホームに戻るボタン
 .c-to-home {
@@ -57,7 +66,6 @@
     line-height: calc(33 / 25);
     display: inline-block;
     text-align: center;
-    padding: 1rem 5rem;
     color: $white;
     display: block;
     max-width: 26rem;
@@ -66,14 +74,18 @@
 
     a {
         color: inherit;
+        padding: 1rem 5rem;
+
+        @include sp {
+            padding: 1.2rem 10.7rem;
+        }
     }
 
     @include sp {
         font-size: 2rem;
         line-height: calc(26 / 20);
-        padding: 1.2rem 10.7rem;
         // max-width: 33.5rem;
-        padding: 1.2rem 10.7;
+
     }
 
     &:hover {
@@ -116,8 +128,9 @@
         width: 6.8rem;
     }
 
-    &:hover {
-        opacity: 0.7;
+    a {
+        display: inline-block;
+        clip-path: circle(50%);
     }
 }
 
@@ -243,14 +256,6 @@
             display: none;
         }
     }
-
-    a {
-        transition: all 0.3s ease;
-
-        &:hover {
-            opacity: 0.5;
-        }
-    }
 }
 
 //下層ページ　セクションタイトル
@@ -264,6 +269,7 @@
 .c-blog__item {
     position: relative;
 }
+
 .c-blog__label {
     font-size: 1.5rem;
     font-weight: 700;
@@ -295,6 +301,7 @@
     display: flex;
     gap: 8rem;
 }
+
 .c-prev-text {
     font-size: 1.7rem;
     line-height: calc(30 / 17);
@@ -329,45 +336,46 @@
 
 //関連記事
 .c-title {
-padding: 0.9rem 0 0.8rem 3rem;
-// max-width: 62rem;
+    padding: 0.9rem 0 0.8rem 3rem;
+    // max-width: 62rem;
 }
 
 //関連記事のリスト
 .c-blog__item {
     display: flex;
 }
+
 .c-blog__list--related {
-display: block;
+    display: block;
 
-.blog__title {
-    margin-top: 0;
-}
+    .blog__title {
+        margin-top: 0;
+    }
 
-data {
-    font-size: 1.7rem;
-    line-height: calc(30 / 17);
-    text-align: left;
-    margin-top: 1.3rem;
-}
+    data {
+        font-size: 1.7rem;
+        line-height: calc(30 / 17);
+        text-align: left;
+        margin-top: 1.3rem;
+    }
 }
 
 .c-blog__item--related {
 
-margin-bottom: 3rem;
+    margin-bottom: 3rem;
 
- a{
-    display: flex;
-    gap: 2.7%;
-}
+    a {
+        display: flex;
+        gap: 2.7%;
+    }
 
-img {
-    // max-width: 20rem;
-}
+    img {
+        // max-width: 20rem;
+    }
 
-.blog__text {
-    // max-width: calc(359 / 1080 * 100vw);
-}
+    .blog__text {
+        // max-width: calc(359 / 1080 * 100vw);
+    }
 }
 
 //ブログ一覧　search01共通
@@ -396,6 +404,7 @@ img {
     a {
         display: flex;
         column-gap: calc(50 / 1080 * 100vw);
+        transition: all 0.3s ease;
 
         @include sp {
             flex-direction: column;
@@ -421,6 +430,7 @@ img {
         }
     }
 }
+
 //ページネーション
 .c-blog__text {
     margin-top: 1.1rem;
@@ -435,7 +445,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:1rem;
+    gap: 1rem;
 }
 
 .c-pagination__item {

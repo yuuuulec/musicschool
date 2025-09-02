@@ -1,0 +1,29 @@
+@use "../../foundation/all" as *;
+@use "../component/component" as *;
+
+.result {
+    padding: 6.5rem 0 21rem;
+}
+
+.result__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: calc(106 / 1080 * 100vw);
+    row-gap: 6rem;
+    margin-top: 4rem;
+}
+
+.result__title {
+    font-size: 2rem;
+    line-height: calc(25 / 20);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.result__img{
+    position: relative;
+}
+
+.result__item {
+cursor: pointer;
+}

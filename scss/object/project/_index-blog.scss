@@ -27,15 +27,6 @@
     max-width: calc(260 / 1080 * 100vw);
     width: 100%;
 
-    a {
-        cursor: pointer;
-        transition: all 0.3s ease;
-
-        &:hover {
-            opacity: 0.5;
-        }
-    }
-
     @include sp {
         max-width: none;
     }
@@ -79,10 +70,6 @@ data {
     @include sp {
         margin-top: 3.7rem;
         text-align: center;
-    }
-
-    &:hover {
-        opacity: 0.5;
     }
 }
 

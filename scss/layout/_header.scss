@@ -16,10 +16,6 @@
    width: 19.2rem;
    transition: all 0.3s ease;
    margin: 0;
-
-   &:hover {
-      opacity: 0.5;
-   }
 }
 
 .header__nav-inner {
@@ -42,7 +38,7 @@
 }
 
 .header__nav-list a {
-   transition: all 0.3s ease;
+   transition: all 0.8s ease;
    padding: 1rem;
    position: relative;
 
@@ -58,12 +54,12 @@
       opacity: 0;
       transform: scaleX(0);   
       transform-origin: right;
-      transition: all 0.3s ease;
+      transition: all 0.8s ease;
    }
 
    &:hover {
       opacity: 0.5;
-
+      
       &::after {
          transform: scaleX(1); 
          transform-origin: left;  
@@ -78,11 +74,11 @@
    font-size: 1.5rem;
    line-height: calc(33 / 15);
    font-weight: 700;
-   padding: 0.7rem 3rem 0.5rem;
-   transition: all 0.8s ease;
+   transition: all 0.3s ease;
 
    a {
       color: inherit;
+      padding: 0.7rem 3rem 0.5rem;
    }
 
    &:hover {
@@ -94,3 +90,11 @@
       }
    }
 }
+
+.header__nav-item--contact a {
+   transition: none;
+   &:hover {
+     opacity: 1;
+   }
+ }
+
