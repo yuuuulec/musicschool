@@ -17,13 +17,14 @@
     font-size: 2rem;
     font-weight: bold;
     line-height: calc(33 / 20);
-    display: inline-block;
+    display: block;
     position: fixed;
     bottom: 32rem;
     right: 0;
     color: $white;
     display: block;
     transition: all 0.8s ease;
+    // max-width: 108rem;
 
     &:hover {
         background-color: white;
@@ -33,8 +34,10 @@
     }
 
     a {
+        display: block;
         color: inherit;
         padding: 1.7rem 8.4rem 1rem 8rem;
+        white-space: nowrap;
     }
 
     @include sp {
