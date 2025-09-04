@@ -299,15 +299,21 @@
 // 前の記事　次の記事
 .c-prev-next {
     display: flex;
-    gap: 8rem;
+    justify-content: space-between;
+    margin-top: 6rem;
 }
 
 .c-prev-text {
     font-size: 1.7rem;
     line-height: calc(30 / 17);
     margin-bottom: 1.6rem;
-    padding: 0.4rem 15rem 0.3rem 2rem;
+    padding: 0.4rem 15rem 0.3rem 2rem; //ブログ用
     display: inline-block;
+}
+
+.c-prev--right {
+    text-align: right;
+    padding: 0.4rem 2rem 0.3rem 15rem; //ブログ用
 }
 
 .c-prev--inner {
@@ -315,6 +321,7 @@
     font-size: 1.6rem;
     line-height: calc(25 / 16);
     font-weight: 700;
+    gap: calc(16 / 1080 * 100vw); //ブログ用 
 
     img {
         max-width: 9.8rem;
@@ -326,7 +333,7 @@
     }
 
     p {
-        max-width: calc(147 / 1080 * 100vw);
+        max-width: calc(147 / 1080 * 100vw); //ブログ用
 
         @include sp {
             max-width: 100%;
@@ -334,10 +341,15 @@
     }
 }
 
+
 //関連記事
 .c-title {
     padding: 0.9rem 0 0.8rem 3rem;
     // max-width: 62rem;
+
+    @include sp {
+        text-align: center;
+    }
 }
 
 //関連記事のリスト
@@ -472,4 +484,11 @@
             color: inherit;
         }
     }
+}
+
+//blog_details result_details 関連記事内　タイトル
+.c-related-title {
+    font-size: 1.7rem;
+    line-height: calc(28 / 17);
+    font-weight: 700;
 }

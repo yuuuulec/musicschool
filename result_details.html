@@ -12,7 +12,7 @@
     <title>きたむらミュージックスクール</title>
 </head>
 
-<body>
+<body class="result_details">
     <header id="header" class="header inner">
         <h1 class="header__logo">
             <a href="./index.html">
@@ -53,43 +53,47 @@
         <span></span>
     </div>
 
-    <section>
-        <picture>
-            <source media="(max-width: 768px)" srcset="../img/result_details/result_details-sp.jpg">
-            <img src="./img/result_details/result_details.jpg">
-        </picture>
-        <p>タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
-        <data value="">0000.00.00</data>
-        <div>
-            <table>
-                <tr>
+    <section class="result-details inner">
+        <div class="c-blog__item result-details__container">
+            <picture>
+                <source media="(max-width: 768px)" srcset="../img/result_details/result_details-sp.jpg">
+                <img src="./img/result_details/result_details.jpg">
+            </picture>
+            <span class="c-blog__label">ポップス</span>
+            <h2 class="result-details__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h2>
+            <data value="">0000.00.00</data>
+        </div>
+
+        <div class="result-details__profile">
+            <table class="result-details__table">
+                <tr class="result-details__name">
                     <td>名前</td>
                     <td>丸山</td>
                 </tr>
-                <tr>
+                <tr class="result-details__job">
                     <td>職業</td>
                     <td>証券会社勤務</td>
                 </tr>
-                <tr>
+                <tr class="result-details__genre">
                     <td>ジャンル</td>
                     <td>入力欄</td>
                 </tr>
-                <tr>
+                <tr class="result-details__achievement">
                     <td>実績</td>
                     <td>入力欄</td>
                 </tr>
-                <tr>
+                <tr class="result-details__sns">
                     <td>SNS</td>
                     <td>入力欄</td>
                 </tr>
             </table>
-            <p>昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
+            <p class="result-details__text">昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
         </div>
     </section>
 
-    <div class="c-prev-next">
+    <div class="c-prev-next inner">
         <a href="">
-            <div class="c-prev">
+            <div class="c-prev prev-next--result">
                 <p class="c-prev-text c-back-black">◀︎ 前の記事</p>
                 <div class="c-prev--inner">
                     <img src="./img/blog_details/blog_details.jpg" alt="">
@@ -98,8 +102,8 @@
             </div>
         </a>
         <a href="">
-            <div class="c-prev">
-                <p class="c-prev-text c-back-black">次の記事 ▶︎</p>
+            <div class="c-next prev-next--result">
+                <p class="c-prev-text c-back-black c-prev--right">次の記事 ▶︎</p>
                 <div class="c-prev--inner">
                     <img src="./img/blog_details/blog_details.jpg" alt="">
                     <p>タイトルが入ります。タイトルが入ります。タイトルが入</p>
@@ -107,52 +111,105 @@
             </div>
         </a>
     </div>
-</section>
 
-<section class="blog-details__related">
-    <p class="c-back-black c-title">関連記事</p>
-    <ul class="blog__list c-blog__list--related">
-        <li class="c-blog__item c-blog__item--related">
-            <a href="">
-                <picture>
-                    <source media="(max-width: 768px)" srcset="./img/voice02-sp.jpg">
-                    <img src="./img/voice02.jpg" alt="">
-                </picture>
-                <span class="c-blog__label">ギター</span>
-                <div class="blog__text">
-                    <p class="blog__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
-                    <data value="0000.00.00">0000.00.00</data>
-                </div>
-            </a>
-        </li>
-        <li class="c-blog__item c-blog__item--related">
-            <a href="">
-                <picture>
-                    <source media="(max-width: 768px)" srcset="./img/voice03-sp.jpg">
-                    <img src="./img/voice03.jpg" alt="">
-                </picture>
-                <span class="c-blog__label">ギター</span>
-                <div class="blog__text">
+    <div class="result-details inner">
+        <p class="c-back-black c-title">関連記事</p>
+        <ul class="blog__list c-blog__list--related result-details__list">
+            <li class="c-blog__item c-blog__item--related">
+                <a href="">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./img/voice02-sp.jpg">
+                        <img src="./img/voice02.jpg" alt="">
+                    </picture>
+                    <span class="c-blog__label">ギター</span>
+                    <div class="blog__text">
+                        <p class="c-related-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+                        <data value="0000.00.00">0000.00.00</data>
+                    </div>
+                </a>
+            </li>
+            <li class="c-blog__item c-blog__item--related">
+                <a href="">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./img/voice03-sp.jpg">
+                        <img src="./img/voice03.jpg" alt="">
+                    </picture>
+                    <span class="c-blog__label">ジャズ</span>
+                    <div class="blog__text">
 
-                    <p class="blog__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
-                    <data value="0000.00.00">0000.00.00</data>
-                </div>
-            </a>
-        </li>
-        <li class="c-blog__item c-blog__item--related">
-            <a href="">
-                <picture>
-                    <source media="(max-width: 768px)" srcset="./img/result_details/result_details03-sp.jpg">
-                    <img src="./img/result_details/result_details03.jpg" alt="">
-                </picture>
-                <span class="c-blog__label">ギター</span>
-                <div class="blog__text">
+                        <p class="c-related-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+                        <data value="0000.00.00">0000.00.00</data>
+                    </div>
+                </a>
+            </li>
+            <li class="c-blog__item c-blog__item--related">
+                <a href="">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./img/result_details/result_details03-sp.jpg">
+                        <img src="./img/result_details/result_details03.jpg" alt="">
+                    </picture>
+                    <span class="c-blog__label">ラテン</span>
+                    <div class="blog__text">
 
-                    <p class="blog__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
-                    <data value="0000.00.00">0000.00.00</data>
-                </div>
-            </a>
-        </li>
-    </ul>
-</section>
-</div>
+                        <p class="c-related-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+                        <data value="0000.00.00">0000.00.00</data>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    </div>
+
+    <div class="c-to-top inner">
+        <a href="#">
+            <img src="./img/to-top.svg" alt="to-top">
+        </a>
+    </div>
+
+    <div class="c-contact__btn c-btn-red">
+        <a href="./contact_form.html">お問い合わせ</a>
+    </div>
+
+
+
+    <footer id="footer" class="footer">
+        <div class="inner">
+            <div class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="./index.html">ホーム</a></li>
+                    <li class="footer__nav-item"><a href="./plan.html">料金</a></li>
+                    <li class="footer__nav-item"><a href="./blog_list.html">ブログ</a></li>
+                    <li class="footer__nav-item"><a href="./result_list.html
+                    
+                    ">卒業実績</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__logo">
+                <a href="#"><img src="./img/logo-white.svg" alt="logo"></a>
+            </div>
+
+            <p class="footer__copyright">©Copyright &copy; 0000 KITAMURA music school Inc. <br class="sp-only">All
+                Rights</p>
+
+            <div class="sns-icons">
+                <a href="https://twitter.com">
+                    <img src="./img/icon-twitter.svg" alt="twitter">
+                </a>
+                <a href="https://www.facebook.com">
+                    <img src="./img/icon-facebook.svg" alt="facebook">
+                </a>
+                <a href="https://www.youtube.com">
+                    <img src="./img/icon-youtube.svg" alt="youtube">
+                </a>
+                <a href="https://www.instagram.com">
+                    <img src="./img/icon-instagram.svg" alt="instagram">
+                </a>
+            </div>
+        </div>
+
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
+</html>

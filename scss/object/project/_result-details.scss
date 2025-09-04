@@ -1,3 +1,105 @@
 @use "../../foundation/all" as *;
 @use "../component/component" as *;
 
+.result-details {
+    padding: 7rem 0 6rem;
+
+    data {
+        font-size: 1.7rem;
+        line-height: calc(30 / 17);
+        text-align: left;
+    }
+
+    @include sp {
+        padding: 5rem 0 4rem;
+    }
+}
+
+.result-details__container {
+    display: block;
+}
+
+.result-details__title {
+    font-size: 2.5rem;
+    line-height: calc(40 / 25);
+    margin-top: 5rem;
+
+    @include sp {
+        font-size: 2rem;
+        line-height: calc(30 / 20);
+    }
+}
+
+.result-details__table {
+border-collapse: collapse;
+
+
+td {
+    border: 0.05rem solid #707070;
+    padding: 0.8rem 2rem;
+
+
+    &:first-child {
+        font-weight: 700;
+        background-color: #E5E5E5;
+        width: calc(148  / 1080 * 100vw);
+
+        @include sp {
+            min-width: calc(120 / 375 * 100vw);
+        }
+    }
+
+    &:last-child {
+        width: calc(260 / 1080 * 100vw);
+
+        @include sp {
+            min-width: calc(215 / 375 * 100vw);
+        }
+    }
+}
+}
+
+.result-details__profile {
+    display: flex;
+    margin-top: 5.5rem;
+    gap: calc(40 / 1080 * 100vw);
+
+    @include sp {
+        display: block;
+        margin-top: 2.1rem;
+    }
+}
+
+.result-details__text {
+    @include sp {
+        margin-top: 2.8rem;
+    }
+}
+
+.result_details .c-prev-next {
+    margin-top: 0;
+    }
+
+.prev-next--result {
+    .c-prev-text {
+        padding: 0.4rem 23rem 0.3rem 2rem;
+
+        @include sp {
+            padding: 0.4rem 4.6rem 0.3rem 2rem;
+        }
+    }
+
+    .c-prev--inner {
+            p {
+                max-width: calc(226 / 1080 * 100vw);
+
+                @include sp {
+                    min-width: calc(156 / 375 * 100vw);
+                }
+            }
+    }
+}
+
+.result-details__list {
+    display: block;
+}

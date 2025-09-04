@@ -136,6 +136,12 @@
     @include sp {
         padding: 0 0 3rem;
     }
+
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
 
 /* ===========================
