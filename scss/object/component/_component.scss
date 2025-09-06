@@ -118,7 +118,7 @@
 .c-to-top {
     position: fixed;
     bottom: 6.1rem;
-    right: 0;
+    right: 2rem;
     bottom: 20rem;
     transition: all 0.8s ease;
 
@@ -477,6 +477,7 @@
 
     a {
         line-height: 1;
+        padding-bottom: 0.7rem;
     }
 
     &:hover {

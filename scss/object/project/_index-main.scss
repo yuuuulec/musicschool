@@ -1,4 +1,5 @@
 @use "../../foundation/all" as *;
+
 /* ===========================
    fv
    =========================== */
@@ -37,11 +38,11 @@
 /* ===========================
    fv-message
    =========================== */
-.fv-message {
+.message {
     padding: 6.6rem 0 5.5rem;
 }
 
-.fv-message__title {
+.message__title {
     font-size: 3.5rem;
     font-weight: 700;
     line-height: calc(50 / 35);
@@ -54,7 +55,7 @@
     }
 }
 
-.fv-message__text {
+.message__text {
     line-height: calc(30 / 18);
     color: $black;
     text-align: center;
@@ -67,38 +68,45 @@
 }
 
 .semicircle {
-    width: 85.8rem;
     margin: 0 auto;
     margin-top: 3.4rem;
+    text-align: center;
 
     img {
-        width: 100%;
-    }
+        display: inline-block;
+    width: calc(858 / 1080 * 100vw);
+    max-width: 85.8rem;
+}
 
     @include sp {
         width: 33.5rem;
     }
 }
 
-.message-box {
-    margin-top: 0;
-    display: flex; 
-    justify-content: center;
-    align-self: start;
-
+.message__list {
+    margin-top: 1.5rem;
+    
     @include sp {
-margin-top: 1.1rem;    
-}
+        margin-top: 1.1rem;
+    }
 }
 
-.message-box__text-en {
+.message__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    row-gap: 1.7rem;
+    margin-top: 1.7rem
+}
+
+.message__item-title {
     font-size: 2.5rem;
     font-weight: 700;
     line-height: calc(50 /25);
     color: $red;
-    margin-top: 2rem;
-    margin-right: 2.4rem;
     text-align: right;
+    flex: 1;
 
     @include sp {
         font-size: 2rem;
@@ -106,42 +114,45 @@ margin-top: 1.1rem;
     }
 }
 
-.message-box__col--center {
+.dot {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50px;
+    background-color: $red;
+    flex-shrink: 0;
     position: relative;
-    display: flex;
-    align-items: center;
-    top: 0;
-    right:1.5rem;
 
-    img {
-width: 3.4rem;
+    &::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 0.3rem;
+        height: 6.6rem;
+        background-color: $red;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
+.dot-top {
+    position: relative;
 
-
-.dot1 {
-    top: 3.8rem;
-    left: 0.5rem;
-}
-.dot2 {
-    top: 50%;
-    left: 0.5rem;
-}
-.dot3 {
-    bottom: 1.7rem;
-    left: 0.5rem;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 6rem;
+        left: 50%;
+        width: 2.5rem;
+    }
 }
 
-.message-box__col--right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.message__item-text {
     font-size: 2.3rem;
     line-height: calc(50 / 23);
-    margin-top: 2.5rem;
-    margin-left: 2.3rem;
-    row-gap: 1.5rem;
+    text-align: left;
+    flex: 1;
 
     @include sp {
         font-size: 2rem;
