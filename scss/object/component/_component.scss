@@ -23,7 +23,7 @@
     right: 0;
     color: $white;
     display: block;
-    transition: all 0.8s ease;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
     // max-width: 108rem;
 
     &:hover {
@@ -60,7 +60,6 @@
         opacity: 1;
     }
 }
-
 
 //ホームに戻るボタン
 .c-to-home {
@@ -117,10 +116,9 @@
 // トップに戻るボタン
 .c-to-top {
     position: fixed;
-    bottom: 6.1rem;
-    right: 2rem;
-    bottom: 20rem;
-    transition: all 0.8s ease;
+    right: 11rem;
+    bottom: 40rem;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
 
     @include sp {
         right: 2rem;

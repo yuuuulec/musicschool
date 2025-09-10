@@ -2,7 +2,7 @@
 @use "../component/component" as *;
 
 .flow {
-    padding: 3.4rem 0 9rem;
+    padding: 3.4rem 0 10.5rem;
 
     @include sp {
         padding: 3.6rem 0 2rem;
@@ -15,6 +15,7 @@
 
     @include sp {
         margin-top: 3.9rem;
+        margin-left: 0;
     }
 }
 
@@ -28,43 +29,44 @@
 
 .flow__step {
     display: flex;
-    margin-bottom: 2.5rem;
+    margin-bottom: calc(58 / 1080 * 100vw);
+    position: relative;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     @include sp {
         margin-left: 1.4rem;
         display: flex;
     }
 
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-
     .dot {
+        position: relative;
+
         &::after {
-            content: "";
-            height: 12rem;
+            height: 23rem;
             top: 0;
-            left: 50%;
-            transform: translateX(-50%);
         }
-    }
-}
 
-.last-dot {
-    position: relative;
+        &.last-dot {
+            &::after {
+                height: 7.5rem;
+            }
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 8rem;
-        left: 50%;
-        width: 4rem;
-        height: 5rem;
-        background-image: url(../../../img/arrow-down.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        transform: translateX(-50%);
+            &::before {
+                content: "";
+                position: absolute;
+                top: 5.5rem;
+                left: 50%;
+                width: 4rem;
+                height: 5rem;
+                background-image: url(../../../img/arrow-down.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                transform: translateX(-50%);
+            }
+        }
     }
 }
 
@@ -81,10 +83,11 @@
     font-size: 2.2rem;
     line-height: calc(33 / 22);
     font-weight: 700;
-    flex: 1;
+    flex-shrink: 0;
     text-align: left;
     max-width: 19.3rem;
-    margin-left: 5rem;
+    margin-left: calc(50 / 1080 * 100vw);
+    width: 17em;
 
     @include sp {
         margin-left: 0;
@@ -92,7 +95,6 @@
 }
 
 .flow__text {
-    flex: 1;
     line-height: calc(30 / 18);
 
     @include sp {

@@ -2,6 +2,7 @@
 @use "../component/component" as *;
 
 .voice {
+    position: relative;
     padding: 4.4rem 0 8rem;
     color: $white;
     text-align: center;
@@ -13,30 +14,19 @@
 }
 
 .voice__inner {
+    position: relative;
     margin-top: 3.6rem;
 
     @include sp {
         margin-top: 3.9rem;
     }
 }
-.voice__list {
-    display: flex;
-    gap: calc(35 / 1080 * 100vw);
-
-    @include sp {
-        flex-direction: column;
-        gap: 0;
-    }
-}
 
 .voice__item {
-    max-width: calc(270/ 1080 * 100vw);
-    width: 100%;
+    width: auto;
+    max-width: none;
+    flex-shrink: 0;
     color: $white;
-
-    @include sp {
-        max-width: 100%;
-    }
 }
 
 .voice__title {
@@ -55,5 +45,30 @@
     font-size: 1.8rem;
     line-height: calc(30 / 18);
     margin-top: 1rem;
+}
+
+.voice__prev,
+.voice__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;    
+    z-index: 10;
+}
+
+.voice__prev { 
+    left: 0; 
+}
+.voice__next { 
+    right: 0; 
+}
+
+.voice__prev img,
+.voice__next img {
+    display: block;
+    width: 5rem; 
 }
 

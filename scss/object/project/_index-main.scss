@@ -77,10 +77,6 @@
     width: calc(858 / 1080 * 100vw);
     max-width: 85.8rem;
 }
-
-    @include sp {
-        width: 33.5rem;
-    }
 }
 
 .message__list {

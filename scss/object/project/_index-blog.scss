@@ -13,6 +13,7 @@
 .blog__list {
     margin-top: 3.8rem;
     display: flex;
+    justify-content: space-between;
     gap: calc(50 / 1080 * 100vw);
     margin-inline: auto;
 
@@ -24,8 +25,6 @@
 }
 
 .blog__item {
-    max-width: calc(260 / 1080 * 100vw);
-    width: 100%;
 
     @include sp {
         max-width: none;
@@ -47,8 +46,8 @@
 }
 
 data {
-    font-size: 1.5rem;
-    line-height: calc(30 / 15);
+    font-size: 1.7rem;
+    line-height: calc(30 / 17);
     margin-top: 1rem;
     display: block;
     text-align: right;

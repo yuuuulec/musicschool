@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
     <title>きたむらミュージックスクール</title>
 </head>
 
@@ -150,9 +152,9 @@
         <section id="voice" class="voice">
             <div class="voice__container inner">
                 <h2 class="c-section-title">生徒さんたちの声</h2>
-                <div class="voice__inner">
-                    <ul class="voice__list">
-                        <li class="voice__item">
+                <div class="swiper voice__inner">
+                    <div class="swiper-wrapper ">
+                        <div class="swiper-slide voice__item">
                             <div class="voice__img">
                                 <picture>
                                     <source media="(max-width: 768px)" srcset="./img/voice01-sp.jpg">
@@ -163,9 +165,9 @@
                                 <h3 class="voice__title">証券会社勤務　丸山さん</h3>
                                 <p class="voice__text">昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
                             </div>
-                        </li>
+                        </div>
 
-                        <li class="voice__item">
+                        <div class="swiper-slide voice__item">
                             <div class="voice__img">
                                 <picture>
                                     <source media="(max-width: 768px)" srcset="./img/voice02-sp.jpg">
@@ -176,9 +178,9 @@
                                 <h3 class="voice__title">IT会社勤務　S.Eさん</h3>
                                 <p class="voice__text">プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。</p>
                             </div>
-                        </li>
+                        </div>
 
-                        <li class="voice__item">
+                        <div class="swiper-slide voice__item">
                             <div class="voice__img">
                                 <picture>
                                     <source media="(max-width: 768px)" srcset="./img/voice03-sp.jpg">
@@ -189,8 +191,10 @@
                                 <h3 class="voice__title">都内大学生　田森さん</h3>
                                 <p class="voice__text">就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。</p>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                    <button class="voice__prev"><img src="./img/arrow-l.svg" alt=""></button>
+                    <button class="voice__next"><img src="./img/arrow-r.svg" alt=""></button>
                 </div>
 
             </div>
@@ -214,33 +218,33 @@
                     <li class="flow__step">
                         <span class="dot"></span>
                         <div class="flow__container">
-                        <p class="flow__heading">ヒアリング</p>
-                        <p class="flow__text">
-                            現在の技術活動内容の目標などをお伺いします。<br>
-                            練習内容や方針もお気軽にご相談ください。
-                        </p>
+                            <p class="flow__heading">ヒアリング</p>
+                            <p class="flow__text">
+                                現在の技術活動内容の目標などをお伺いします。<br>
+                                練習内容や方針もお気軽にご相談ください。
+                            </p>
                         </div>
                     </li>
 
                     <li class="flow__step">
                         <span class="dot"></span>
                         <div class="flow__container">
-                        <p class="flow__heading">プランのご提案</p>
-                        <p class="flow__text">
-                            ライフスタイルや目標にそって最適なプランをご提案します。<br>
-                            継続できるようサポートいたします。
-                        </p>
+                            <p class="flow__heading">プランのご提案</p>
+                            <p class="flow__text">
+                                ライフスタイルや目標にそって最適なプランをご提案します。<br>
+                                継続できるようサポートいたします。
+                            </p>
                         </div>
                     </li>
 
                     <li class="flow__step">
                         <span class="dot last-dot"></span>
                         <div class="flow__container">
-                        <p class="flow__heading">ご入学</p>
-                        <p class="flow__text">
-                            お申し込み完了後、レッスンがスタートします。<br>
-                            マンツーマン指導なので、いつからでもスタートが可能です。
-                        </p>
+                            <p class="flow__heading">ご入学</p>
+                            <p class="flow__text">
+                                お申し込み完了後、レッスンがスタートします。<br>
+                                マンツーマン指導なので、いつからでもスタートが可能です。
+                            </p>
                         </div>
                     </li>
                 </ol>
@@ -339,7 +343,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="more-link inner">
+            <div class="more-link">
                 <a href="./blog_list.html">ブログ一覧へ</a>
             </div>
         </section>
@@ -391,6 +395,9 @@
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 
 </body>
 
