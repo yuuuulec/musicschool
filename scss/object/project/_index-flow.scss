@@ -51,13 +51,13 @@
 
         &.last-dot {
             &::after {
-                height: 7.5rem;
+                height: calc(50 / 1080 * 100vw);
             }
 
             &::before {
                 content: "";
                 position: absolute;
-                top: 5.5rem;
+                top: calc(40 / 1080 * 100vw);
                 left: 50%;
                 width: 4rem;
                 height: 5rem;

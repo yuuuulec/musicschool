@@ -65,9 +65,8 @@ $(function () {
 
 //生徒さんたちの声　スライダー
 const voiceSwiper = new Swiper('.voice__inner', {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    loop: false,
+    spaceBetween: 35,
+    loop: true,
     navigation: {
         nextEl: '.voice__next',
         prevEl: '.voice__prev',
