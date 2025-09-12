@@ -305,7 +305,7 @@
 .c-prev-next {
     display: flex;
     justify-content: space-between;
-    margin-top: 6rem;
+    margin-top: 5.5rem;
 }
 
 .c-prev-text {
@@ -327,15 +327,7 @@
     line-height: calc(25 / 16);
     font-weight: 700;
     gap: calc(16 / 1080 * 100vw); //ブログ用 
-
-    img {
-        max-width: 9.8rem;
-
-        @include sp {
-            display: none;
-            max-width: none;
-        }
-    }
+    
 
     p {
         max-width: calc(147 / 1080 * 100vw); //ブログ用
@@ -344,8 +336,17 @@
             max-width: 100%;
         }
     }
-}
 
+    img {
+        aspect-ratio: 98 / 68;
+        object-fit: cover;
+
+        @include sp {
+            display: none;
+            max-width: none;
+        }
+}
+}
 
 //関連記事
 .c-title {

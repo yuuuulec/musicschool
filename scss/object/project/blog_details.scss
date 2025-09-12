@@ -2,7 +2,7 @@
 @use "../component/component" as *;
 
 .blog-details {
-    padding: 7rem 0 4.5rem;
+    padding: 7rem 0 4rem;
     border-bottom: 0.5px solid $black;
     position: relative;
 
@@ -72,7 +72,7 @@
 }
 
 .blog-details__link {
-    padding: 4.35rem 0 10.1rem;
+    padding: 4.3rem 0 10.1rem;
 }
 
 .blog-details__link--title {
@@ -93,7 +93,7 @@
         left: 0;
         transform: translateY(-50%);
         width: 0.3rem;
-        height: 5rem;
+        height: 2rem;
         background-color: $black;
         aspect-ratio: 1 /1;
     }
@@ -103,6 +103,7 @@
     background-color: #E8E8E8;
     padding: 1.8rem 3rem 1rem 6.7rem;
     position: relative;
+    line-height: calc(30 / 18 );
     margin-top: 1.7rem;
     max-width: calc(600 / 1080 * 100vw);
 
@@ -124,7 +125,6 @@
 
 .link {
     margin-top: 2.7rem;
-    margin-bottom: 5.4rem;
 
     a {
         font-size: 2rem;
