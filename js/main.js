@@ -64,24 +64,38 @@ $(function () {
 
 
 //生徒さんたちの声　スライダー
-const voiceSwiper = new Swiper('.voice__inner', {
-    spaceBetween: 35,
-    loop: true,
-    navigation: {
-        nextEl: '.voice__next',
-        prevEl: '.voice__prev',
-    },
-    breakpoints: {
-        0: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
-    },
-    observer: true,        
-    observeParents: true,
-});
+function getSpaceBetween() {
+    const baseWidth = 1080; 
+    const baseSpace = 35;  
+    const currentWidth = window.innerWidth;
+    const ratio = currentWidth / baseWidth;
 
-initVoiceSwiper();
+    return Math.min(baseSpace, Math.max(baseSpace * ratio, 10));
+}
 
+// Swiper 初期化関数
+function initVoiceSwiper() {
+    return new Swiper('.voice__inner', {
+        loop: true,
+        navigation: {
+            nextEl: '.voice__next',
+            prevEl: '.voice__prev',
+        },
+        slidesPerView: 3,
+        spaceBetween: getSpaceBetween(),
+        breakpoints: {
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 3 },
+        },
+        observer: true,
+        observeParents: true,
+    });
+}
+
+let voiceSwiper = initVoiceSwiper();
+
+// リサイズ時に再初期化
 window.addEventListener('resize', () => {
-    initVoiceSwiper(); // リサイズ時に再初期化
+    voiceSwiper.destroy(true, true);
+    voiceSwiper = initVoiceSwiper();
 });

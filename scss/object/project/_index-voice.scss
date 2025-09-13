@@ -2,7 +2,6 @@
 @use "../component/component" as *;
 
 .voice {
-    position: relative;
     padding: 4.4rem 0 8rem;
     color: $white;
     text-align: center;
@@ -13,9 +12,14 @@
     }
 }
 
+.voice__container {
+    position: relative;
+}
+
 .voice__inner {
     position: relative;
     margin-top: 3.6rem;
+    overflow: visible;
 
     @include sp {
         margin-top: 3.9rem;
@@ -25,6 +29,10 @@
 .voice__item {
     flex-shrink: 0;
     color: $white;
+}
+
+.voice__img {
+    position: relative;
 }
 
 .voice__title {
@@ -48,8 +56,7 @@
 .voice__prev,
 .voice__next {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 13rem;
     border: none;
     background: none;
     padding: 0;
@@ -58,15 +65,16 @@
 }
 
 .voice__prev { 
-    left: 0; 
+    left: -2rem;
 }
 .voice__next { 
-    right: 0; 
+    right: -2rem; 
 }
 
 .voice__prev img,
 .voice__next img {
     display: block;
-    width: 5rem; 
+    width: 2.7rem; 
 }
+
 
