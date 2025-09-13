@@ -29,6 +29,7 @@
 .voice__item {
     flex-shrink: 0;
     color: $white;
+    width: calc(270 / 1080 * 100vw);
 }
 
 .voice__img {
