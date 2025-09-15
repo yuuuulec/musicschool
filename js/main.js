@@ -1,6 +1,5 @@
 //お問い合わせ　トップに戻るボタン　スクロール
 $(function() {
-    const headerHeight = $('#header').outerHeight(); 
     const fv = $('.fv'); 
     let fvHeight = fv.outerHeight();
 
@@ -8,13 +7,12 @@ $(function() {
         fvHeight = fv.outerHeight();
     });
 
-    const showOffset = headerHeight + fvHeight;
-
     $(window).on('scroll', function() {
         const scroll = $(window).scrollTop();
-        if (scroll > showOffset) {
+
+        if (scroll > fvHeight) {  // FVの下端を超えたらすぐ表示
             $('.c-to-top, .c-contact__btn').fadeIn();
-        } else {
+        } else {                   
             $('.c-to-top, .c-contact__btn').fadeOut();
         }
     });

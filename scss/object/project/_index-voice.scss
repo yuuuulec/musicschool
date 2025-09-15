@@ -2,7 +2,7 @@
 @use "../component/component" as *;
 
 .voice {
-    padding: 4.4rem 0 8rem;
+    padding: 4.4rem 4rem 8rem;
     color: $white;
     text-align: center;
     background-color: $red;
@@ -57,25 +57,41 @@
 .voice__prev,
 .voice__next {
     position: absolute;
-    top: 13rem;
+    top: 37%;
     border: none;
     background: none;
     padding: 0;
-    cursor: pointer;    
+    cursor: pointer;
     z-index: 10;
 }
 
-.voice__prev { 
+@media screen and (max-width: 1079px) {
+    .voice__prev,
+    .voice__next {
+      top: 12vw;
+    }
+  }
+
+.voice__prev {
     left: -2rem;
+
+    @include sp {
+        left: 2rem;
+        top: 37vw;
+    }
 }
-.voice__next { 
-    right: -2rem; 
+
+.voice__next {
+    right: -2rem;
+
+    @include sp {
+        right: 2rem;
+        top: 37vw;
+    }
 }
 
 .voice__prev img,
 .voice__next img {
     display: block;
-    width: 2.7rem; 
+    width: 2.7rem;
 }
-
-

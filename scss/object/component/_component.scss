@@ -1,9 +1,17 @@
 @use "../../foundation/all" as *;
 
+//トップに戻るボタンとお問い合わせボタン
+.c-floating-btns {
+    position: sticky;
+    bottom: 0;
+    z-index: 10001;
+}
+
 // 背景が赤いボタン
 .c-btn-red {
     background-color: $red;
     border: 1px solid $red;
+
 
     a {
         color: $white;
@@ -17,14 +25,13 @@
     font-size: 2rem;
     font-weight: bold;
     line-height: calc(33 / 20);
-    display: block;
-    position: fixed;
-    bottom: 32rem;
-    right: 0;
     color: $white;
     display: block;
+    text-align: right; 
+    margin-left: auto;   
     transition: opacity 0.4s ease, visibility 0.4s ease;
-    // max-width: 108rem;
+    width: 30rem;
+
 
     &:hover {
         background-color: white;
@@ -34,17 +41,15 @@
     }
 
     a {
-        display: block;
         color: inherit;
         padding: 1.7rem 8.4rem 1rem 8rem;
         white-space: nowrap;
     }
 
     @include sp {
-        right: 50%;
-        transform: translateX(50%);
-        bottom: 30rem;
-        max-width: 33.5rem;
+        text-align: center;
+        margin-inline: auto;
+        width: 33.5rem;
 
         a {
             color: inherit;
@@ -52,6 +57,30 @@
         }
     }
 }
+
+
+// トップに戻るボタン
+.c-to-top {
+    margin-bottom: 3.1rem;
+    padding-right: calc(116 / 1080 * 100vw);
+    text-align: right;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 10001;
+
+    @include sp {
+        right: 0;
+    }
+
+    img {
+        width: 7rem;
+    }
+
+    a {
+        display: inline-block;
+        clip-path: circle(50%);
+    }
+}
+
 
 .c-contact__btn a {
     transition: none;
@@ -116,28 +145,6 @@ text-align: center;
     @include sp {
         font-size: 2.5rem;
         line-height: calc(40 / 25);
-    }
-}
-
-// トップに戻るボタン
-.c-to-top {
-    position: fixed;
-    right: 11rem;
-    bottom: 40rem;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
-
-    @include sp {
-        right: 2rem;
-        bottom: 10rem;
-    }
-
-    img {
-        width: 6.8rem;
-    }
-
-    a {
-        display: inline-block;
-        clip-path: circle(50%);
     }
 }
 
@@ -294,9 +301,7 @@ text-align: center;
     width: 8rem;
 
     @include sp {
-        font-size: 1.5rem;
-        line-height: calc(25 / 15);
-        padding: 0.3rem 2.9rem;
+        width: 9rem;
     }
 }
 
@@ -391,14 +396,6 @@ text-align: center;
     a {
         display: flex;
         gap: 2.7%;
-    }
-
-    img {
-        // max-width: 20rem;
-    }
-
-    .blog__text {
-        // max-width: calc(359 / 1080 * 100vw);
     }
 }
 
