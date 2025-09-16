@@ -116,7 +116,6 @@
         font-size: 2rem;
         line-height: calc(26 / 20);
         // max-width: 33.5rem;
-
     }
 
     &:hover {
@@ -133,6 +132,11 @@
 font-size: 3rem;
 line-height: calc(50 / 30);
 text-align: center;
+
+@include sp {
+    font-size: 2.5rem;
+    line-height: calc(40 / 25);
+}
 }
 
 // 各セクションタイトル

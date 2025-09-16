@@ -2,7 +2,7 @@
 @use "../component/component" as *;
 
 .reason {
-    padding: 6.4rem 0 4rem;
+    padding: 6.4rem 0 9rem;
 
     @include sp {
         padding: 4.9rem 0 3.6rem;
@@ -24,6 +24,10 @@
     @include sp {
         flex-direction: column;
         margin-bottom: 3.9rem;
+    }
+
+&:last-of-type {
+        margin-bottom: 0;
     }
 }
 
@@ -68,7 +72,9 @@
         margin-top: 1rem;
     }
     @include sp {
-        margin-left: 0;
+        font-size: 2rem;
+        line-height: calc(30 / 20);
+        padding-left: 0;
     }
 }
 
@@ -79,7 +85,7 @@ margin-top: 4.9rem;
 margin-left: 5rem;
 
     @include sp {
-        margin-top: 1.7rem;
+        margin-top: 2.7rem;
         margin-left: 0;
         font-size: 1.6rem;
         line-height: calc(30 / 16);

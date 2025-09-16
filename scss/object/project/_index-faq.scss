@@ -5,7 +5,7 @@
     padding: 0 0 6.4rem;
 
     @include sp {
-        padding: 3.6rem 0 2.5rem;
+        padding-bottom: 2.5rem;
     }
 }
 
@@ -26,7 +26,9 @@
     @include sp {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
+
 
     &::after {
         content: "";
@@ -86,6 +88,7 @@
 
     @include sp {
         padding: 1.7rem 0 0.9rem 0;
+        align-items: center;
     }
 }
 
@@ -138,5 +141,6 @@
 
     @include sp {
         padding: 1.7rem 0 0.9rem 0;
+        align-items: center;
     }
 }

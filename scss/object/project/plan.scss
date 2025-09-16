@@ -27,10 +27,20 @@
 .price__title {
     padding: 1.4rem 6.5rem 1.3rem;
     background-color: $red;
+
+    @include sp {
+        padding: 1.5rem 6.5rem;
+        width: 21rem;
+    }
 }
 
 .price__title--enrollment {
     padding: 1.4rem 3rem 1.3rem 3.1rem;
+
+    @include sp {
+        padding: 1.5rem 3rem;
+        width: 21rem;
+    }
 }
 
 .price__plus {
@@ -69,6 +79,12 @@
 .price__text {
     margin-top: 4.8rem;
     line-height: calc(30 / 18);
+
+    @include sp {
+        margin-top: 4.7rem;
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+    }
 }
 
 /* ===========================
@@ -86,6 +102,10 @@
 .plan__scroll {
     overflow: visible;
     -webkit-overflow-scrolling: touch;
+
+    @include sp {
+        overflow-x: auto;
+    }
 }
 
 .plan__note {
@@ -97,7 +117,8 @@
 
 .plan-table {
     width: 100%;
-    min-width: 820px;
+    min-width: 0;
+    table-layout: auto;       
     border-collapse: separate;
     border-spacing: 0;
     margin-top: 6.1rem;
@@ -105,6 +126,16 @@
     @include sp {
         margin-top: 3.6rem;
     }
+}
+
+.plan-table th {
+    font-weight: normal;
+}
+
+.plan-table__heading,
+.plan-table__label.plan-table__top,
+.plan-table__price.plan-table__top {
+    font-weight: 700;
 }
 
 .plan-table__cell {
@@ -126,7 +157,6 @@
     text-align: center;
     padding: 1.2rem 1rem;
     position: relative;
-    font-weight: 700;
     letter-spacing: .06em;
 }
 
@@ -135,25 +165,33 @@
 }
 
 .plan-table__heading--featured {
+    position: relative;
     background: $red;
+    padding-top: 3rem;
 }
 
 .plan-table__badge {
     position: absolute;
-    top: -0.9rem;
+    top: -2rem;
     left: 50%;
     transform: translateX(-50%);
     display: inline-block;
     font-size: 1.7rem;
-    line-height: calc(33 / 17);
-    padding: .1rem .6rem;
-    font-weight: 700;
+    line-height: 1;
+    padding: 1.1rem 0 0;
+    background-color: $red;
+    width: 100%;
 }
 
 .plan-table__plan-name {
     display: block;
     font-size: 2rem;
     line-height: calc(33 / 20);
+
+    @include sp {
+        line-height: calc(25 / 20);
+        max-width: 17rem;
+    }
 }
 
 .plan-table__price-row th,
@@ -165,14 +203,11 @@
 .plan-table__label {
     text-align: left;
     padding: 3.2rem 2rem 2.8rem;
-    font-weight: 700;
     white-space: nowrap;
-    border-bottom: 1px solid $gray;
 }
 
 .plan-table__price {
     text-align: center;
-    font-weight: 800;
     font-size: clamp(18px, 2.1vw, 24px);
     padding: 3.2rem 2rem 2.8rem;
     border-bottom: 1px solid $gray;
@@ -180,7 +215,12 @@
 
 .plan-table__price span {
     font-size: 2.2rem;
-    line-height: calc(33 / 20);
+    line-height: calc(33 / 22);
+
+    @include sp {
+        font-size: 1.6rem;
+        line-height: calc(25 / 16);
+    }
 }
 
 .plan-table__price--featured {
@@ -188,14 +228,10 @@
     padding: 2.2rem 1rem;
 }
 
-.plan-table__top {
-    font-weight: 700;
-}
-
 .plan-table__heading--tall {
     padding: 0;
 
-    
+
 }
 
 tbody tr:nth-child(odd) {
@@ -221,13 +257,12 @@ tbody tr__note {
 tbody tr__dash {
     display: inline-block;
     opacity: .5;
-    font-weight: 700;
     color: #707070;
 }
 
 /* ドット（●） */
 .u-dot {
-    --size: 12px;
+    --size: 15px;
     display: inline-block;
     width: var(--size);
     height: var(--size);
@@ -240,13 +275,35 @@ tbody tr__dash {
     background: $red;
 }
 
+.tab-only {
+    display: none;
+    @media screen and (max-width: 850px) {
+        display: block;
+    }
+}
+
+/* 左上の空セルに線をつける */
+.plan-table__heading--blank {
+  border-bottom: 0.5px solid $black;
+}
+
+/* 一番下の行に線をつける */
+.plan-table tbody tr:last-child th,
+.plan-table tbody tr:last-child td {
+  border-bottom: 0.5px solid $black;
+}
+
 /* 罫線 */
 .plan-table th,
 .plan-table td {
     border-right: 0.5px solid $black;
     font-size: 1.7rem;
-    line-height: calc(25 / 17);
-    font-weight: normal;
+    line-height: calc(30 / 17);
+
+    @include sp {
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+    }
 }
 
 .plan-table th:last-child,
@@ -257,7 +314,7 @@ tbody tr__dash {
 /* SP調整 */
 @include sp {
     .plan {
-        padding: 3rem 0;
+        padding: 0;
     }
 
     .plan__scroll {
@@ -268,11 +325,12 @@ tbody tr__dash {
 
     .plan-table {
         min-width: 720px;
+        margin-bottom: 3.8rem;
     }
 
     .plan-table__badge {
-        top: -0.8rem;
-        margin-top: 3.6rem;
+        top: 1rem;
+        margin-top: -2rem;
     }
 
     .plan-table__badge {
@@ -282,10 +340,33 @@ tbody tr__dash {
 
 //スクロールバー
 
+
+/* Chrome, Edge, Safari */
+[data-simplebar]::-webkit-scrollbar {
+    display: none;
+}
+
+/* Firefox */
+[data-simplebar] {
+    scrollbar-width: none;
+}
+
+/* 擬似要素を透明にする */
+.simplebar-scrollbar::before {
+    background: transparent !important;
+}
+
+/* ホバー時も透明 */
+.simplebar-scrollbar:hover::before {
+    background: transparent !important;
+}
+
+
+
 /* 横スクロールのトラック */
 .simplebar-track.simplebar-horizontal {
     background: rgba(80, 80, 80, 0.149) !important;
-    height: 2.5rem !important;
+    height: 2.3rem !important;
     border-radius: 0 !important;
 }
 
@@ -294,44 +375,4 @@ tbody tr__dash {
     background: rgba(80, 80, 80, 0.251) !important;
     height: 100% !important;
     border-radius: 0 !important;
-    width: 10rem;
 }
-
-/* ホバー時 */
-.simplebar-scrollbar:hover:before {
-    background: #a00;
-}
-
-
-
-//居酒屋源のスクロールバー
-// .contact__privacy-box .simplebar-track.simplebar-vertical {
-//     top: 1rem;
-//     bottom: 1rem;
-//     height: auto;
-//   }
-
-//   /* SimpleBar のスクロールバー本体 */
-//   .contact__privacy-box .simplebar-scrollbar {
-//     width: 10px;
-//   }
-
-//   /* スクロールバーのつまみ */
-//   .contact__privacy-box .simplebar-scrollbar::before {
-//     background-color: rgba(155, 155, 155, 1);
-//     right: 0;
-//     left: 0;
-//     top: 0;
-//     bottom: 0;
-//     height: 3rem;
-//     border-radius: 0;
-//     opacity: 1 !important;
-//     transition: none !important;
-//   }
-
-//   /* スクロールバーのトラック背景 */
-//   .contact__privacy-box .simplebar-track.simplebar-vertical {
-//     right: 10px;
-//     background-color: rgba(227, 227, 227, 1);
-//     width: 10px;
-//   }

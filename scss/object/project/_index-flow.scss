@@ -5,7 +5,7 @@
     padding: 3.4rem 0 10.5rem;
 
     @include sp {
-        padding: 3.6rem 0 2rem;
+        padding: 4.6rem 0 5rem;
     }
 }
 
@@ -37,8 +37,9 @@
     }
 
     @include sp {
-        margin-left: 1.4rem;
+        margin-left: 0.8rem;
         display: flex;
+        margin-bottom: 4rem;
     }
 }
 
@@ -64,6 +65,10 @@
         left: 50%;
         transform: translateX(-50%);
     }
+
+    @include sp {
+        
+}
 }
 
 .flow__container {
@@ -71,8 +76,10 @@
 
     @include sp {
         flex-direction: column;
+        margin-left: 2rem;
     }
-}
+    }
+
 
 .flow__step .dot-flow.last-dot::after {
     height: 6rem;
@@ -105,6 +112,7 @@
 
     @include sp {
         margin-left: 0;
+        width: 100%;
     }
 }
 
@@ -113,5 +121,8 @@
 
     @include sp {
         margin-left: 0;
+        margin-top: 0.6rem;
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
     }
 }

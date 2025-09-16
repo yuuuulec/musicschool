@@ -28,10 +28,18 @@
 
     @include sp {
         top: calc(208 / 375 * 100vw);
-        left: calc(20 / 375 * 100vw);
+        left: calc(38 / 375 * 100vw);
         font-size: calc(30 / 375 * 100vw);
         line-height: calc(50 / 30);
         text-align: center;
+    }
+}
+
+.pc-space {
+    display: inline-block;
+    
+    @include sp {
+        display: none;
     }
 }
 
@@ -40,6 +48,10 @@
    =========================== */
 .message {
     padding: 6.6rem 0 5.5rem;
+
+    @include sp {
+        padding: 5rem 0 4rem;
+    }
 }
 
 .message__title {
@@ -64,6 +76,7 @@
     @include sp {
         font-size: 1.8rem;
         text-align: left;
+        margin-top: 0.6rem;
     }
 }
 
@@ -74,16 +87,25 @@
 
     img {
         display: inline-block;
-    width: calc(858 / 1080 * 100vw);
-    max-width: 85.8rem;
-}
+        width: calc(858 / 1080 * 100vw);
+        max-width: 85.8rem;
+
+        @include sp {
+            width: calc(335 / 375 * 100vw);
+            max-width: 40rem;
+        }
+    }
+
+    @include sp {
+        margin-top: 2.1rem;
+    }
 }
 
 .message__list {
     margin-top: 1.5rem;
-    
+
     @include sp {
-        margin-top: 1.1rem;
+        margin-top: 2.5rem;
     }
 }
 
@@ -92,8 +114,7 @@
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    row-gap: 1.7rem;
-    margin-top: 1.7rem
+    margin-top: 1.7rem;
 }
 
 .message__item-title {
@@ -170,7 +191,7 @@ promotion
     color: $white;
 
     @include sp {
-        padding: 4.9rem 0 4rem;
+        padding: 4.8rem 0 4rem;
     }
 }
 
@@ -182,7 +203,7 @@ promotion
 
     @include sp {
         font-size: 2.5rem;
-        line-height: calc(50 / 25);
+        line-height: calc(40 / 25);
     }
 }
 
