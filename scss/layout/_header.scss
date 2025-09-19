@@ -26,22 +26,49 @@
 .header__nav {
    display: flex;
    align-items: center;
-   // justify-content: center;
    column-gap: 2.3rem;
    font-size: 1.7rem;
    font-weight: 700;
+
+   @include sp {
+      position: fixed;
+      top: 5rem;
+      right: -100%;
+      width: 30%;
+      background-color: $white;
+      flex-direction: column;
+      row-gap: 4rem;
+      text-align: center;
+      transition: all 0.8s ease;
+      z-index: 10000;
+
+      &.active {
+         right: 0;
+      }
+   }
 }
 
 .header__nav-list {
    display: flex;
    column-gap: 1.3rem;
    margin-right: 2.3rem;
+
+   @include sp {
+      flex-direction: column;
+      margin-right: 0;
+      width: 100%;
+   }
 }
 
 .header__nav-list a {
    transition: all 0.8s ease;
-   padding: 1rem;
    position: relative;
+   display: block;
+
+   @include sp {
+      padding:1.5rem;
+      width: 100%;
+   }
 
    &::after {
       content: "";
@@ -53,22 +80,32 @@
       bottom: 0;
       left: 0;
       opacity: 0;
-      transform: scaleX(0);   
+      transform: scaleX(0);
       transform-origin: right;
       transition: all 0.8s ease;
-   }
 
-   &:hover {
-      opacity: 0.5;
-      
-      &::after {
-         transform: scaleX(1); 
-         transform-origin: left;  
-         opacity: 1;    
+      @include sp {
+         display: none;
       }
    }
-}
 
+   &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+      opacity: 1;
+   }
+
+      @include sp {
+         &:hover {
+            background-color: $black;
+            color: $white;
+            display: block;
+            width: 100%;
+            opacity: 1;
+         } 
+         }
+      }
+   
 .header__nav-item--contact {
    cursor: pointer;
    color: $white;
@@ -94,8 +131,65 @@
 
 .header__nav-item--contact a {
    transition: none;
-   &:hover {
-     opacity: 1;
-   }
- }
 
+   &:hover {
+      opacity: 1;
+   }
+}
+
+// ハンバーガーメニュー
+.hamburger {
+   cursor: pointer;
+   width: 7.2rem;
+   max-width: 7.2rem;
+   height: 5rem;
+   background-color: $red;
+   position: fixed;
+   top: 0;
+   right: 0;
+   display: none;
+   box-sizing: border-box;
+   z-index: 100001;
+
+   @include sp {
+      display: block;
+   }
+}
+
+.hamburger span {
+   width: 3.2rem;
+   height: 0.4rem;
+   border-radius: 4px;
+   background-color: $white;
+   display: inline-block;
+   position: absolute;
+   left: 2rem;
+   transition: all 0.8s;
+
+   &:nth-of-type(1) {
+      top: 1.1rem;
+   }
+
+   &:nth-of-type(2) {
+      top: 2.3rem;
+   }
+
+   &:nth-of-type(3) {
+      top: 3.5rem;
+   }
+}
+
+// 開いた時のばつ印
+.hamburger.active span:nth-of-type(1) {
+   top: 2.3rem;
+   transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-of-type(2) {
+   opacity: 0;
+}
+
+.hamburger.active span:nth-of-type(3) {
+   top: 2.3rem;
+   transform: rotate(-45deg);
+}

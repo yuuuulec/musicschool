@@ -23,24 +23,25 @@
             </a>
         </h1>
         <div class="header__nav-inner">
-            <nav class="header__nav pc-only">
+            <nav class="header__nav">
                 <ul class="header__nav-list">
                     <li class="header__nav-item"><a href="./plan.html">料金</a></li>
                     <li class="header__nav-item"><a href="./blog_list.html">ブログ</a></li>
                     <li class="header__nav-item"><a href="./result_list.html">卒業実績</a></li>
                 </ul>
             </nav>
-            <div class="c-btn-red header__nav-item--contact pc-only"><a href="./contact_form.html">お問い合わせ</a>
+            <div class="btn-red header__nav-item--contact pc-only"><a href="./contact_form.html">お問い合わせ</a>
             </div>
+        </div>
+        <div class="hamburger sp-only">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </header>
 
     <!-- ハンバーガーメニュー -->
-    <div class="c-hamburger sp-only">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+
 
     <section id="fv" class="fv">
         <div>
@@ -48,7 +49,7 @@
                 <source media="(max-width: 768px)" srcset="./img/plan-sp.jpg">
                 <img src="./img/plan.jpg" alt="plan">
             </picture>
-            <div class="c-fv__overlay--sub"></div>
+            <div class="fv__overlay--sub"></div>
         </div>
         <div class="c-fv__title-wrapper">
             <h2 class="c-fv__title">プラン・料金</h2>
@@ -160,7 +161,7 @@
                         <!-- ビジネスコンサル -->
                         <tr>
                             <th scope="row" class="plan-table__label">ビジネスコンサル</th>
-                            <td class="plan-table__cell"><span class="plan-table__dash" aria-hidden="true">—</span></td>
+                            <td class="plan-table__cell"><span class="plan-table__dash" aria-hidden="true"></span></td>
                             <td class="plan-table__cell">
                                 <span class="u-dot u-dot--red"></span><br><span class="plan-table__note">月２回</span>
                             </td>
@@ -171,9 +172,9 @@
 
                         <!-- コミュニティ参加資格 -->
                         <tr>
-                            <th scope="row" class="plan-table__label">コミュニティ参加資格</th>
-                            <td class="plan-table__cell"><span class="plan-table__dash" aria-hidden="true">—</span></td>
-                            <td class="plan-table__cell"><span class="plan-table__dash" aria-hidden="true">—</span></td>
+                            <th scope="row" class="plan-table__label">コミュニティ<br class="sp-only">参加資格</th>
+                            <td class="plan-table__cell"><span class="plan-table__dash" aria-hidden="true"></span></td>
+                            <td class="plan-table__cell"><span class="plan-table__dash" aria-hidden="true"></span></td>
                             <td class="plan-table__cell"><span class="u-dot"></span><br></td>
                         </tr>
                     </tbody>

@@ -2,10 +2,10 @@
 @use "../component/component" as *;
 
 .price {
-    padding: 6.6rem 0 5.7rem;
+    padding: 7rem 0 5.7rem;
 
     @include sp {
-        padding: 4.6rem 0 3.8rem;
+        padding: 5.4rem 0 3.8rem;
     }
 }
 
@@ -13,10 +13,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 4.5rem;
     font-size: 2rem;
     color: $white;
-    gap: 7rem;
+    gap: 3rem;
 
     @include sp {
         flex-direction: column;
@@ -25,8 +25,10 @@
 }
 
 .price__title {
-    padding: 1.4rem 6.5rem 1.3rem;
+    padding: 2rem 6.5rem 1.3rem;
     background-color: $red;
+    height: 6rem;
+    width: 21rem;
 
     @include sp {
         padding: 1.5rem 6.5rem;
@@ -35,7 +37,10 @@
 }
 
 .price__title--enrollment {
-    padding: 1.4rem 3rem 1.3rem 3.1rem;
+    padding: 2rem 3rem 1.3rem 3.1rem;
+    height: 6rem;
+    align-items: center;
+    width: 21rem;
 
     @include sp {
         padding: 1.5rem 3rem;
@@ -96,7 +101,7 @@
 // Plan Table (SCSS)
 // ==============================
 .plan {
-    padding: 0 0 22rem;
+    padding: 0 0 5.5rem;
 }
 
 .plan__scroll {
@@ -113,15 +118,21 @@
     font-size: 1.7rem;
     line-height: calc(25 / 17);
     text-align: left;
+
+    @include sp {
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+        margin-top: 2rem;
+    }
 }
 
 .plan-table {
     width: 100%;
     min-width: 0;
-    table-layout: auto;       
+    table-layout: fixed;
     border-collapse: separate;
     border-spacing: 0;
-    margin-top: 6.1rem;
+    margin-top: 7.5rem;
 
     @include sp {
         margin-top: 3.6rem;
@@ -130,6 +141,9 @@
 
 .plan-table th {
     font-weight: normal;
+    // height: calc(85 / 1080 * 100vw);
+    vertical-align: middle;
+
 }
 
 .plan-table__heading,
@@ -144,20 +158,29 @@
 }
 
 .plan-table__col--feature {
-    width: 28%;
+    width: calc(220 / 1080 * 100vw);
+
+    @include sp {
+        width: calc(169 / 375 * 100vw);
+    }
 }
 
 .plan-table__col--plan {
-    width: calc((72%)/3);
+    width: calc(220 / 1080 * 100vw);
+
+    @include sp {
+       width: calc(166.5 / 375 * 100vw);
+    }
 }
+
 
 .plan-table__heading {
     background: $black;
     color: $white;
     text-align: center;
-    padding: 1.2rem 1rem;
+    padding: 1rem 0 0.5rem;
     position: relative;
-    letter-spacing: .06em;
+    height: calc(50 / 1080 * 100vw);
 }
 
 .plan-table__heading--blank {
@@ -172,13 +195,13 @@
 
 .plan-table__badge {
     position: absolute;
-    top: -2rem;
+    top: -3rem;
     left: 50%;
     transform: translateX(-50%);
     display: inline-block;
     font-size: 1.7rem;
     line-height: 1;
-    padding: 1.1rem 0 0;
+    padding: 1.8rem 0 0.5rem;
     background-color: $red;
     width: 100%;
 }
@@ -202,15 +225,23 @@
 
 .plan-table__label {
     text-align: left;
-    padding: 3.2rem 2rem 2.8rem;
-    white-space: nowrap;
+    padding: 3.2rem 2rem 2.3rem;
+
+    @include sp {
+        // padding: 3rem 1rem;
+        padding: 0 1rem;
+        height: 8.5rem;
+    }
 }
 
 .plan-table__price {
     text-align: center;
-    font-size: clamp(18px, 2.1vw, 24px);
-    padding: 3.2rem 2rem 2.8rem;
+    padding: 3rem 2rem 2.2rem;
     border-bottom: 1px solid $gray;
+
+    @include sp {
+        padding: 3rem 2rem 2.2rem;
+    }
 }
 
 .plan-table__price span {
@@ -218,8 +249,8 @@
     line-height: calc(33 / 22);
 
     @include sp {
-        font-size: 1.6rem;
-        line-height: calc(25 / 16);
+        font-size: 2.2rem;
+        line-height: calc(33 / 22);
     }
 }
 
@@ -230,8 +261,6 @@
 
 .plan-table__heading--tall {
     padding: 0;
-
-
 }
 
 tbody tr:nth-child(odd) {
@@ -254,10 +283,13 @@ tbody tr__note {
     white-space: nowrap;
 }
 
-tbody tr__dash {
+.plan-table__dash {
     display: inline-block;
+    width: 3rem;
+    height: 0.1rem;
+    background-color: #707070;
     opacity: .5;
-    color: #707070;
+    vertical-align: middle;
 }
 
 /* ドット（●） */
@@ -277,6 +309,7 @@ tbody tr__dash {
 
 .tab-only {
     display: none;
+
     @media screen and (max-width: 850px) {
         display: block;
     }
@@ -284,13 +317,13 @@ tbody tr__dash {
 
 /* 左上の空セルに線をつける */
 .plan-table__heading--blank {
-  border-bottom: 0.5px solid $black;
+    border-bottom: 0.5px solid $black;
 }
 
 /* 一番下の行に線をつける */
 .plan-table tbody tr:last-child th,
 .plan-table tbody tr:last-child td {
-  border-bottom: 0.5px solid $black;
+    border-bottom: 0.5px solid $black;
 }
 
 /* 罫線 */
@@ -302,7 +335,7 @@ tbody tr__dash {
 
     @include sp {
         font-size: 1.6rem;
-        line-height: calc(30 / 16);
+        line-height: calc(25 / 16);
     }
 }
 
@@ -314,7 +347,7 @@ tbody tr__dash {
 /* SP調整 */
 @include sp {
     .plan {
-        padding: 0;
+        padding-bottom: 3.5rem;
     }
 
     .plan__scroll {
@@ -324,7 +357,6 @@ tbody tr__dash {
     }
 
     .plan-table {
-        min-width: 720px;
         margin-bottom: 3.8rem;
     }
 

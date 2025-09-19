@@ -1,18 +1,35 @@
+//ハンバーガーメニュー
+$(function () {
+    $('.hamburger').click(function () {
+        $(this).toggleClass('active');
+        $('.header__nav').toggleClass('active');
+    });
+
+    $('.header__nav a').click(function () {
+        $('.hamburger').removeClass('active');
+        $('.header__nav').removeClass('active');
+    });
+    $(".header__nav a").click(function () {
+        $(".hamburger").removeClass("active");
+        $(".header__nav").removeClass("active");
+    });
+});
+
 //お問い合わせ　トップに戻るボタン　スクロール
-$(function() {
-    const fv = $('.fv'); 
+$(function () {
+    const fv = $('.fv');
     let fvHeight = fv.outerHeight();
 
-    $(window).on('load resize', function() {
+    $(window).on('load resize', function () {
         fvHeight = fv.outerHeight();
     });
 
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         const scroll = $(window).scrollTop();
 
         if (scroll > fvHeight) {  // FVの下端を超えたらすぐ表示
             $('.c-to-top, .c-contact__btn').fadeIn();
-        } else {                   
+        } else {
             $('.c-to-top, .c-contact__btn').fadeOut();
         }
     });
@@ -21,7 +38,7 @@ $(function() {
     $('.c-to-top, .c-contact__btn').hide();
 
     // トップへスムーズスクロール
-    $('.c-to-top a').on('click', function(e) {
+    $('.c-to-top a').on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({ scrollTop: 0 }, 600);
     });
@@ -63,8 +80,8 @@ $(function () {
 
 //生徒さんたちの声　スライダー
 function getSpaceBetween() {
-    const baseWidth = 1080; 
-    const baseSpace = 35;  
+    const baseWidth = 1080;
+    const baseSpace = 35;
     const currentWidth = window.innerWidth;
     const ratio = currentWidth / baseWidth;
 
