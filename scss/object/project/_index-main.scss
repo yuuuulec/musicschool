@@ -129,6 +129,11 @@
         font-size: 2rem;
         line-height: calc(50 / 20);
     }
+
+    @media screen and (max-width: 360px) {
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+    }
 }
 
 .dot-message {
@@ -179,6 +184,11 @@
     @include sp {
         font-size: 2rem;
         line-height: calc(50 / 20);
+    }
+
+    @media screen and (max-width: 360px) {
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
     }
 }
 

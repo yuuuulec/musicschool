@@ -25,25 +25,25 @@
 }
 
 .price__title {
-    padding: 2rem 6.5rem 1.3rem;
+    padding: 1.8rem 6.5rem 1.3rem;
     background-color: $red;
     height: 6rem;
     width: 21rem;
 
     @include sp {
-        padding: 1.5rem 6.5rem;
+        padding: 1.8rem 6.5rem;
         width: 21rem;
     }
 }
 
 .price__title--enrollment {
-    padding: 2rem 3rem 1.3rem 3.1rem;
+    padding: 1.8rem 3rem 1.3rem 3.1rem;
     height: 6rem;
     align-items: center;
     width: 21rem;
 
     @include sp {
-        padding: 1.5rem 3rem;
+        padding: 1.8rem 3rem;
         width: 21rem;
     }
 }
@@ -207,11 +207,14 @@
 }
 
 .plan-table__plan-name {
-    display: block;
+    display: inline-block;
     font-size: 2rem;
     line-height: calc(33 / 20);
+    text-align: center;
+    margin-inline: auto;
 
     @include sp {
+        display: block;
         line-height: calc(25 / 20);
         max-width: 17rem;
     }

@@ -16,6 +16,10 @@
    width: 19.2rem;
    transition: all 0.3s ease;
    margin: 0;
+
+   @include sp {
+      width: 20.8rem;
+   }
 }
 
 .header__nav-inner {
@@ -50,7 +54,8 @@
 
 .header__nav-list {
    display: flex;
-   column-gap: 1.3rem;
+   align-items: center;
+   column-gap: 1.2rem;
    margin-right: 2.3rem;
 
    @include sp {
@@ -64,6 +69,7 @@
    transition: all 0.8s ease;
    position: relative;
    display: block;
+   padding: 1rem;
 
    @include sp {
       padding:1.5rem;
@@ -146,10 +152,11 @@
    background-color: $red;
    position: fixed;
    top: 0;
-   right: 0;
+   right: -2rem;
    display: none;
    box-sizing: border-box;
    z-index: 100001;
+   position: relative;
 
    @include sp {
       display: block;
@@ -163,7 +170,8 @@
    background-color: $white;
    display: inline-block;
    position: absolute;
-   left: 2rem;
+   left: 50%;
+   transform: translateX(-50%);
    transition: all 0.8s;
 
    &:nth-of-type(1) {
