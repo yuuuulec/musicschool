@@ -2,12 +2,16 @@
 @use "../component/component" as *;
 
 .contact-form {
-    padding: 6.8rem 0 10rem;
+    padding-top: 6.5rem;
+
+    @include sp {
+        padding: 4.5rem 0 1.5rem;
+    }
 }
 
 .contact-form__text {
     line-height: calc(30 / 18);
-    margin-bottom: 6.5rem;
+    margin-bottom: 5.9rem;
     text-align: center;
 
     @include sp {
@@ -16,16 +20,36 @@
         line-height: calc(30 / 16);
         margin-bottom: 3.2rem;
     }
-
 }
 
 .form-item {
-    display: flex;
-    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 14rem 1fr;
+    gap: 3rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
 
     @include sp {
-        flex-direction: column;
-        margin-bottom: 1.4rem;
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &:nth-child(5),
+    &:nth-child(6) {
+        align-items: flex-start;
+    }
+}
+
+.form-item.form-item--tel {
+    margin-bottom: 2rem;
+
+    @include sp {
+        margin-bottom: 1rem;
     }
 }
 
@@ -39,14 +63,16 @@
     font-size: 1.5rem;
     line-height: calc(33 / 15);
     border: 0.5px solid $black;
+
+    @include sp {
+        padding: 0.2rem 2rem;
+    }
 }
 
 label {
     display: inline-block;
-    width: 18rem;
     font-size: 2rem;
     line-height: calc(30 / 20);
-    margin-right: 3rem;
     text-align: left;
 }
 
@@ -54,32 +80,35 @@ label {
 
     span {
         display: block;
+
+        @include sp {
+            display: inline;
+        }
     }
 }
 
 .form-item--checkbox {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 0.8rem;
     font-size: 2rem;
     line-height: calc(30 / 20);
 }
 
 .contact-form__form-item--label {
-    width: 18rem;
 
     @include sp {
-        margin-bottom: 0.8rem;
+        font-size: 1.6rem;
+        line-height: calc(33 / 16);
     }
 }
 
 .checkbox-group {
-    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
     input[type="checkbox"] {
         appearance: none;
         cursor: pointer;
         margin-right: 2rem;
-        margin-bottom: 0.9rem;
         border: 0.5px solid $black;
         width: 2rem;
         height: 2rem;
@@ -88,7 +117,6 @@ label {
 
         @include sp {
             margin-right: 1rem;
-            margin-bottom: 1rem;
         }
 
         &::after {
@@ -117,10 +145,15 @@ label {
 
     label {
         cursor: pointer;
-        display: flex;
         width: fit-content;
-        margin-right: 0;
+        display: flex;
+        align-items: center;
         line-height: 1;
+        font-size: 1.8rem;
+
+        @include sp {
+            font-size: 1.6rem;
+        }
     }
 }
 
@@ -133,6 +166,11 @@ label {
     word-wrap: break-word;
     overflow-wrap: break-word;
     padding: 1rem 2rem;
+
+    @include sp {
+        height: 19rem;
+        min-height: 19rem;
+    }
 }
 
 .contact-form__form-item--submit {
@@ -142,16 +180,21 @@ label {
     color: $white;
     font-weight: 700;
     line-height: calc(33 / 25);
+    letter-spacing: 0.6rem;
     text-align: center;
     margin: 0 auto;
+    margin-top: 5rem;
     cursor: pointer;
-    padding: 1rem 9.5rem 0.7rem 9.7rem;
+    padding: 0.9rem 0 0.7rem 0;
     border: 1px solid $red;
+    width: 100%;
+    max-width: 25rem;
 
     @include sp {
         font-size: 2rem;
         line-height: calc(26 / 20);
-        padding: 1.2rem 14.4rem;
+        padding: 1.2rem 0;
+        max-width: 33.5rem;
     }
 
     &:hover {
@@ -161,10 +204,16 @@ label {
 }
 
 .form-item:last-of-type {
-    margin-top: 2.7rem;
-    margin-bottom: 5rem;
+    margin-top: 3.2rem;
 
     @include sp {
-        margin-top: 0.6rem;
+        margin-top: 0;
+        gap: 0;
+    }
+}
+
+.contact-form {
+    .c-to-top {
+
     }
 }

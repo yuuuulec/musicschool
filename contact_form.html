@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./s css/foundation/_normalize.scss">
+    <link rel="stylesheet" href="./scss/foundation/_normalize.scss">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/contact_form.css">
     <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
@@ -78,7 +78,7 @@
                 <form action="#" method="post">
                     <div class="form-item">
                         <label class="contact-form__form-item--label" for="company">会社名</label>
-                        <input type="text" id="company" placeholder="きたむらミュージックスクール">
+                        <input type="text" id="company" name="company" placeholder="きたむらミュージックスクール">
                     </div>
 
                     <div class="form-item">
@@ -91,15 +91,15 @@
                         <input type="email" id="email" placeholder="info@kitamura.musicschool.jp">
                     </div>
 
-                    <div class="form-item">
+                    <div class="form-item form-item--tel">
                         <label class="contact-form__form-item--label" for="tel">電話番号</label>
                         <input type="tel" id="tel" placeholder="090-1234-5678">
                     </div>
 
                     <div class="form-item form-item--checkbox">
-                        <p class="contact-form__form-item--label">目　的 <span>(複数選択可)</span></p>
+                        <p class="contact-form__form-item--label">目　的 <span> （複数選択可）</span></p>
                         <div class="checkbox-group">
-                            <label><input type="checkbox">プランについてのお問い合わせ</label>
+                            <label><input type="checkbox" name="purpose[]" value="plan">プランについてのお問い合わせ</label>
                             <label><input type="checkbox">ヒアリングのご予約</label>
                             <label><input type="checkbox">資料請求</label>
                             <label><input type="checkbox">その他</label>
@@ -119,11 +119,14 @@
         </section>
     </main>
 
-    <div class="c-to-top">
-        <a href="#">
-            <img src="./img/to-top.svg" alt="to-top">
-        </a>
+    <div class="c-floating-btns">
+        <div class="c-to-top">
+            <a href="#">
+                <img src="./img/to-top.svg" alt="to-top">
+            </a>
+        </div>
     </div>
+
     <footer id="footer" class="footer">
         <div class="inner">
             <div class="footer__nav">
@@ -161,6 +164,4 @@
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="./js/main.js"></script>
 </html>

@@ -197,6 +197,10 @@ text-align: center;
     padding: 1rem;
     line-height: calc(33 / 16);
     background-color: rgba(232, 232, 232, 1);
+
+    @include sp {
+    padding: 0;
+}
 }
 
 .c-breadcrumb__list {
