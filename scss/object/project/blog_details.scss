@@ -169,6 +169,10 @@
     width: 100%;
 }
 
+.sidebar__newsletter--inner {
+    position: relative;
+}
+
 .sidebar__newsletter--inner,
 .sidebar__search--inner {
     padding: 1.5rem;
@@ -230,17 +234,20 @@
     gap: calc(15 / 1080 * 100vw);
 
     &:last-of-type {
-        margin-bottom: 3rem;
+        margin-bottom: 2.6rem;
+    }
+
+    img {
+        width: 9.5rem;
+        aspect-ratio: 95 / 75;
     }
 }
 
 .sidebar__category-item {
     font-size: 1.7rem;
     line-height: calc(28 / 17);
-    margin-bottom: 1.5rem;
     border-bottom: 0.05rem solid $black;
-    padding-bottom: 0.7rem;
-    padding-top: 1.2rem;
+    padding: 1.2rem 0 0.7rem;  
 }
 
 

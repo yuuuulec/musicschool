@@ -194,16 +194,17 @@ text-align: center;
 //パンくずリスト
 .c-breadcrumb {
     font-size: 1.6rem;
+    padding: 1rem;
     line-height: calc(33 / 16);
     background-color: rgba(232, 232, 232, 1);
 }
 
 .c-breadcrumb__list {
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     align-items: center;
-    gap: 5.3rem;
-    height: 5rem;
+    gap: 1.3rem;
+    flex-wrap: wrap;
 
     @include sp {
     height: 3.6rem;
@@ -211,18 +212,12 @@ text-align: center;
 }
 
 .c-breadcrumb__item {
-    position: relative;
+    display: flex;
+    align-items: center;
 
-    &::after {
+    & + .c-breadcrumb__item::before {
         content: ">";
-        position: absolute;
-        right: -3rem;
-    }
-
-    &:last-child {
-        &::after {
-            display: none;
-        }
+        margin: 0 1.4rem;
     }
 }
 
@@ -271,6 +266,7 @@ text-align: center;
     display: flex;
     justify-content: space-between;
     margin-top: 5.5rem;
+    gap: 9%;
 }
 
 .c-prev-text {

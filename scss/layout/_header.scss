@@ -59,9 +59,13 @@
    margin-right: 2.3rem;
 
    @include sp {
+      display: block;
+      text-align: left;
       flex-direction: column;
-      margin-right: 0;
       width: 100%;
+      background-color: $red;
+      max-width: 30rem;
+      width: 30rem;
    }
 }
 
@@ -72,9 +76,11 @@
    padding: 1rem;
 
    @include sp {
-      padding:1.5rem;
+      padding:1.5rem 0 1.5rem 2rem;
       width: 100%;
+      color: $white;
    }
+
 
    &::after {
       content: "";
@@ -199,5 +205,6 @@
 
 .hamburger.active span:nth-of-type(3) {
    top: 2.3rem;
+
    transform: rotate(-45deg);
 }
