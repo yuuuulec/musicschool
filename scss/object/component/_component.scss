@@ -275,11 +275,21 @@ text-align: center;
     margin-bottom: 1.6rem;
     padding: 0.4rem 15rem 0.3rem 2rem; //ブログ用
     display: inline-block;
+
+    @include sp {
+        padding: 0.4rem 0 0.3rem 2rem; 
+        width: 15.6rem;
+    }
 }
 
 .c-prev--right {
     text-align: right;
-    padding: 0.4rem 2rem 0.3rem 15rem; //ブログ用
+    padding: 0.4rem 2rem 0.3rem 15rem; 
+
+    @include sp {
+        padding: 0.4rem 2rem 0.3rem 0; 
+        width: 15.6rem;
+    }
 }
 
 .c-prev--inner {

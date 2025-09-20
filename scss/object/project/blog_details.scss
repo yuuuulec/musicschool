@@ -2,7 +2,7 @@
 @use "../component/component" as *;
 
 .blog-details {
-    padding: 7rem 0 4rem;
+    padding: 6.6rem 0 4rem;
     border-bottom: 0.5px solid $black;
     position: relative;
 
@@ -270,6 +270,7 @@
 
 .blog-details__sidebar {
     width: 25rem;
+    margin-top: 6.7rem;
 
     @include sp {
         width: 100%;
