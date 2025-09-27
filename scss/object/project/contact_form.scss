@@ -189,6 +189,7 @@ label {
     border: 1px solid $red;
     width: 100%;
     max-width: 25rem;
+    transition: all 0.8s ease;
 
     @include sp {
         font-size: 2rem;

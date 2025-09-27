@@ -10,8 +10,8 @@
 // 背景が赤いボタン
 .c-btn-red {
     background-color: $red;
+    color: $white;
     border: 1px solid $red;
-
 
     a {
         color: $white;
@@ -29,10 +29,9 @@
     display: block;
     text-align: right; 
     margin-left: auto;   
-    transition: opacity 0.4s ease, visibility 0.4s ease;
     letter-spacing: 0.4rem;
     width: 30rem;
-
+    transition: all 0.8s ease;
 
     &:hover {
         background-color: white;
@@ -51,7 +50,6 @@
         text-align: center;
         margin-inline: auto;
         width: calc(335 / 375 * 100vw);
-
 
         a {
             color: inherit;
@@ -85,11 +83,15 @@
 }
 
 
-.c-contact__btn a {
-    transition: none;
+.c-contact__btn  {
+    transition: all 0.8s ease;
 
     &:hover {
         opacity: 1;
+    }
+
+    a {
+        color: inherit;
     }
 }
 
@@ -100,25 +102,20 @@
     line-height: calc(33 / 25);
     display: inline-block;
     text-align: center;
-    color: $white;
+    padding: 1rem 0;
     display: block;
+    width: 26rem;
     max-width: 26rem;
     margin-inline: auto;
     transition: all 0.8s ease;
 
     a {
         color: inherit;
-        padding: 1rem 5rem;
-
-        @include sp {
-            padding: 1.2rem 10.7rem;
-        }
     }
 
     @include sp {
         font-size: 2rem;
         line-height: calc(26 / 20);
-        // max-width: 33.5rem;
     }
 
     &:hover {

@@ -75,7 +75,7 @@
             </div>
 
             <div class="contact-form__form-wrapper">
-                <form action="#" method="post">
+                <form action="./contact_send.html" method="post">
                     <div class="form-item">
                         <label class="contact-form__form-item--label" for="company">会社名</label>
                         <input type="text" id="company" name="company" placeholder="きたむらミュージックスクール">
@@ -83,37 +83,35 @@
 
                     <div class="form-item">
                         <label class="contact-form__form-item--label" for="name">お名前</label>
-                        <input type="text" id="name" placeholder="北村　翔平">
+                        <input type="text" id="name"  name = "name" placeholder="北村　翔平" >
                     </div>
 
                     <div class="form-item">
                         <label class="contact-form__form-item--label" for="email">メールアドレス</label>
-                        <input type="email" id="email" placeholder="info@kitamura.musicschool.jp">
+                        <input type="email" id="email" name="email" placeholder="info@kitamura.musicschool.jp" >
                     </div>
 
                     <div class="form-item form-item--tel">
                         <label class="contact-form__form-item--label" for="tel">電話番号</label>
-                        <input type="tel" id="tel" placeholder="090-1234-5678">
+                        <input type="tel" id="tel" name="tel" placeholder="090-1234-5678">
                     </div>
 
                     <div class="form-item form-item--checkbox">
                         <p class="contact-form__form-item--label">目　的 <span> （複数選択可）</span></p>
                         <div class="checkbox-group">
-                            <label><input type="checkbox" name="purpose[]" value="plan">プランについてのお問い合わせ</label>
-                            <label><input type="checkbox">ヒアリングのご予約</label>
-                            <label><input type="checkbox">資料請求</label>
-                            <label><input type="checkbox">その他</label>
+                            <label><input type="checkbox" name="purpose[]" value="plan" checked>プランについてのお問い合わせ</label>
+                            <label><input type="checkbox" name="purpose[]" value="hearing">ヒアリングのご予約</label>
+                            <label><input type="checkbox" name="purpose[]" value="material">資料請求</label>
+                            <label><input type="checkbox" name="purpose[]" value="other">その他</label>
                         </div>
                     </div>
 
                     <div class="form-item">
-                        <label class="contact-form__form-item--label">内　容</label>
-                        <textarea placeholder="内容に関する詳細や備考等をご入力ください。"></textarea>
-
+                        <label class="contact-form__form-item--label" >内　容</label>
+                        <textarea id="message" name="message" placeholder="内容に関する詳細や備考等をご入力ください。"></textarea>
                     </div>
 
-                    <button type="submit" class="contact-form__form-item--submit">送信</button>
-
+                        <button type="submit" class="contact-form__form-item--submit">送信</button>
                 </form>
             </div>
         </section>
@@ -164,4 +162,5 @@
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
 </html>
