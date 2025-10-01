@@ -42,18 +42,18 @@ td {
     &:first-child {
         font-weight: 700;
         background-color: #E5E5E5;
-        width: calc(148  / 1080 * 100vw);
+        width: 14.8rem;
 
         @include sp {
-            min-width: calc(120 / 375 * 100vw);
+            min-width: 12rem;
         }
     }
 
     &:last-child {
-        width: calc(260 / 1080 * 100vw);
+        width: 26rem;
 
         @include sp {
-            min-width: calc(215 / 375 * 100vw);
+            min-width: 21.5rem;
         }
     }
 }
@@ -62,7 +62,7 @@ td {
 .result-details__profile {
     display: flex;
     margin-top: 5.5rem;
-    gap: calc(40 / 1080 * 100vw);
+    gap: 4rem;
 
     @include sp {
         display: block;
@@ -91,10 +91,10 @@ td {
 
     .c-prev--inner {
             p {
-                max-width: calc(226 / 1080 * 100vw);
+                max-width: 22.6rem;
 
                 @include sp {
-                    min-width: calc(156 / 375 * 100vw);
+                    min-width: 15.6rem;
                 }
             }
     }

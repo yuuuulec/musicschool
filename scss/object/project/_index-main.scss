@@ -18,18 +18,18 @@
 
 .catchphrase {
     position: absolute;
-    top: calc(185 / 1080 * 100vw);
-    left: calc(300 / 1080 * 100vw);
-    font-size: calc(40 / 1080 * 100vw);
+    top: 18.5rem;
+    left: 30rem;
+    font-size: 4rem;
     font-weight: 700;
     line-height: calc(60 / 40);
     color: $white;
     z-index: 10;
 
     @include sp {
-        top: calc(208 / 375 * 100vw);
-        left: calc(38 / 375 * 100vw);
-        font-size: calc(30 / 375 * 100vw);
+        top: 20.8rem;
+        left: 3.8rem;
+        font-size: 3rem;
         line-height: calc(50 / 30);
         text-align: center;
     }
@@ -87,11 +87,11 @@
 
     img {
         display: inline-block;
-        width: calc(858 / 1080 * 100vw);
+        width: 85.8rem;
         max-width: 85.8rem;
 
         @include sp {
-            width: calc(335 / 375 * 100vw);
+            width: 33.5rem;
             max-width: 40rem;
         }
     }

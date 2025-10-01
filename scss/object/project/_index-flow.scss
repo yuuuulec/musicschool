@@ -29,7 +29,7 @@
 
 .flow__step {
     display: flex;
-    margin-bottom: calc(58 / 1080 * 100vw);
+    margin-bottom: 5.8rem;
     position: relative;
 
     &:last-child {
@@ -59,7 +59,7 @@
         position: absolute;
         display: inline-block;
         width: 0.3rem;
-        height: 15rem;
+        height: 20rem;
         background-color: $red;
         top: 0;
         left: 50%;
@@ -88,7 +88,7 @@
 .flow__step .dot-flow.last-dot::before {
     content: "";
     position: absolute;
-    top: calc(40 / 1080 * 100vw);
+    top: 4rem;
     // bottom: 0;
     // top:0;
     left: 50%;
@@ -109,7 +109,7 @@
     flex-shrink: 0;
     text-align: left;
     max-width: 19.3rem;
-    margin-left: calc(50 / 1080 * 100vw);
+    margin-left: 5rem;
     width: 17em;
 
     @include sp {

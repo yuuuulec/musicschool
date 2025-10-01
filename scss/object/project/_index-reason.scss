@@ -32,7 +32,7 @@
 }
 
 .reason__img {
-    max-width: calc(350 / 1080 * 100vw);
+    max-width: 35rem;
     width: 100%;
 
     @include sp {

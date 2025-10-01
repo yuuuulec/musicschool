@@ -16,7 +16,7 @@
 
     span {
         position: absolute;
-        top: 7rem;
+        top: 6.6rem;
         left: 0;
     }
 }
@@ -105,7 +105,7 @@
     position: relative;
     line-height: calc(30 / 18 );
     margin-top: 1.7rem;
-    max-width: calc(600 / 1080 * 100vw);
+    max-width: 60rem;
 
     @include sp {
         max-width: 100%;
@@ -148,6 +148,12 @@
         left: 0;
     }
 }
+
+.blog__img {
+    position: relative;
+}
+
+
 
 
 
@@ -231,7 +237,7 @@
     margin-top: 1.5rem;
     font-size: 1.7rem;
     line-height: calc(28 / 17);
-    gap: calc(15 / 1080 * 100vw);
+    gap: 1.5rem;
 
     &:last-of-type {
         margin-bottom: 2.6rem;

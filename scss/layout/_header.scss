@@ -79,45 +79,46 @@
 }
 
 .header__nav-item {
-height: 8rem;
-   a {
-     transition: all 0.8s ease;
-   position: relative;
-   display: flex;
-   align-items: center;
-   padding: 0 1rem;
-   height: 100%; 
-   
-   @include sp {
-      padding:1.5rem 0 1.5rem 2rem;
-      width: 100%;
-      color: $white;
-   }
+   height: 8rem;
 
-   &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 0.2rem;
-      background-color: $red;
-      position: absolute;
-      bottom: 2rem;
-      left: 0;
-      opacity: 0;
-      transform: scaleX(0);
-      transform-origin: right;
+   a {
       transition: all 0.8s ease;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      height: 100%;
 
       @include sp {
-         display: none;
+         padding: 1.5rem 0 1.5rem 2rem;
+         width: 100%;
+         color: $white;
       }
-   }
 
-   &:hover::after {
-      transform: scaleX(1);
-      transform-origin: left;
-      opacity: 1;
-   }
+      &::after {
+         content: "";
+         display: block;
+         width: 100%;
+         height: 0.2rem;
+         background-color: $red;
+         position: absolute;
+         bottom: 2rem;
+         left: 0;
+         opacity: 0;
+         transform: scaleX(0);
+         transform-origin: right;
+         transition: all 0.8s ease;
+
+         @include sp {
+            display: none;
+         }
+      }
+
+      &:hover::after {
+         transform: scaleX(1);
+         transform-origin: left;
+         opacity: 1;
+      }
 
       @include sp {
          &:hover {
@@ -126,11 +127,11 @@ height: 8rem;
             display: block;
             width: 100%;
             opacity: 1;
-         } 
          }
       }
    }
-   
+}
+
 .header__nav-item--contact {
    cursor: pointer;
    color: $white;

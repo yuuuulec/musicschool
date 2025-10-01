@@ -49,7 +49,7 @@
     @include sp {
         text-align: center;
         margin-inline: auto;
-        width: calc(335 / 375 * 100vw);
+        width: 33.5rem;
 
         a {
             color: inherit;
@@ -62,7 +62,7 @@
 // トップに戻るボタン
 .c-to-top {
     margin-bottom: 3.1rem;
-    padding-right: calc(116 / 1080 * 100vw);
+    padding-right: 11.6rem;
     text-align: right;
     transition: opacity 0.4s ease, visibility 0.4s ease;
     z-index: 10001;
@@ -179,19 +179,19 @@ text-align: center;
     text-align: center;
     color: $white;
     position: absolute;
-    top: calc(74 / 1080 * 100vw);
+    top: 7.4rem;
     left: 50%;
     transform: translateX(-50%);
 
     @include sp {
-        top: calc(124 / 375 * 100vw);
+        top: 12.4rem;
     }
 }
 
 //パンくずリスト
 .c-breadcrumb {
     font-size: 1.6rem;
-    padding: 1rem;
+    padding: 0.8rem;
     line-height: calc(33 / 16);
     background-color: rgba(232, 232, 232, 1);
 
@@ -204,12 +204,9 @@ text-align: center;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 1.3rem;
+    row-gap: 0;
+    column-gap: 0.6rem;
     flex-wrap: wrap;
-
-    @include sp {
-    height: 3.6rem;
-    }
 }
 
 .c-breadcrumb__item {
@@ -218,7 +215,7 @@ text-align: center;
 
     & + .c-breadcrumb__item::before {
         content: ">";
-        margin: 0 1.4rem;
+        margin: 0 1.9rem 0 1.4rem;
     }
 }
 
@@ -230,9 +227,9 @@ text-align: center;
 }
 
 //ブログ　写真の中の赤いラベル
-.c-blog__item {
-    position: relative;
-}
+// .c-blog__item {
+//     position: relative;
+// }
 
 .c-blog__label {
     font-size: 1.5rem;
@@ -298,11 +295,11 @@ text-align: center;
     font-size: 1.6rem;
     line-height: calc(25 / 16);
     font-weight: 700;
-    gap: calc(16 / 1080 * 100vw); //ブログ用 
+    gap: 1.6rem; //ブログ用 
     
 
     p {
-        max-width: calc(147 / 1080 * 100vw); //ブログ用
+        max-width: 14.7rem; //ブログ用
 
         @include sp {
             max-width: 100%;
@@ -334,9 +331,9 @@ text-align: center;
 .c-blog__item {
     display: flex;
 
-    img {
-        max-width: 20rem;
-    }
+    // img {
+    //     max-width: 20rem;
+    // }
 }
 
 .c-blog__list--related {
@@ -369,7 +366,7 @@ text-align: center;
 //ブログ一覧　search01共通
 
 .c-blog--sub {
-    padding: 6.7rem 0 4.5rem;
+    padding: 6.6rem 0 4.5rem;
 
     @include sp {
         padding: 4.8rem 0;
@@ -389,16 +386,6 @@ text-align: center;
     max-width: 100%;
     margin-bottom: 7rem;
 
-    img {
-        width: calc(260 / 1080 * 100vw);
-        max-width: 26rem;
-
-        @include sp {
-            width: 100%;
-            max-width: none;
-        }
-    }
-
     @include sp {
         margin-bottom: 3.8rem;
 
@@ -409,17 +396,22 @@ text-align: center;
 
     a {
         display: flex;
-        column-gap: calc(50 / 1080 * 100vw);
+        align-items: center;
+        gap: 5rem;
         transition: all 0.3s ease;
 
         @include sp {
             flex-direction: column;
         }
     }
+}
+
+    .c-blog__img-wrapper {
+        position: relative;
+    }
 
     .c-blog__text-wrapper {
-        // width: calc(570 / 1080 * 100vw);
-        width: 64%;
+        width: 64.7%;
 
         @include sp {
             width: 100%;
@@ -432,7 +424,7 @@ text-align: center;
         margin-top: 0;
 
         @include sp {
-            margin-top: 3rem;
+            margin-top: 3.1rem;
             line-height: calc(30 / 20);
         }
     }
@@ -449,7 +441,7 @@ text-align: center;
 
         }
     }
-}
+
 
 .c-blog__text {
     margin-top: 1rem;
@@ -482,7 +474,7 @@ text-align: center;
     line-height: calc(30 / 18);
     justify-content: center;
     align-items: center;
-    width: calc(50 / 1080 * 100vw);
+    width: 5rem;
     padding: 1.5rem 0 2.1rem;
     height: 5rem;
     cursor: pointer;

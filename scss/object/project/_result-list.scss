@@ -8,7 +8,7 @@
 .result__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: calc(106 / 1080 * 100vw);
+    gap: 10.6rem;
     row-gap: 6rem;
     margin-top: 4rem;
 }

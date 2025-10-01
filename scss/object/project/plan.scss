@@ -141,7 +141,6 @@
 
 .plan-table th {
     font-weight: normal;
-    // height: calc(85 / 1080 * 100vw);
     vertical-align: middle;
 
 }
@@ -158,18 +157,18 @@
 }
 
 .plan-table__col--feature {
-    width: calc(220 / 1080 * 100vw);
+    width: 22rem;
 
     @include sp {
-        width: calc(169 / 375 * 100vw);
+        width: 16.9rem;
     }
 }
 
 .plan-table__col--plan {
-    width: calc(220 / 1080 * 100vw);
+    width: 22rem;
 
     @include sp {
-       width: calc(166.5 / 375 * 100vw);
+       width: 16.65rem;
     }
 }
 
@@ -180,7 +179,7 @@
     text-align: center;
     padding: 1rem 0 0.5rem;
     position: relative;
-    height: calc(50 / 1080 * 100vw);
+    height: 5rem;
 }
 
 .plan-table__heading--blank {
