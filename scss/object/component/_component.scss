@@ -64,7 +64,6 @@
     margin-bottom: 3.1rem;
     padding-right: 11.6rem;
     text-align: right;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
     z-index: 10001;
 
     @include sp {
@@ -79,6 +78,11 @@
     a {
         display: inline-block;
         clip-path: circle(50%);
+        transition: opacity 0.8s ease;
+
+        &:hover {
+            opacity: 0.5;
+        }
     }
 }
 
@@ -354,7 +358,6 @@ text-align: center;
 }
 
 .c-blog__item--related {
-
     margin-bottom: 3rem;
 
     a {

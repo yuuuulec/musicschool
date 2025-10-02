@@ -47,7 +47,6 @@
     justify-content: center;
 
     img {
-        display: block;
         width: 3.2rem;
     }
 
@@ -82,5 +81,13 @@
     @include sp {
         margin-top: 1.6rem;
         gap: 1.2rem;
+    }
+
+    a {
+        transition: all 0.8s ease;
+
+        &:hover {
+            opacity: 0.5;
+        }
     }
 }

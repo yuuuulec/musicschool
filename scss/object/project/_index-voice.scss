@@ -16,6 +16,7 @@
     position: relative;
 }
 
+
 .voice__inner {
     position: relative;
     margin-top: 3.6rem;
@@ -29,11 +30,9 @@
 .voice__item {
     flex-shrink: 0;
     color: $white;
-    width: calc(270 / 1080 * 100vw);
-}
-
-.voice__img {
-    position: relative;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .voice__title {
@@ -57,12 +56,14 @@
 .voice__prev,
 .voice__next {
     position: absolute;
-    top: 37%;
+    bottom: 30rem;
     border: none;
     background: none;
     padding: 0;
     cursor: pointer;
     z-index: 10;
+    display: block;
+    width: 2.7rem;
 }
 
 @media screen and (max-width: 1079px) {
@@ -90,8 +91,9 @@
     }
 }
 
-.voice__prev img,
-.voice__next img {
-    display: block;
-    width: 2.7rem;
-}
+.swiper-slide {
+    width: auto;    
+    max-width: 100%; 
+    box-sizing: border-box;
+  }
+  
