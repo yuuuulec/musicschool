@@ -7,9 +7,20 @@
    height: 8rem;
    position: fixed;
    background-color: $white;
+   transition: background-color 0.8s ease;
+   padding: 0 10rem;
+   z-index: 10000;
+   width: 100%;
+   max-width: 920px;
+   margin: 0 auto;
+
+   &.header-scroll {
+      background-color: $white;
+   }
 
    @include sp {
       height: 5rem;
+      padding-left: 2rem;
    }
 }
 
@@ -174,7 +185,7 @@
    background-color: $red;
    position: fixed;
    top: 0;
-   right: -2rem;
+   right: 0;
    display: none;
    box-sizing: border-box;
    z-index: 100001;

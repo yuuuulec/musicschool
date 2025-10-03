@@ -15,6 +15,29 @@ $(function () {
     });
 });
 
+//ヘッダー　スクロール
+$(function () {
+    const header = $('#header');
+    const feature = $('.message');
+
+    function checkScroll() {
+        const scrollTop = $(window).scrollTop();
+        const target = feature.offset().top;
+
+        let offset = 0;
+
+        if (scrollTop >= target - offset) {
+            header.addClass('header-scroll');
+        } else {
+            header.removeClass('header-scroll');
+        }
+    }
+
+    $(window).on('scroll', checkScroll);
+    $(window).on('resize', checkScroll);
+    checkScroll();
+});
+
 //お問い合わせ　トップに戻るボタン　スクロール
 $(function () {
     const fv = $('.fv');
