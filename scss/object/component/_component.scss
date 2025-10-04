@@ -61,7 +61,7 @@
 
 // トップに戻るボタン
 .c-to-top {
-    margin-bottom: 3.1rem;
+    margin-bottom: 2.1rem;
     padding-right: 11.6rem;
     text-align: right;
     z-index: 10001;
@@ -85,7 +85,6 @@
         }
     }
 }
-
 
 .c-contact__btn  {
     transition: all 0.8s ease;
@@ -183,7 +182,7 @@ text-align: center;
     text-align: center;
     color: $white;
     position: absolute;
-    top: 7.4rem;
+    top: 15.4rem;
     left: 50%;
     transform: translateX(-50%);
 

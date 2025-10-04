@@ -5,7 +5,7 @@
     padding: 0 0 6.4rem;
 
     @include sp {
-        padding-bottom: 4.5rem;
+        padding-bottom: 3.5rem;
     }
 }
 
@@ -65,7 +65,7 @@
         content: "";
         position: absolute;
         top: 50%;
-        right: 7rem;
+        right: 5rem;
         width: 0.8rem;
         height: 0.8rem;
         border-right: 0.1rem solid #000;
@@ -134,12 +134,12 @@
     position: relative;
     display: flex;
     color: $red;
-    padding: 2rem 0 1.2rem 2rem;
+    padding: 1.7rem 0 1.2rem 2rem;
     background-color: rgba(203, 0, 0, 0.098);
     width: 100%;
 
     @include sp {
         align-items: center;
-        padding: 2rem 0 .2rem 0;
+        padding: 1.7rem 0;
     }
 }

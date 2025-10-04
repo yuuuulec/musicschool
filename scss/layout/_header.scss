@@ -1,18 +1,12 @@
 @use "../foundation/all" as *;
 
 .header {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
    height: 8rem;
    position: fixed;
    background-color: $white;
    transition: background-color 0.8s ease;
-   padding: 0 10rem;
    z-index: 10000;
    width: 100%;
-   max-width: 920px;
-   margin: 0 auto;
 
    &.header-scroll {
       background-color: $white;
@@ -20,7 +14,17 @@
 
    @include sp {
       height: 5rem;
-      padding-left: 2rem;
+   }
+}
+.header__inner {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   justify-content: space-between;
+   height: 100%;
+
+   @include sp {
+      height: 5rem;
    }
 }
 
@@ -33,6 +37,7 @@
 
    @include sp {
       width: 20.8rem;
+      height: 5rem;
    }
 
    a {
@@ -88,11 +93,12 @@
       background-color: $red;
       max-width: 30rem;
       width: 30rem;
+      height: 17.4rem;
+      background-color: $red;
    }
 }
 
 .header__nav-item {
-   height: 8rem;
 
    a {
       transition: all 0.8s ease;
@@ -103,7 +109,8 @@
       height: 100%;
 
       @include sp {
-         padding: 1.5rem 0 1.5rem 2rem;
+         font-size: 1.8rem;
+         height: 5.8rem;
          width: 100%;
          color: $white;
       }
@@ -118,8 +125,8 @@
          bottom: 2rem;
          left: 0;
          opacity: 0;
-         transform: scaleX(0);
-         transform-origin: right;
+         // transform: scaleX(0);
+         // transform-origin: right;
          transition: all 0.8s ease;
 
          @include sp {
@@ -128,17 +135,14 @@
       }
 
       &:hover::after {
-         transform: scaleX(1);
-         transform-origin: left;
+         // transform: scaleX(1);
+         // transform-origin: left;
          opacity: 1;
       }
 
       @include sp {
          &:hover {
             background-color: $black;
-            color: $white;
-            display: block;
-            width: 100%;
             opacity: 1;
          }
       }
@@ -185,7 +189,7 @@
    background-color: $red;
    position: fixed;
    top: 0;
-   right: 0;
+   right: -2rem;
    display: none;
    box-sizing: border-box;
    z-index: 100001;

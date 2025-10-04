@@ -3,7 +3,7 @@
 
 
 .blog {
-    padding-bottom: 3.6rem;
+    padding-bottom: 4.6rem;
 
     @include sp {
         padding-bottom: 4rem;
@@ -11,7 +11,7 @@
 }
 
 .blog__list {
-    margin-top: 3.8rem;
+    margin-top: 3.6rem;
     display: flex;
     justify-content: space-between;
     gap: 5rem;

@@ -41,16 +41,17 @@ $(function () {
 //お問い合わせ　トップに戻るボタン　スクロール
 $(function () {
     const fv = $('.fv');
-    let fvHeight = fv.outerHeight();
-
+    let fvHeight = fv.length ? fv.outerHeight() : 0;
+    const showScroll = fv.length ? fvHeight :  1000; 
+    
     $(window).on('load resize', function () {
-        fvHeight = fv.outerHeight();
+        fvHeight = fv.length ? fv.outerHeight() : 0;
     });
 
     $(window).on('scroll', function () {
         const scroll = $(window).scrollTop();
 
-        if (scroll > fvHeight) {  // FVの下端を超えたらすぐ表示
+        if (scroll > showScroll) {  // showScrollを使う
             $('.c-to-top, .c-contact__btn').fadeIn();
         } else {
             $('.c-to-top, .c-contact__btn').fadeOut();
@@ -58,7 +59,11 @@ $(function () {
     });
 
     // 初期非表示
-    $('.c-to-top, .c-contact__btn').hide();
+    if(fv.length){
+        $('.c-to-top, .c-contact__btn').hide();  // FVあり → 初期非表示
+    } else {
+        $('.c-to-top, .c-contact__btn').show();  // FVなし → 初期表示
+    }
 
     // トップへスムーズスクロール
     $('.c-to-top a').on('click', function (e) {
@@ -66,6 +71,7 @@ $(function () {
         $('html, body').animate({ scrollTop: 0 }, 600);
     });
 });
+
 
 
 

@@ -8,7 +8,7 @@
     padding-top: 8rem;
 
     @include sp {
-        padding-top: 0;
+        padding-top: 5rem;
     }
 }
 
@@ -23,17 +23,18 @@
 
 .catchphrase {
     position: absolute;
-    top: 26.5rem;
-    left: 30rem;
+    top: calc(270 / 1080 * 100vw);
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 4rem;
     font-weight: 700;
     line-height: calc(60 / 40);
     color: $white;
     z-index: 10;
+    white-space: nowrap;
 
     @include sp {
-        top: 20.8rem;
-        left: 3.8rem;
+        top: calc(260 / 375 * 100vw);
         font-size: 3rem;
         line-height: calc(50 / 30);
         text-align: center;
@@ -52,10 +53,10 @@
    fv-message
    =========================== */
 .message {
-    padding: 6.6rem 0 5.5rem;
+    padding: 6.3rem 0 5.5rem;
 
     @include sp {
-        padding: 5rem 0 4rem;
+        padding: 5rem 0 3.5rem;
     }
 }
 
@@ -116,7 +117,7 @@
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    margin-top: 1.7rem;
+    margin-top: 2rem;
 }
 
 .message__item-title {
@@ -152,13 +153,18 @@
         position: absolute;
         display: inline-block;
         width: 0.3rem;
-        height: 6.7rem;
+        height: 7rem;
         background-color: $red;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
     }
-}
+    }
+
+    .message__item:first-child .dot-message::after {
+        height: 6rem; 
+    }
+
 
 .dot-top {
     position: relative;
@@ -168,8 +174,8 @@
         position: absolute;
         bottom: 1.8rem;
         left: 50%;
-        width: 4rem;
-        height: 5rem;
+        width: 4.2rem;
+        height: 4.4rem;
         background-image: url(../../../img/arrow.svg);
         background-repeat: no-repeat;
         background-size: contain;
