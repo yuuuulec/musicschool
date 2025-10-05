@@ -316,6 +316,7 @@
     font-size: 1.6rem;
     line-height: calc(25 / 16);
     font-weight: 700;
+    margin: 0;
     gap: 1.6rem; //ブログ用 
 
 
@@ -370,6 +371,10 @@
     a {
         display: flex;
         gap: 3rem;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
     }
 }
 
@@ -432,6 +437,14 @@
     @include sp {
         width: 100%;
     }
+
+    time {
+        display: block;
+        margin-top: 1.5rem;
+        font-size: 1.7rem;
+        line-height: calc(30 / 17);
+    }
+
 }
 
 .c-blog__title {
