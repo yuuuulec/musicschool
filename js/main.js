@@ -38,40 +38,61 @@ $(function () {
     checkScroll();
 });
 
-//お問い合わせ　トップに戻るボタン　スクロール
-$(function () {
-    const fv = $('.fv');
-    let fvHeight = fv.length ? fv.outerHeight() : 0;
-    const showScroll = fv.length ? fvHeight :  1000; 
-    
-    $(window).on('load resize', function () {
-        fvHeight = fv.length ? fv.outerHeight() : 0;
-    });
+// お問い合わせ・トップに戻るボタン（スクロール制御）
 
-    $(window).on('scroll', function () {
+function initFloatingBtns() {
+    const fv = $('.fv');
+    const $floatBtns = $('.c-to-top, .c-contact__btn');
+
+    // 初期は非表示（ちらつき防止）
+    $floatBtns.hide();
+
+    function checkFloatingBtns() {
+        const fvExists = fv.length > 0;
+        const fvHeight = fvExists ? fv.outerHeight() : 0;
         const scroll = $(window).scrollTop();
 
-        if (scroll > showScroll) {  // showScrollを使う
-            $('.c-to-top, .c-contact__btn').fadeIn();
+        if (fvExists) {
+            // FVがある → FVを完全に過ぎたら表示
+            if (scroll > fvHeight) {
+                $floatBtns.fadeIn();
+            } else {
+                $floatBtns.fadeOut();
+            }
         } else {
-            $('.c-to-top, .c-contact__btn').fadeOut();
+            // FVがない → 常に表示
+            $floatBtns.fadeIn();
         }
-    });
-
-    // 初期非表示
-    if(fv.length){
-        $('.c-to-top, .c-contact__btn').hide();  // FVあり → 初期非表示
-    } else {
-        $('.c-to-top, .c-contact__btn').show();  // FVなし → 初期表示
     }
 
-    // トップへスムーズスクロール
-    $('.c-to-top a').on('click', function (e) {
+    // イベント登録（重複防止）
+    $(window).off('scroll resize load', checkFloatingBtns);
+    $(window).on('scroll resize load', checkFloatingBtns);
+
+    // 初期実行（FVの高さが反映されるまで少し待つ）
+    setTimeout(checkFloatingBtns, 200);
+
+    // スムーズスクロール（重複登録防止）
+    $('.c-to-top a').off('click').on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({ scrollTop: 0 }, 600);
     });
+}
+
+// 通常ページ読み込み時
+$(function () {
+    initFloatingBtns();
 });
 
+// 初回ロード
+$(document).ready(function() {
+    initFloatingBtns();
+});
+
+// ページ遷移（PJAXなど）後にも再実行
+$(document).on('pjax:end', function () {
+    initFloatingBtns();
+});
 
 
 

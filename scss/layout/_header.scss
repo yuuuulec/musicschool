@@ -122,11 +122,11 @@
          height: 0.2rem;
          background-color: $red;
          position: absolute;
-         bottom: 2rem;
+         bottom: -1rem;
          left: 0;
          opacity: 0;
-         // transform: scaleX(0);
-         // transform-origin: right;
+         transform: scaleX(0);
+         transform-origin: right;
          transition: all 0.8s ease;
 
          @include sp {
@@ -135,8 +135,8 @@
       }
 
       &:hover::after {
-         // transform: scaleX(1);
-         // transform-origin: left;
+         transform: scaleX(1);
+         transform-origin: left;
          opacity: 1;
       }
 
