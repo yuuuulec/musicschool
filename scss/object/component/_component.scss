@@ -258,7 +258,7 @@
     width: 8rem;
 
     @include sp {
-        width: 9rem;
+        width: 8rem;
     }
 }
 
@@ -278,13 +278,13 @@
 
     @include sp {
         gap: 2.2rem;
+        margin-top: 4.5rem;
     }
 }
 
 .c-prev-text {
     font-size: 1.7rem;
     line-height: calc(30 / 17);
-    margin-bottom: 1.6rem;
     padding: 0.4rem 15rem 0.3rem 2rem; //ブログ用
     display: inline-block;
 
@@ -298,7 +298,11 @@
 .c-next--img {
     width: 9.8rem;
     max-width: 9.8rem;
-    object-fit: cover
+    object-fit: cover;
+
+    @include sp {
+       display: none;
+    }
 }
 
 .c-prev--right {
@@ -316,7 +320,7 @@
     font-size: 1.6rem;
     line-height: calc(25 / 16);
     font-weight: 700;
-    margin: 0;
+    margin-top: 1.6rem;
     gap: 1.6rem; //ブログ用 
 
 
@@ -328,11 +332,10 @@
         }
     }
 
-        @include sp {
-            display: none;
-            max-width: none;
-        }
+    @include sp {
+        margin-top: 2.2rem;
     }
+}
 
 //関連記事
 .c-title {
@@ -340,6 +343,7 @@
 
     @include sp {
         text-align: center;
+        padding: 1.5rem 0;
     }
 }
 
@@ -352,9 +356,10 @@
     display: block;
     margin-top: 3rem;
 
-    .blog__title {
-        margin-top: 0;
+    @include sp {
+        margin-top: 2rem;
     }
+
 
     data {
         font-size: 1.7rem;
@@ -368,9 +373,17 @@
 .c-blog__item--related {
     margin-bottom: 3rem;
 
+    @include sp {
+        margin-bottom: 1.8rem;
+    }
+
     a {
         display: flex;
         gap: 3rem;
+
+        @include sp {
+            gap: 2rem;
+        }
     }
 
     &:last-of-type {

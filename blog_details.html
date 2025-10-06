@@ -57,69 +57,75 @@
         <div class="blog-details__container inner">
             <article class="blog-details__main">
                 <section class="blog-details">
-                    <div class="blog-details__img c-blog__img-wrapper">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="./img/blog03-sp.jpg">
-                            <img src="./img/blog_details/blog_details01.jpg" alt="ギターを弾く生徒">
-                        </picture>
-                        <span class="c-blog__label">ギター</span>
-                    </div>
+                    <header class="blog-details__header">
+                        <div class="blog-details__img c-blog__img-wrapper">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="./img/blog03-sp.jpg">
+                                <img src="./img/blog_details/blog_details01.jpg" alt="ギターを弾く生徒">
+                            </picture>
+                            <span class="c-blog__label">ギター</span>
+                        </div>
 
-                    <p class="blog-details__title">アルペジオが劇的に向上する３つの習慣</p>
-                    <time datetime="0000-00-00" class="blog-details__date">0000.00.00</time>
+                        <p class="blog-details__title">アルペジオが劇的に向上する３つの習慣</p>
+                        <time class="blog-details__date">0000.00.00</time>
 
-                    <ul class="blog-details__sns-list">
-                        <li class="blog-details__sns-item">
-                            <a href="">
-                                <div class="blog-details__sns-icon">
-                                    <picture>
-                                        <source media="(max-width: 768px)" srcset="./img/blog_details/facebook-sp.svg">
-                                        <img src="./img/blog_details/facebook.svg" alt="facebook">
-                                    </picture>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="blog-details__sns-item">
-                            <a href="">
-                                <div class="blog-details__sns-icon">
-                                    <picture>
-                                        <source media="(max-width: 768px)" srcset="./img/blog_details/twitter-sp.svg">
-                                        <img src="./img/blog_details/twitter.svg" alt="twitter">
-                                    </picture>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="blog-details__sns-item">
-                            <a href="">
-                                <div class="blog-details__sns-icon">
-                                    <picture>
-                                        <source media="(max-width: 768px)" srcset="./img/blog_details/hatena-sp.svg">
-                                        <img src="./img/blog_details/hatena.svg" alt="blog">
-                                    </picture>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="blog-details__sns-item">
-                            <a href="">
-                                <div class="blog-details__sns-icon">
-                                    <picture>
-                                        <source media="(max-width: 768px)" srcset="./img/blog_details/line-sp.svg">
-                                        <img src="./img/blog_details/line.svg" alt="line">
-                                    </picture>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="blog-details__sns-item">
-                            <a href="">
-                                <div class="blog-details__sns-icon">
-                                    <picture>
-                                        <source media="(max-width: 768px)" srcset="./img/blog_details/pocket-sp.svg">
-                                        <img src="./img/blog_details/pocket.svg" alt="pocket">
-                                    </picture>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+                        <ul class="blog-details__sns-list">
+                            <li class="blog-details__sns-item">
+                                <a href="">
+                                    <div class="blog-details__sns-icon">
+                                        <picture>
+                                            <source media="(max-width: 768px)"
+                                                srcset="./img/blog_details/facebook-sp.svg">
+                                            <img src="./img/blog_details/facebook.svg" alt="facebook">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="blog-details__sns-item">
+                                <a href="">
+                                    <div class="blog-details__sns-icon">
+                                        <picture>
+                                            <source media="(max-width: 768px)"
+                                                srcset="./img/blog_details/twitter-sp.svg">
+                                            <img src="./img/blog_details/twitter.svg" alt="twitter">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="blog-details__sns-item">
+                                <a href="">
+                                    <div class="blog-details__sns-icon">
+                                        <picture>
+                                            <source media="(max-width: 768px)"
+                                                srcset="./img/blog_details/hatena-sp.svg">
+                                            <img src="./img/blog_details/hatena.svg" alt="blog">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="blog-details__sns-item">
+                                <a href="">
+                                    <div class="blog-details__sns-icon">
+                                        <picture>
+                                            <source media="(max-width: 768px)" srcset="./img/blog_details/line-sp.svg">
+                                            <img src="./img/blog_details/line.svg" alt="line">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="blog-details__sns-item">
+                                <a href="">
+                                    <div class="blog-details__sns-icon">
+                                        <picture>
+                                            <source media="(max-width: 768px)"
+                                                srcset="./img/blog_details/pocket-sp.svg">
+                                            <img src="./img/blog_details/pocket.svg" alt="pocket">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </header>
 
                     <div class="blog-details__text">
                         <p class="blog-details__text--text">
@@ -196,7 +202,12 @@
                                         <span class="c-blog__label">ギター</span>
                                     </div>
                                     <div class="c-blog__text-wrapper">
-                                        <p class="c-related-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+                                        <p class="c-related-title pc-only">
+                                            タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                                        </p>
+                                        <p class="c-related-title sp-only">
+                                            タイトルが入ります。タイトル
+                                        </p>
                                         <time datetime="0000-00-00">0000.00.00</time>
                                     </div>
                                 </a>
@@ -209,7 +220,12 @@
                                         <span class="c-blog__label">ギター</span>
                                     </div>
                                     <div class="c-blog__text-wrapper">
-                                        <p class="c-related-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+                                        <p class="c-related-title pc-only">
+                                            タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                                        </p>
+                                        <p class="c-related-title sp-only">
+                                            タイトルが入ります。タイトル
+                                        </p>
                                         <time datetime="0000-00-00">0000.00.00</time>
                                     </div>
                                 </a>
@@ -222,7 +238,12 @@
                                         <span class="c-blog__label">ギター</span>
                                     </div>
                                     <div class="c-blog__text-wrapper">
-                                        <p class="c-related-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+                                        <p class="c-related-title pc-only">
+                                            タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                                        </p>
+                                        <p class="c-related-title sp-only">
+                                            タイトルが入ります。タイトル
+                                        </p>
                                         <time datetime="0000-00-00">0000.00.00</time>
                                     </div>
                                 </a>

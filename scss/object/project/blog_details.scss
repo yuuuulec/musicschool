@@ -2,7 +2,7 @@
 @use "../component/component" as *;
 
 .blog-details {
-    padding: 6.6rem 0 4rem;
+    padding: 6.6rem 0 3rem;
     position: relative;
 
     @include sp {
@@ -132,10 +132,10 @@
 }
 
 .blog-details__link {
-    padding: 4.2rem 0 9.1rem;
+    padding: 4.2rem 0 9.3rem;
 
     @include sp {
-        padding: 5rem 0 3.8rem;
+        padding: 5rem 0 6rem;
     }
 }
 
@@ -208,10 +208,6 @@
 }
 
 .blog-details__related {
-    @include sp {
-        padding: 0 0 3rem;
-    }
-
     span {
         position: absolute;
         top: 0;
@@ -241,7 +237,7 @@
 
 .sidebar__newsletter,
 .sidebar__search {
-    margin-bottom: 3rem;
+    margin-bottom: 2.9rem;
 }
 
 .blog-details__sidebar .title {
@@ -253,6 +249,10 @@
     width: 100%;
 }
 
+.sidebar__recommend-list {
+    padding: 1.5rem 0 2.8rem;
+}
+
 .sidebar__newsletter--inner {
     position: relative;
 }
@@ -261,6 +261,10 @@
 .sidebar__search--inner {
     padding: 1.5rem;
     border: 0.05rem solid $black;
+
+    @include sp {
+        padding: 1.9rem;
+    }
 }
 
 .blog-details__sidebar {
@@ -293,7 +297,8 @@
     width: 18rem;
 
     @include sp {
-        width: 100%;
+        height: 5.4rem;
+        width: 24.1rem;
     }
 }
 
@@ -303,24 +308,32 @@
     padding: 0;
     cursor: pointer;
     width: 4rem;
+
+    @include sp {
+        width: 5.4rem;
+    }
 }
 
 .sidebar__search-icon {
     width: 4rem;
     height: auto;
+
+    @include sp {
+        width: 5.4rem;
+    }
 }
 
 
 .sidebar__recommend-item {
     display: flex;
     margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
     font-size: 1.7rem;
     line-height: calc(28 / 17);
     gap: 1.5rem;
 
     &:last-of-type {
-        margin-bottom: 2.6rem;
+        margin-bottom: 2.1rem;
+        gap: 2rem;
     }
 }
 
@@ -328,6 +341,13 @@
     width: 9.5rem;
     aspect-ratio: 95 / 75;
     object-fit: contain;
+
+    @include sp {
+        width: 16rem;
+        max-width: 16rem;
+        // height: 11rem;
+        aspect-ratio: 160 / 110;
+    }
 }
 
 .sidebar__recommend-title {
@@ -336,9 +356,9 @@
 
 .sidebar__category-item {
     font-size: 1.7rem;
-    line-height: calc(28 / 17);
+    // line-height: calc(28 / 17);
     border-bottom: 0.05rem solid $black;
-    padding: 1.2rem 0 0.7rem;
+    padding: 1.4rem 0 1.2rem;
 }
 
 
