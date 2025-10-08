@@ -55,13 +55,15 @@
 
     <section class="result-details inner">
         <div class="c-blog__item result-details__container">
-            <picture>
-                <source media="(max-width: 768px)" srcset="../img/result_details/result_details-sp.jpg">
-                <img src="./img/result_details/result_details.jpg">
-            </picture>
-            <span class="c-blog__label">ポップス</span>
+            <div class="result__img">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="../img/result_details/result_details-sp.jpg">
+                    <img src="./img/result_details/result_details.jpg">
+                </picture>
+                <span class="c-blog__label">ポップス</span>
+            </div>
             <h2 class="result-details__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h2>
-           <time datetime="0000-00-00">0000.00.00</time>
+            <time datetime="0000-00-00">0000.00.00</time>
         </div>
 
         <div class="result-details__profile">
@@ -93,14 +95,17 @@
 
     <div class="c-prev-next inner">
         <a href="">
-            <div class="c-prev prev-next--result">
+            <div class="c-prev">
                 <p class="c-prev-text c-back-black">◀︎ 前の記事</p>
                 <div class="c-prev--inner">
-                    <img src="./img/blog_details/blog_details.jpg" alt="拳をあげて歌う女性">
+                    <div class="c-prev--img">
+                        <img src="./img/blog_details/blog_details.jpg" alt="拳をあげて歌う女性">
+                    </div>
                     <p>タイトルが入ります。タイトルが入ります。タイトルが入</p>
                 </div>
             </div>
         </a>
+        
         <a href="">
             <div class="c-next prev-next--result">
                 <p class="c-prev-text c-back-black c-prev--right">次の記事 ▶︎</p>
@@ -215,4 +220,5 @@
 <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="./js/main.js"></script>
+
 </html>

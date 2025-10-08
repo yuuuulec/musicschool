@@ -2,7 +2,7 @@
 @use "../component/component" as *;
 
 .result-details {
-    padding: 7rem 0 6rem;
+    padding: 6.7rem 0 6rem;
 
     data {
         font-size: 1.7rem;
@@ -17,6 +17,11 @@
 
 .result-details__container {
     display: block;
+
+    time{
+        display: block;
+        margin-top: 1.5rem;
+    }
 }
 
 .result-details__title {
@@ -36,13 +41,12 @@ border-collapse: collapse;
 
 td {
     border: 0.05rem solid #707070;
-    padding: 0.8rem 2rem;
-
+    padding: 1.3rem 2rem 0.4rem;
 
     &:first-child {
         font-weight: 700;
         background-color: #E5E5E5;
-        width: 14.8rem;
+        width: 14rem;
 
         @include sp {
             min-width: 12rem;
@@ -61,7 +65,7 @@ td {
 
 .result-details__profile {
     display: flex;
-    margin-top: 5.5rem;
+    margin-top: 6.5rem;
     gap: 4rem;
 
     @include sp {
@@ -71,34 +75,36 @@ td {
 }
 
 .result-details__text {
+    flex: 1;
+    line-height: calc(30 / 18);
     @include sp {
         margin-top: 2.8rem;
     }
 }
 
-.result_details .c-prev-next {
-    margin-top: 0;
-    }
+// .result_details .c-prev-next {
+//     margin-top: 0;
+//     }
 
-.prev-next--result {
-    .c-prev-text {
-        padding: 0.4rem 23rem 0.3rem 2rem;
+// .prev-next--result {
+//     .c-prev-text {
+//         padding: 0.4rem 23rem 0.3rem 2rem;
 
-        @include sp {
-            padding: 0.4rem 4.6rem 0.3rem 2rem;
-        }
-    }
+//         @include sp {
+//             padding: 0.4rem 4.6rem 0.3rem 2rem;
+//         }
+//     }
 
-    .c-prev--inner {
-            p {
-                max-width: 22.6rem;
+//     .c-prev--inner {
+//             p {
+//                 max-width: 22.6rem;
 
-                @include sp {
-                    min-width: 15.6rem;
-                }
-            }
-    }
-}
+//                 @include sp {
+//                     min-width: 15.6rem;
+//                 }
+//             }
+//     }
+// }
 
 .result-details__list {
     display: block;

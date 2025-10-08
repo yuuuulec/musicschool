@@ -198,7 +198,7 @@
     line-height: calc(33 / 16);
     background-color: rgba(232, 232, 232, 1);
     padding-top: 8rem;
-    
+
     @include sp {
         padding-top: 5rem;
         line-height: 1.5;
@@ -220,13 +220,18 @@
 }
 
 .c-breadcrumb__item {
-    display: flex;
+    display: inline-flex;
     align-items: center;
 
-    &+.c-breadcrumb__item::before {
+    &::after {
         content: ">";
         margin: 0 2.2rem 0 1.4rem;
+        white-space: nowrap;
     }
+
+        &:last-child::after {
+            content: none;
+        }
 }
 
 //下層ページ　セクションタイトル
@@ -301,7 +306,7 @@
     object-fit: cover;
 
     @include sp {
-       display: none;
+        display: none;
     }
 }
 
@@ -357,7 +362,7 @@
     margin-top: 3rem;
 
     @include sp {
-        margin-top: 2rem;
+        margin: 2rem 0 3rem;
     }
 
 

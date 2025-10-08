@@ -1,0 +1,6 @@
+@use "../../foundation/all" as *;
+
+//FVがあるページのみ余白なし
+.has-fv .c-breadcrumb {
+    padding-top: 0;
+}

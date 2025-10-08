@@ -2,12 +2,7 @@
 @use "../component/component" as *;
 
 .blog-details {
-    padding: 6.6rem 0 3rem;
     position: relative;
-
-    @include sp {
-        padding: 5.3rem 0 3rem;
-    }
 
     span {
         position: absolute;
@@ -44,7 +39,7 @@
     margin-top: 2.2rem;
 
     @include sp {
-        margin-top: 2rem;
+        margin-top: 2.4rem;
     }
 }
 
@@ -139,6 +134,12 @@
     }
 }
 
+.blog-details__related {
+    @include sp {
+        
+    }
+}
+
 .blog-details__link--title {
     font-size: 2rem;
     font-weight: 700;
@@ -227,10 +228,6 @@
     }
 }
 
-
-
-
-
 /* ===========================
    sidebar
    =========================== */
@@ -265,10 +262,6 @@
     @include sp {
         padding: 1.9rem;
     }
-}
-
-.blog-details__sidebar {
-    margin-top: 7rem;
 }
 
 .sidebar__newsletter {
@@ -332,20 +325,22 @@
     gap: 1.5rem;
 
     &:last-of-type {
-        margin-bottom: 2.1rem;
+        margin-bottom: 0;
+    }
+
+    @include sp {
+        margin-bottom: 2.2rem;
         gap: 2rem;
+
     }
 }
 
 .sidebar__recommend-img {
     width: 9.5rem;
     aspect-ratio: 95 / 75;
-    object-fit: contain;
 
     @include sp {
         width: 16rem;
-        max-width: 16rem;
-        // height: 11rem;
         aspect-ratio: 160 / 110;
     }
 }
@@ -368,8 +363,10 @@
 .blog-details__container {
     display: flex;
     gap: 3rem;
+    padding: 6.6rem 0 3rem;
 
     @include sp {
+        padding: 5rem 0;
         flex-direction: column;
         gap: 0;
     }
@@ -381,7 +378,6 @@
 
 .blog-details__sidebar {
     width: 25rem;
-    margin-top: 6.7rem;
 
     @include sp {
         width: 100%;
