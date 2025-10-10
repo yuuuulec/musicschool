@@ -1,13 +1,17 @@
 @use "../../foundation/all" as *;
 @use "../component/component" as *;
 
-.blog-details {
+.blog-details__main {
     position: relative;
 
     span {
         position: absolute;
         top: 0;
         left: 0;
+    }
+
+    @include sp {
+        padding-bottom: 2.7rem;
     }
 }
 
@@ -119,6 +123,7 @@
 .blog-details__text--list {
     margin-top: 2.8rem;
     line-height: calc(30 / 18);
+    padding-left: 1.8rem;
 
     @include sp {
         font-size: 1.6rem;
@@ -126,11 +131,22 @@
     }
 }
 
+.blog-details__text--list-item {
+    position: relative;
+}
+
+.blog-details__text--list-item::before{
+content: "・";
+position: absolute;
+top: 0;
+left: -1.8rem;
+}
+
 .blog-details__link {
-    padding: 4.2rem 0 9.3rem;
+    padding: 4.2rem 0 5.5rem;
 
     @include sp {
-        padding: 5rem 0 6rem;
+        padding: 5rem 0 4.5rem;
     }
 }
 
@@ -196,7 +212,7 @@
     }
 }
 
-.link {
+.blog-details__link-btn {
     margin-top: 2.7rem;
 
     a {
@@ -248,6 +264,10 @@
 
 .sidebar__recommend-list {
     padding: 1.5rem 0 2.8rem;
+
+    @include sp {
+        padding: 1.5rem 0 3rem;
+    }
 }
 
 .sidebar__newsletter--inner {
