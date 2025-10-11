@@ -11,7 +11,7 @@
 
 .contact-form__text {
     line-height: calc(30 / 18);
-    margin-bottom: 6.3rem;
+    // margin-bottom: 6.3rem;
     text-align: center;
 
     @include sp {
@@ -22,11 +22,19 @@
     }
 }
 
+.contact-form__form-wrapper {
+    margin-top: 7rem;
+
+    @include sp {
+        margin-top: 2.9rem;
+    }
+}
+
 .form-item {
     display: grid;
     grid-template-columns: 14rem 1fr;
     gap: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2.7rem;
     align-items: center;
 
     @include sp {
@@ -46,7 +54,7 @@
 }
 
 .form-item.form-item--tel {
-    margin-bottom: 2rem;
+    margin-bottom: 2.9rem;
 
     @include sp {
         margin-bottom: 1rem;
@@ -191,7 +199,7 @@ label {
     letter-spacing: 0.6rem;
     text-align: center;
     margin: 0 auto;
-    margin-top: 5.3rem;
+    margin-top: 5rem;
     cursor: pointer;
     padding: 0.9rem 0 0.7rem 0;
     border: 1px solid $red;
@@ -204,7 +212,7 @@ label {
         line-height: calc(26 / 20);
         padding: 1.2rem 0;
         max-width: 33.5rem;
-        margin-top: 5.4rem;
+        margin-top: 5.2rem;
     }
 
     &:hover {

@@ -35,6 +35,34 @@
     box-sizing: border-box;
 }
 
+.voice__link {
+    display: block;
+    overflow: hidden;
+
+    &:hover {
+        .voice__img img {
+            transform: scale(1.1);
+        }
+        .voice__text-block {
+            opacity: 0.5;
+        }
+    }
+}
+
+.voice__item a.voice__link {
+    opacity: 1; 
+}
+
+.voice__img img{
+    transition: all 0.8s ease;
+}
+
+.voice__text-block {
+    opacity: 1;
+    pointer-events: none;
+    transition: all 0.8s ease;
+}
+
 .voice__title {
     font-size: 2.2rem;
     font-weight: 700;
