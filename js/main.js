@@ -16,22 +16,30 @@ $(function () {
 });
 
 //ヘッダー　スクロール
-$(function () {
-    const header = $('#header');
-    const feature = $('.message');
+const fv = $('.fv');
+const $floatBtns = $('.c-to-top, .c-contact__btn');
+$floatBtns.hide(); // 初期非表示
 
-    function checkScroll() {
-        const scrollTop = $(window).scrollTop();
-        const target = feature.offset().top;
+function checkFloatingBtns() {
+    const fvExists = fv.length > 0;
+    const fvHeight = fvExists ? fv.outerHeight() : 0;
+    const scroll = $(window).scrollTop();
 
-        let offset = 0;
-
-        if (scrollTop >= target - offset) {
-            header.addClass('header-scroll');
+    if (fvExists) {
+        if (scroll > fvHeight) {
+            $floatBtns.fadeIn(300);
         } else {
-            header.removeClass('header-scroll');
+            $floatBtns.fadeOut(300);
+        }
+    } else {
+        const displayPx = 300;
+        if (scroll > displayPx) {
+            $floatBtns.fadeIn(300);
+        } else {
+            $floatBtns.fadeOut(300);
         }
     }
+<<<<<<< HEAD
 
     $(window).on('scroll', checkScroll);
     $(window).on('resize', checkScroll);
@@ -89,6 +97,18 @@ $(function () {
 $(document).on('pjax:end', function () {
     initFloatingBtns();
 });
+=======
+}
+
+$(window).off('scroll resize load', checkFloatingBtns);
+$(window).on('scroll resize load', checkFloatingBtns);
+
+$('.c-to-top a').off('click').on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, 600);
+});
+
+>>>>>>> develop01
 
 
 
