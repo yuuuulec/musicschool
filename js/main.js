@@ -38,37 +38,28 @@ $(function () {
     checkScroll();
 });
 
-// お問い合わせ・トップに戻るボタン（スクロール制御）
+
 function initFloatingBtns() {
     const fv = $('.fv');
     const $floatBtns = $('.c-to-top, .c-contact__btn');
 
-    // 初期は非表示（ちらつき防止）
-    // *ここで`hide()`を使うと、CSSで`display: none;`を設定していない場合、初期チェックまで要素が見えてしまいます。
-    // *CSSで初期状態を非表示にする方が推奨されますが、このまま進めます。
     $floatBtns.hide();
 
     function checkFloatingBtns() {
         const fvExists = fv.length > 0;
-        // FVの高さは、関数が呼ばれるたびに再取得することで、リサイズや遅延読み込みに対応します。
+        
         const fvHeight = fvExists ? fv.outerHeight() : 0;
         const scroll = $(window).scrollTop();
 
         if (fvExists) {
-            // FVがある → FVを完全に過ぎたら表示
-            // FVの高さ（fvHeight）ではなく、FVの下端のY座標を基準にするのがより正確です。
-            // fv.offset().top + fvHeight となることがほとんどですが、offset().topが0でないページ構成もあり得るので、
-            // スクロール量が fvの高さ を超えたら、という現在のロジックでOKです。
+           
             if (scroll > fvHeight) {
-                $floatBtns.fadeIn(300); // フェードインに時間を持たせる
+                $floatBtns.fadeIn(300); 
             } else {
-                $floatBtns.fadeOut(300); // フェードアウトに時間を持たせる
+                $floatBtns.fadeOut(300); 
             }
         } else {
-            // FVがない → 常に表示（固定pxの場合、条件分岐をここに加える）
-            // ページ上部からの固定pxでの表示が必要な場合は、以下のブロックを修正します。
-            const displayPx = 300; // 例: 300pxスクロールしたら表示
-
+            const displayPx = 300; 
             if (scroll > displayPx) {
                 $floatBtns.fadeIn(300);
             } else {
@@ -77,30 +68,24 @@ function initFloatingBtns() {
         }
     }
 
-    // イベント登録（重複防止）
-    // load イベントを追加することで、FVの高さが確定した後に一度チェックが走るようにします。
     $(window).off('scroll resize load', checkFloatingBtns);
     $(window).on('scroll resize load', checkFloatingBtns);
 
-    // スムーズスクロール（重複登録防止）
     $('.c-to-top a').off('click').on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({ scrollTop: 0 }, 600);
     });
 }
 
-// ページ内の全アセット（画像など）読み込み完了後に初期実行
-// これにより、FVの高さが確実に反映されます。
 $(window).on('load', function () {
     initFloatingBtns();
 });
 
-// DOM構築完了後に実行（FVがない場合や、初期表示時にFVの高さが確定している場合に対応）
+
 $(function () {
     initFloatingBtns();
 });
 
-// ページ遷移（PJAXなど）後にも再実行
 $(document).on('pjax:end', function () {
     initFloatingBtns();
 });
