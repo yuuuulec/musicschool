@@ -44,6 +44,11 @@ html {
         text-decoration: none;
         color: $black;
         cursor: pointer;
+        transition: opacity 0.5s ease;
+
+        &:hover {
+            opacity: 0.5;
+        }
     }
 
     .pc-only {

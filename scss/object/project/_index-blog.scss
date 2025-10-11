@@ -3,7 +3,7 @@
 
 
 .blog {
-    padding-bottom: 4.6rem;
+    padding-bottom: 4.8rem;
 
     @include sp {
         padding-bottom: 4rem;
@@ -27,13 +27,24 @@
 .blog__item {
 
     @include sp {
-        max-width: none;  
-        margin-top: 4rem; 
-     }
+        max-width: none;
+        margin-top: 4.7rem;
+    }
 
-     &:first-of-type {
+    &:first-of-type {
         margin-top: 0;
-     }
+    }
+
+    time {
+        display: block;
+        text-align: right;
+        font-size: 1.7rem;
+        margin-top: 1.5rem;
+
+        @include sp {
+            margin-top: 1rem;
+        }
+    }
 }
 
 .blog__title {
@@ -45,7 +56,7 @@
 
     @include sp {
         font-size: 2rem;
-        line-height: calc(30 / 20);    
+        line-height: calc(30 / 20);
         margin-top: 3rem;
     }
 }
@@ -67,12 +78,12 @@ data {
 
 .more-link {
     line-height: calc(30 / 18);
-    margin-top: 3.7rem;
+    margin-top: 4rem;
     text-align: right;
     transition: all 0.3s ease;
 
     @include sp {
-        margin-top: 4rem;
+        margin-top: 4.5rem;
         text-align: center;
     }
 }
@@ -81,4 +92,3 @@ data {
     display: inline-block;
     border-bottom: 1px solid $black;
 }
-

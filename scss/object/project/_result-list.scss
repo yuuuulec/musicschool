@@ -9,8 +9,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10.6rem;
-    row-gap: 6rem;
-    margin-top: 3.5rem;
+    row-gap: 7.4rem;
+    margin-top: 3.8rem;
 
     @include sp {
         grid-template-columns: 1fr;
