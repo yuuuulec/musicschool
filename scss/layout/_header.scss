@@ -102,6 +102,10 @@
 
 .header__nav-item {
    height: 100%;
+
+   @include sp {
+      height: 5.8rem;
+   }
 }
 
 .header__nav-item a {
