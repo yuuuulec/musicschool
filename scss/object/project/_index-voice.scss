@@ -68,6 +68,7 @@
     font-weight: 700;
     line-height: calc(33 / 22);
     margin-top: 1.7rem;
+    white-space: nowrap;
 
     @include sp {
         margin-top: 2.7rem;
