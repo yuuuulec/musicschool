@@ -1,0 +1,144 @@
+@use "../../foundation/all" as *;
+@use "../component/component" as *;
+.result-details__wrapper {
+    @include sp {
+        padding-bottom: 4.5rem;
+    }
+}
+.result-details {
+    padding: 6.7rem 0 5.7rem;
+
+    data {
+        font-size: 1.7rem;
+        line-height: calc(30 / 17);
+        text-align: left;
+    }
+
+    @include sp {
+        padding: 4.5rem 0 4rem;
+    }
+}
+
+.result-details__container {
+    display: block;
+
+    time {
+        display: block;
+        margin-top: 1.5rem;
+
+        @include sp {
+            margin-top: 1.2rem;
+        }
+    }
+}
+
+.result-details__title {
+    font-size: 2.5rem;
+    line-height: calc(40 / 25);
+    margin-top: 5rem;
+
+    @include sp {
+        font-size: 2rem;
+        line-height: calc(30 / 20);
+        margin-top: 3rem;
+    }
+}
+
+.result-details__table {
+    border-collapse: collapse;
+
+
+    td {
+        border: 0.05rem solid #707070;
+        padding: 1.3rem 2rem 0.4rem;
+
+        @include sp {
+            padding: 1.3rem 1rem 0.4rem;
+        }
+
+        &:first-child {
+            font-weight: 700;
+            background-color: #E5E5E5;
+            width: 14rem;
+
+            @include sp {
+                min-width: 12rem;
+            }
+        }
+
+        &:last-child {
+            width: 26rem;
+
+            @include sp {
+                min-width: 21.5rem;
+            }
+        }
+    }
+}
+
+.result-details__profile {
+    display: flex;
+    margin-top: 6.5rem;
+    gap: 4rem;
+
+    @include sp {
+        display: block;
+        margin-top: 2.4rem;
+    }
+}
+
+.result-details__text {
+    flex: 1;
+    line-height: calc(30 / 18);
+
+    @include sp {
+        margin-top: 2.5rem;
+    }
+}
+
+.result__next {
+    gap: 19.9rem;
+
+    @include sp {
+        gap: 2.2rem;
+    }
+}
+
+.prev__ttl {
+    width: 34rem;
+
+    @include sp {
+        width: 15.6rem;
+    }
+}
+
+.result-details__list {
+    display: block;
+
+    @include sp {
+        margin-top: 2rem;
+    }
+}
+
+.related__img {
+    position: relative;
+    width: 26rem;
+    aspect-ratio: 260 / 183;
+
+    @include sp {
+        width: 16rem;
+        aspect-ratio: 160 / 113;
+    }
+}
+
+.related__text {
+    flex: 1;
+    time {
+        display: block;
+        margin-top: 1.5rem;
+
+        @include sp {
+            margin-top: 0.9rem;
+        }
+    }
+}

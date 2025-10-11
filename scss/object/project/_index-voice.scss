@@ -1,0 +1,128 @@
+@use "../../foundation/all" as *;
+@use "../component/component" as *;
+
+.voice {
+    padding: 4.4rem 4rem 8rem;
+    color: $white;
+    text-align: center;
+    background-color: $red;
+
+    @include sp {
+        padding: 4.6rem 0 1.5rem;
+    }
+}
+
+.voice__container {
+    position: relative;
+}
+
+
+.voice__inner {
+    position: relative;
+    margin-top: 3.6rem;
+    overflow: visible;
+
+    @include sp {
+        margin-top: 3.9rem;
+    }
+}
+
+.voice__item a{
+    flex-shrink: 0;
+    color: $white;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.voice__link {
+    display: block;
+    overflow: hidden;
+
+    &:hover {
+        .voice__img img {
+            transform: scale(1.1);
+        }
+        .voice__text-block {
+            opacity: 0.5;
+        }
+    }
+}
+
+.voice__item a.voice__link {
+    opacity: 1; 
+}
+
+.voice__img img{
+    transition: all 0.8s ease;
+}
+
+.voice__text-block {
+    opacity: 1;
+    pointer-events: none;
+    transition: all 0.8s ease;
+}
+
+.voice__title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: calc(33 / 22);
+    margin-top: 1.7rem;
+    white-space: nowrap;
+
+    @include sp {
+        margin-top: 2.7rem;
+    }
+}
+
+.voice__text {
+    text-align: left;
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+    margin-top: 1rem;
+}
+
+.voice__prev,
+.voice__next {
+    position: absolute;
+    bottom: 18rem;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 10;
+    display: block;
+    width: 2.7rem;
+}
+
+@media screen and (max-width: 1079px) {
+    .voice__prev,
+    .voice__next {
+      top: 1.2rem;
+    }
+  }
+
+.voice__prev {
+    left: -2rem;
+
+    @include sp {
+        left: 2rem;
+        top: 3.5rem;
+    }
+}
+
+.voice__next {
+    right: -2rem;
+
+    @include sp {
+        right: 2rem;
+        top: 3.5rem;
+    }
+}
+
+.swiper-slide {
+    width: auto;    
+    max-width: 100%; 
+    box-sizing: border-box;
+  }
+  

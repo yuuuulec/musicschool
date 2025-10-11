@@ -1,0 +1,21 @@
+@use "./foundation/all" as *;      
+
+@use "./layout/header" as *;
+@use "./layout/footer" as *;
+
+@use "./object/component/component" as *;
+
+@use "./object/project/index-reason" as *;
+@use "./object/project/index-main" as *;
+
+@use "./object/project/index-faq" as *;
+
+@use "./object/project/index-flow" as *;
+@use "./object/project/index-blog" as *;
+
+@use "./object/project/index-voice" as *;
+
+@use "./object/project/result-details" as *;
+@use "./object/project/result-list" as *;
+
+@use "./object/utility/utility" as *;

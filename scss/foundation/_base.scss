@@ -1,0 +1,84 @@
+@use "variable" as *;
+@use "normalize" as *;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    line-height: 1.15;
+    scroll-behavior: smooth;
+    font-size: 10px;
+
+    @media (max-width: 920px) and (min-width: 768px) {
+        font-size: calc(10 / 920 * 100vw);
+    }
+
+        @include sp {
+            font-size: min(vw(10, 375), 500 / 375 * 10px);
+        }
+    }
+
+    body {
+        color: #000000;
+        font-family: "YuGothic", "Yu Gothic", "游ゴシック", "Noto Sans JP", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    li {
+        list-style: none;
+        color: $black;
+    }
+
+    a {
+        text-decoration: none;
+        color: $black;
+        cursor: pointer;
+        transition: opacity 0.5s ease;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    .pc-only {
+        display: block !important;
+
+        @include sp {
+            display: none !important;
+        }
+    }
+
+    .sp-only {
+        display: none !important;
+
+        @include sp {
+            display: block !important;
+        }
+    }
+
+    .inner {
+        max-width: 920px;
+        margin-inline: auto;
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+        box-sizing: border-box;
+
+        @include sp {
+            max-width: none;
+        }
+    }
+
+    // * {
+    //     outline: 1px solid red; /* 全要素の枠線を表示 */
+    //   }

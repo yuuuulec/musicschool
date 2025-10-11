@@ -1,0 +1,21 @@
+@use "../../foundation/all" as *;
+@use "../component/component" as *;
+
+.message {
+    padding: 5rem 0 9rem;
+    text-align: center;
+    line-height: calc(30 / 18);
+
+    @include sp {
+        padding: 3.6rem 0 5rem;
+    }
+}
+
+.message__text {
+
+    @include sp {
+        text-align: left;
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+}
+}

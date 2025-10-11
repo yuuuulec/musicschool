@@ -1,0 +1,15 @@
+
+@mixin sp {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  
+  $red: #CB0000;
+  $black: #000000;
+  $white: #FFFFFF;
+  $gray: rgba(80, 80, 80, 0.149);
+
+  @function vw($pixelSize, $baseWidth: 920) {
+    @return calc($pixelSize / $baseWidth * 100vw);
+  }

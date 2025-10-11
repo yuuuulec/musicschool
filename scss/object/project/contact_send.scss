@@ -1,0 +1,24 @@
+@use "../../foundation/all" as *;
+@use "../component/component" as *;
+
+.contact-send {
+    padding: 6.7rem 0 18rem;
+    text-align: center;
+
+
+    @include sp {
+        padding: 4.7rem 0 3.9rem;
+    }
+}
+
+.contact-send__text {
+    line-height: calc(30 / 18);
+    text-align: center;
+    margin-bottom: 4rem;
+
+    @include sp {
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+    }
+}
+

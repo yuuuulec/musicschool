@@ -1,0 +1,93 @@
+@use "../foundation/all" as *;
+@use "../object/component/component" as *;
+
+.footer {
+    padding: 4.4rem 0 5.1rem;
+    background-color: $red;
+    color: $white;
+
+    @include sp {
+        padding: 4.4rem 0 5.1rem;
+    }
+}
+
+.footer__nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+
+    @include sp {
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.footer__nav-item {
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: calc(33 / 17);
+    text-align: center;
+
+    a {
+        color: $white;
+        padding: 1rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+}
+
+.footer__logo {
+    margin-top: 2.2rem;
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 3.2rem;
+    }
+
+    a {
+        transition: all 0.3s ease;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+.footer__copyright {
+    margin-top: 2.3rem;
+    font-size: 1.5rem;
+    line-height: calc(33 / 15);
+    text-align: center;
+    white-space: nowrap;
+
+    @include sp {
+        margin-top: 2.9rem;
+        font-size: 1.5rem;
+        line-height: calc(20 / 15);}
+}
+
+.sns-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+
+    @include sp {
+        margin-top: 1.6rem;
+        gap: 1.2rem;
+    }
+
+    a {
+        transition: all 0.8s ease;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}

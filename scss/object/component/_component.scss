@@ -1,0 +1,638 @@
+@use "../../foundation/all" as *;
+
+//トップに戻るボタンとお問い合わせボタン
+.c-floating-btns {
+    position: sticky;
+    bottom: 0;
+    z-index: 10001;
+}
+
+// 背景が赤いボタン
+.c-btn-red {
+    background-color: $red;
+    color: $white;
+    border: 1px solid $red;
+
+    a {
+        color: $white;
+        display: inline-block;
+    }
+}
+
+// お問い合わせボタン
+.c-contact__btn {
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: calc(33 / 20);
+    color: $white;
+    display: block;
+    text-align: right;
+    margin-left: auto;
+    letter-spacing: 0.4rem;
+    width: 30rem;
+    transition: all 0.8s ease;
+
+    &:hover {
+        background-color: white;
+        color: $red;
+        border: 1px solid $red;
+        opacity: 1;
+    }
+
+    a {
+        color: inherit;
+        display: block;
+        padding: 1.7rem 0 1rem 0;
+        text-align: center;
+        white-space: nowrap;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    @include sp {
+        text-align: center;
+        margin-inline: auto;
+        width: 33.5rem;
+
+        a {
+            color: inherit;
+            padding: 1.3rem 0 1rem;
+        }
+    }
+}
+
+
+// トップに戻るボタン
+.c-to-top {
+    margin-bottom: 2.1rem;
+    padding-right: 11.6rem;
+    text-align: right;
+    z-index: 10001;
+
+    @include sp {
+        padding-right: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    img {
+        width: 7rem;
+    }
+
+    a {
+        display: inline-block;
+        clip-path: circle(50%);
+        transition: opacity 0.8s ease;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+.c-contact__btn {
+    transition: all 0.8s ease;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    a {
+        color: inherit;
+    }
+}
+
+//ホームに戻るボタン
+.c-to-home {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: calc(33 / 25);
+    display: inline-block;
+    text-align: center;
+    padding: 1rem 0 0.7rem;
+    display: block;
+    width: 25rem;
+    max-width: 25rem;
+    margin-inline: auto;
+    transition: all 0.8s ease;
+    list-style: dots;
+    margin-top: 4rem;
+
+    a {
+        color: inherit;
+    }
+
+    @include sp {
+        font-size: 2rem;
+        // line-height: calc(26 / 20);
+        margin-top: 1rem;
+        width: 33.5rem;
+        max-width: 33.5rem;
+        padding: 1rem 0;
+
+    }
+
+    &:hover {
+        background-color: white;
+        color: $red;
+
+        a {
+            color: inherit;
+        }
+    }
+}
+
+//トップページのセクションタイトル
+.c-top-section-title {
+    font-size: 3rem;
+    line-height: calc(50 / 30);
+    text-align: center;
+
+    @include sp {
+        font-size: 2.5rem;
+        line-height: calc(40 / 25);
+    }
+}
+
+// 各セクションタイトル
+.c-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: calc(50 / 30);
+    text-align: center;
+
+    @include sp {
+        font-size: 2.5rem;
+        line-height: calc(40 / 25);
+    }
+}
+
+//赤丸
+.c-dot {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: $red;
+}
+
+
+//下層ページ　FVの背景
+.c-fv__overlay--sub {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(80, 80, 80, 0.4863);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
+//下層ページ　FVタイトル
+.c-fv__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: calc(60 / 25);
+    text-align: center;
+    color: $white;
+    position: absolute;
+    top: calc(154 / 1080 * 100vw);
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include sp {
+        top: calc(175 / 375 * 100vw);
+    }
+}
+
+//パンくずリスト
+.c-breadcrumb {
+    font-size: 1.6rem;
+    line-height: calc(33 / 16);
+    background-color: rgba(232, 232, 232, 1);
+    padding-top: 8rem;
+
+    @include sp {
+        padding-top: 5rem;
+        line-height: 1.5;
+    }
+}
+
+.c-breadcrumb__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 0;
+    column-gap: 0.6rem;
+    flex-wrap: wrap;
+    padding: 0.8rem 0;
+
+    @include sp {
+        padding: 0.5rem 0;
+    }
+}
+
+.c-breadcrumb__item {
+    display: inline-flex;
+    align-items: center;
+
+    &::after {
+        content: ">";
+        margin: 0 2.2rem 0 1.4rem;
+        white-space: nowrap;
+    }
+
+    &:last-child::after {
+        content: none;
+    }
+}
+
+//下層ページ　セクションタイトル
+.c-section-title--sub {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+//ブログ　写真の中の赤いラベル
+// .c-blog__item {
+//     position: relative;
+// }
+
+.c-blog__label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: calc(25 / 15);
+    background-color: $red;
+    color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 8rem;
+
+    @include sp {
+        width: 9rem;
+    }
+}
+
+
+//背景が黒
+.c-back-black {
+    background-color: $black;
+    color: $white;
+}
+
+// 前の記事　次の記事
+.c-prev-next {
+    display: flex;
+    justify-content: space-between;
+    gap: 7.8rem;
+    padding-bottom: 9.3rem;
+
+    @include sp {
+        gap: 2.2rem;
+        padding-bottom: 6.5rem;
+    }
+}
+
+.c-prev-text {
+    font-size: 1.7rem;
+    line-height: calc(30 / 17);
+    padding: 0.4rem 15rem 0.3rem 2rem; //ブログ用
+    display: inline-block;
+
+    @include sp {
+        padding: 0.4rem 0 0.3rem 2rem;
+        width: 15.6rem;
+    }
+}
+
+.c-prev--img,
+.c-next--img {
+    width: 9.8rem;
+    max-width: 9.8rem;
+    object-fit: cover;
+
+    @include sp {
+        display: none;
+    }
+}
+
+.c-prev--right {
+    text-align: right;
+    padding: 0.4rem 2rem 0.3rem 15rem;
+
+    @include sp {
+        padding: 0.4rem 2rem 0.3rem 0;
+        width: 15.6rem;
+    }
+}
+
+.c-prev--inner {
+    display: flex;
+    font-size: 1.6rem;
+    line-height: calc(25 / 16);
+    font-weight: 700;
+    margin-top: 1.6rem;
+    gap: 1.6rem; //ブログ用 
+
+
+    p {
+        flex: 1; //ブログ用
+
+        @include sp {
+            max-width: 100%;
+        }
+    }
+
+    @include sp {
+        margin-top: 1.6rem;
+    }
+}
+
+//関連記事
+.c-title {
+    padding: 1.5rem 0 1.5rem 3rem;
+
+    @include sp {
+        text-align: center;
+        padding: 1.5rem 0;
+    }
+}
+
+//関連記事のリスト
+.c-blog__item {
+    display: flex;
+}
+
+.c-blog__list--related {
+    display: block;
+    margin-top: 3rem;
+
+    @include sp {
+        margin-top: 2rem;
+    }
+
+
+    data {
+        font-size: 1.7rem;
+        line-height: calc(30 / 17);
+        text-align: left;
+        margin-top: 1.3rem;
+        margin-left: 0.4rem;
+    }
+}
+
+.c-blog__item--related {
+    margin-bottom: 3rem;
+
+    @include sp {
+        margin-bottom: 1.8rem;
+    }
+
+    a {
+        display: flex;
+        gap: 3rem;
+
+        @include sp {
+            gap: 2rem;
+        }
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+//ブログ一覧　search01共通
+
+.c-blog--sub {
+    padding: 6.6rem 0 5.5rem;
+
+    @include sp {
+        padding: 4.8rem 0 5.3rem 0;
+    }
+}
+
+.c-blog__list--sub {
+    flex-direction: column;
+    margin-top: 3.7rem;
+
+    @include sp {
+        margin-top: 3.8rem;
+    }
+}
+
+.c-blog__item--sub {
+    max-width: 100%;
+    margin-bottom: 7rem;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    @include sp {
+        margin-bottom: 3.6rem;
+    }
+
+    a {
+        display: flex;
+        align-items: flex-start;
+        gap: 5rem;
+        transition: all 0.3s ease;
+
+        @include sp {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+}
+
+.c-blog__img-wrapper {
+    position: relative;
+    width: 26rem;
+
+    @include sp {
+        width: 100%;
+    }
+}
+
+.c-blog__text-wrapper {
+    flex: 1;
+
+    @include sp {
+        width: 100%;
+    }
+
+    time {
+        display: block;
+        font-size: 1.7rem;
+        line-height: calc(30 / 17);
+
+        @include sp {
+            margin-top: 0.8rem;
+            text-align: right;
+        }
+    }
+
+}
+
+.c-blog__title {
+    font-size: 2rem;
+    line-height: calc(25 / 20);
+    font-weight: 700;
+    margin-top: 0;
+
+    @include sp {
+        margin-top: 3.1rem;
+        line-height: calc(30 / 20);
+    }
+}
+
+data {
+    text-align: left;
+    margin-top: 0;
+    margin-top: 0.3rem;
+
+
+    @include sp {
+        text-align: right;
+        margin-top: 0.6rem;
+
+    }
+}
+
+.c-blog__text {
+    margin-top: 1rem;
+    line-height: calc(30 / 18);
+
+    @include sp {
+        margin-top: 0.8rem;
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+    }
+}
+
+//ページネーション
+.c-pagination {
+    line-height: 1;
+    margin-top: 8rem;
+
+    @include sp {
+        margin-top: 5.7rem;
+    }
+}
+
+.c-pagination__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @include sp {
+        margin-top: 6rem;
+        font-size: 1.6rem;
+    }
+}
+
+.c-pagination__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: $white;
+    border: 1px solid $black;
+    line-height: 1;
+    cursor: pointer;
+    margin-right: 1rem;
+    font-weight: 700;
+    padding-bottom: 0.7rem;
+    transition: background-color 0.8s ease;
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+
+
+    @include sp {
+        width: 4.2rem;
+        height: 4.2rem;
+        padding-bottom: 0.6rem;
+        font-size: 1.6rem;
+        margin-right: 0.4rem;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: inherit;
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &.c-pagination__item--back-black {
+        background-color: $black;
+        color: $white;
+        padding: 1.5rem 0 2.1rem;
+        font-size: 1.8rem;
+        line-height: calc(30 / 18);
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: inherit;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &.border-none {
+        border: none;
+        width: 4rem;
+        cursor: default;
+        padding-top: 1rem;
+
+        @include sp {
+            padding: 1rem 0;
+        }
+    }
+
+    &:hover:not(.border-none) {
+        background-color: $black;
+        color: $white;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: inherit;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+//blog_details result_details 関連記事内　タイトル
+.c-related-title {
+    font-size: 2rem;
+    line-height: calc(25 / 20);
+    font-weight: 700;
+
+    @include sp {
+        font-size: 1.7rem;
+        line-height: calc(28 / 17);
+    }
+}

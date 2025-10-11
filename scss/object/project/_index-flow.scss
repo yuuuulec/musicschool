@@ -1,0 +1,137 @@
+@use "../../foundation/all" as *;
+@use "../component/component" as *;
+
+.flow {
+    padding: 3.4rem 0 10.5rem;
+
+    @include sp {
+        padding: 4.6rem 0 5.3rem;
+    }
+}
+
+.flow__wrapper {
+    margin-top: 5.4rem;
+    margin-left: 5rem;
+
+    @include sp {
+        margin-top: 3.5rem;
+        margin-left: 0;
+    }
+}
+
+.flow__side {
+    position: relative;
+
+    @include sp {
+        padding-left: 0.5rem;
+    }
+}
+
+.flow__step {
+    display: flex;
+    margin-bottom: 5.8rem;
+    position: relative;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include sp {
+        margin-left: 0.8rem;
+        display: flex;
+        margin-bottom: 4rem;
+    }
+}
+
+.dot-flow {
+    position: relative;
+    margin-top: 0.6rem;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50px;
+    background-color: $red;
+    flex-shrink: 0;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 0.3rem;
+        height: 17.5rem;
+        background-color: $red;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include sp {
+            height: 20.5rem;
+        }
+    }
+}
+
+.flow__container {
+    display: flex;
+
+    @include sp {
+        flex-direction: column;
+        margin-left: 2rem;
+    }
+    }
+
+.flow__step .dot-flow.last-dot::after {
+    height: 7rem;
+
+    @include sp {
+        height: 14rem;
+    }
+}
+
+.flow__step .dot-flow.last-dot::before {
+    content: "";
+    position: absolute;
+    top: 5.3rem;
+    // bottom: 0;
+    // top:0;
+    left: 50%;
+    width: 3.5rem;
+    height: 5rem;
+    background-image: url(../../../img/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateX(-50%);
+
+    @include sp {
+        top: 12.5rem;
+    }
+}
+
+
+.flow__heading {
+    color: $red;
+    font-size: 2.2rem;
+    line-height: calc(33 / 22);
+    font-weight: 700;
+    flex-shrink: 0;
+    text-align: left;
+    max-width: 19.3rem;
+    margin-left: 5rem;
+    width: 17em;
+
+    @include sp {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+.flow__text {
+    line-height: calc(30 / 18);
+
+    @include sp {
+        margin-left: 0;
+        margin-top: 0.6rem;
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+    }
+}

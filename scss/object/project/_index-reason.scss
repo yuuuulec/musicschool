@@ -1,0 +1,96 @@
+@use "../../foundation/all" as *;
+@use "../component/component" as *;
+
+.reason {
+    padding: 6.4rem 0 9rem;
+
+    @include sp {
+        padding: 4.9rem 0 4rem;
+    }
+}
+
+.reason__inner {
+    margin-top: 2.8rem;
+
+    @include sp {
+        margin-top: 3.6rem;
+    }
+}
+
+.reason__item {
+    display: flex;
+    margin-bottom: 5rem;
+
+    @include sp {
+        flex-direction: column;
+        margin-bottom: 3.9rem;
+    }
+
+&:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.reason__img {
+    max-width: 35rem;
+    width: 100%;
+
+    @include sp {
+        max-width: 100%;
+    }
+}
+
+.reason__container {
+    flex: 1;
+
+    @include sp {
+        margin-top: 3rem;
+    }
+        @include sp {
+        top: 2.5rem;
+    }
+}
+
+.reason__item-title {
+    font-size: 2.2rem;
+    line-height: calc(33 / 22);
+    display: block;
+    padding-left: 5rem; 
+    position: relative;
+ 
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -0.7rem;
+        left: 0;
+        width: 100%;
+        height: 0.2rem;
+        background-color: $red;
+        width: 100%;
+        margin-top: 1rem;
+
+        @include sp {
+bottom: -1rem;        }
+    }
+    @include sp {
+        font-size: 2rem;
+        line-height: calc(30 / 20);
+        padding-left: 0;
+    }
+}
+
+.reason__item-text {
+    font-size: 1.8rem;
+    line-height: calc(33 / 18);
+margin-top: 4.9rem;
+margin-left: 5rem;
+
+    @include sp {
+        margin-top: 2.7rem;
+        margin-left: 0;
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+    }
+}

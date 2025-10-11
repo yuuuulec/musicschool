@@ -1,0 +1,240 @@
+@use "../foundation/all" as *;
+
+.header {
+   height: 8rem;
+   position: fixed;
+   background-color: $white;
+   transition: background-color 0.8s ease;
+   z-index: 10000;
+   width: 100%;
+
+   &.header-scroll {
+      background-color: $white;
+   }
+
+   @include sp {
+      height: 5rem;
+   }
+}
+.header__inner {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   justify-content: space-between;
+   height: 100%;
+
+   @include sp {
+      height: 5rem;
+   }
+}
+
+.header__logo {
+   cursor: pointer;
+   width: 19.2rem;
+   transition: all 0.3s ease;
+   margin: 0;
+   height: 8rem;
+
+   @include sp {
+      width: 20.8rem;
+      height: 5rem;
+   }
+
+   a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+   }
+}
+
+.header__nav-inner {
+   display: flex;
+   align-items: center;
+}
+
+.header__nav {
+   display: flex;
+   align-items: center;
+   column-gap: 2.3rem;
+   font-size: 1.7rem;
+   font-weight: 700;
+
+   @include sp {
+      position: fixed;
+      top: 5rem;
+      right: -100%;
+      width: 30%;
+      background-color: $white;
+      flex-direction: column;
+      row-gap: 4rem;
+      text-align: center;
+      transition: all 0.8s ease;
+      z-index: 10000;
+
+      &.active {
+         right: 0;
+      }
+   }
+}
+
+.header__nav-list {
+   display: flex;
+   align-items: center;
+   column-gap: 1.2rem;
+   margin-right: 2.3rem;
+   height: 8rem;
+
+
+   @include sp {
+      display: block;
+      text-align: left;
+      flex-direction: column;
+      width: 100%;
+      background-color: $red;
+      max-width: 30rem;
+      width: 30rem;
+      height: 17.4rem;
+      background-color: $red;
+   }
+}
+
+.header__nav-item {
+
+   a {
+      transition: all 0.8s ease;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      height: 100%;
+
+      @include sp {
+         font-size: 1.8rem;
+         height: 5.8rem;
+         width: 100%;
+         color: $white;
+      }
+
+      &::after {
+         content: "";
+         display: block;
+         width: 100%;
+         height: 0.2rem;
+         background-color: $red;
+         position: absolute;
+         bottom: -1rem;
+         left: 0;
+         opacity: 0;
+         transform: scaleX(0);
+         transform-origin: right;
+         transition: all 0.8s ease;
+
+         @include sp {
+            display: none;
+         }
+      }
+
+      &:hover::after {
+         transform: scaleX(1);
+         transform-origin: left;
+         opacity: 1;
+      }
+
+      @include sp {
+         &:hover {
+            background-color: $black;
+            opacity: 1;
+         }
+      }
+   }
+}
+
+.header__nav-item--contact {
+   cursor: pointer;
+   color: $white;
+   font-size: 1.5rem;
+   line-height: calc(33 / 15);
+   font-weight: 700;
+   transition: all 0.8s ease;
+
+   a {
+      color: inherit;
+      padding: 0.7rem 3rem 0.5rem;
+   }
+
+   &:hover {
+      background-color: white;
+      color: $red;
+
+      a {
+         color: inherit;
+      }
+   }
+}
+
+.header__nav-item--contact a {
+   transition: none;
+
+   &:hover {
+      opacity: 1;
+   }
+}
+
+// ハンバーガーメニュー
+.hamburger {
+   cursor: pointer;
+   width: 7.2rem;
+   max-width: 7.2rem;
+   height: 5rem;
+   background-color: $red;
+   position: fixed;
+   top: 0;
+   right: -2rem;
+   display: none;
+   box-sizing: border-box;
+   z-index: 100001;
+   position: relative;
+
+   @include sp {
+      display: block;
+   }
+}
+
+.hamburger span {
+   width: 3.2rem;
+   height: 0.4rem;
+   border-radius: 4px;
+   background-color: $white;
+   display: inline-block;
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   transition: all 0.8s;
+
+   &:nth-of-type(1) {
+      top: 1.1rem;
+   }
+
+   &:nth-of-type(2) {
+      top: 2.3rem;
+   }
+
+   &:nth-of-type(3) {
+      top: 3.5rem;
+   }
+}
+
+// 開いた時のばつ印
+.hamburger.active span:nth-of-type(1) {
+   top: 2.3rem;
+   transform: translateX(-50%) rotate(45deg);
+}
+
+.hamburger.active span:nth-of-type(2) {
+   opacity: 0;
+}
+
+.hamburger.active span:nth-of-type(3) {
+   top: 2.3rem;
+   transform: translateX(-50%) rotate(-45deg);
+}

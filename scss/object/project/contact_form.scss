@@ -1,0 +1,239 @@
+@use "../../foundation/all" as *;
+@use "../component/component" as *;
+
+.contact-form {
+    padding-top: 6.5rem;
+
+    @include sp {
+        padding: 4.9rem 0 1.5rem;
+    }
+}
+
+.contact-form__text {
+    line-height: calc(30 / 18);
+    // margin-bottom: 6.3rem;
+    text-align: center;
+
+    @include sp {
+        text-align: left;
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+        margin-bottom: 3.2rem;
+    }
+}
+
+.contact-form__form-wrapper {
+    margin-top: 7rem;
+
+    @include sp {
+        margin-top: 2.9rem;
+    }
+}
+
+.form-item {
+    display: grid;
+    grid-template-columns: 14rem 1fr;
+    gap: 3rem;
+    margin-bottom: 2.7rem;
+    align-items: center;
+
+    @include sp {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+        margin-bottom: 1.4rem;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &:nth-child(5),
+    &:nth-child(6) {
+        align-items: flex-start;
+    }
+}
+
+.form-item.form-item--tel {
+    margin-bottom: 2.9rem;
+
+    @include sp {
+        margin-bottom: 1rem;
+    }
+}
+
+.form-item input[type="text"],
+.form-item input[type="email"],
+.form-item input[type="tel"],
+.form-item textarea {
+    width: 100%;
+    padding: 0.7rem 2rem 1rem;
+    font-size: 2rem;
+    // line-height: calc(33 / 15);
+    border: 0.5px solid $black;
+
+    @include sp {
+        font-size: 1.6rem;
+        padding: 0.8rem 2rem 1.1rem;
+    }
+}
+
+.form-item input[type="text"]::placeholder,
+.form-item input[type="email"]::placeholder,
+.form-item input[type="tel"]::placeholder,
+.form-item textarea::placeholder {
+    font-size: 1.5rem; 
+    color: #B2B2B2;
+}
+
+label {
+    display: inline-block;
+    font-size: 2rem;
+    // line-height: calc(30 / 20);
+    text-align: left;
+}
+
+.contact-form__form-item--label {
+
+    span {
+        display: block;
+
+        @include sp {
+            display: inline;
+        }
+    }
+}
+
+.form-item--checkbox {
+    font-size: 2rem;
+    line-height: calc(30 / 20);
+}
+
+.contact-form__form-item--label {
+
+    @include sp {
+        font-size: 1.6rem;
+        line-height: calc(33 / 16);
+    }
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    input[type="checkbox"] {
+        appearance: none;
+        cursor: pointer;
+        margin-right: 2rem;
+        border: 0.5px solid $black;
+        width: 2rem;
+        height: 2rem;
+        align-items: center;
+        position: relative;
+
+        @include sp {
+            margin-right: 1rem;
+        }
+
+        &::after {
+            content: "✔";
+            position: absolute;
+            top: -0.6rem;
+            left: 0.3rem;
+            margin: auto;
+            pointer-events: none;
+            color: $black;
+            opacity: 0;
+            font-size: 1.5rem;
+            line-height: calc(33 / 15);
+            transition: opacity 0.3s ease
+        }
+
+        &:checked {
+            background-color: $white;
+            border: 0.5px solid $black;
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    label {
+        cursor: pointer;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        font-size: 1.8rem;
+
+        @include sp {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.form-item textarea {
+    width: 100%;
+    height: 30rem;
+    min-height: 30rem;
+    resize: vertical;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 2rem;
+
+    @include sp {
+        height: 19rem;
+        min-height: 19rem;
+    }
+}
+
+.contact-form__form-item--submit {
+    display: block;
+    font-size: 2.5rem;
+    background-color: $red;
+    color: $white;
+    font-weight: 700;
+    line-height: calc(33 / 25);
+    letter-spacing: 0.6rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5rem;
+    cursor: pointer;
+    padding: 0.9rem 0 0.7rem 0;
+    border: 1px solid $red;
+    width: 100%;
+    max-width: 25rem;
+    transition: all 0.8s ease;
+
+    @include sp {
+        font-size: 2rem;
+        line-height: calc(26 / 20);
+        padding: 1.2rem 0;
+        max-width: 33.5rem;
+        margin-top: 5.2rem;
+    }
+
+    &:hover {
+        background-color: white;
+        color: $red;
+    }
+}
+
+.form-item:last-of-type {
+    margin-top: 3.2rem;
+
+    @include sp {
+        margin-top: 0;
+        gap: 0;
+    }
+}
+
+.contact-form__form-item--label-message {
+    margin-top: 1.5rem;
+
+    @include sp {
+        margin-top: 0;
+    }
+}

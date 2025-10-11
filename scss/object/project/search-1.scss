@@ -1,0 +1,37 @@
+@use "../../foundation/all" as *;
+@use "../component/component" as *;
+
+.search-message {
+    text-align: center;
+    margin-top: 6.6rem;
+    display: flex;
+    justify-content: space-between;
+    line-height: calc(30 / 18);
+
+    @include sp {
+        margin-top: 4rem;
+    }
+}
+
+.c-blog--sub--search {
+    padding: 3.8rem 0 5rem;
+}
+
+.blog__list--sub {
+    margin-top: 0;
+}
+
+.search-message__title {
+
+    span {
+        font-weight: 700;
+    }
+}
+
+.search {
+    padding-bottom: 22rem;
+}
+
+.pagination__search {
+margin-top: 6rem;
+}

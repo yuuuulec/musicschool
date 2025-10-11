@@ -1,0 +1,240 @@
+@use "../../foundation/all" as *;
+
+/* ===========================
+   fv
+   =========================== */
+.fv {
+    position: relative;
+    padding-top: 8rem;
+
+    @include sp {
+        padding-top: 5rem;
+    }
+}
+
+.fv__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(80, 80, 80, 0.502);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
+
+.catchphrase {
+    position: absolute;
+    top: calc(265 / 1080 * 100vw);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: calc(60 / 40);
+    color: $white;
+    z-index: 10;
+    white-space: nowrap;
+
+    @include sp {
+        top: calc(260 / 375 * 100vw);
+        font-size: 3rem;
+        line-height: calc(50 / 30);
+        text-align: center;
+    }
+}
+
+.pc-space {
+    display: inline-block;
+    
+    @include sp {
+        display: none;
+    }
+}
+
+/* ===========================
+   fv-message
+   =========================== */
+.message {
+    padding: 6.3rem 0 5.5rem;
+
+    @include sp {
+        padding: 5rem 0 3.5rem;
+    }
+}
+
+.message__title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: calc(50 / 35);
+    color: $red;
+    text-align: center;
+
+    @include sp {
+        font-size: 2.5rem;
+        line-height: calc(40 / 25);
+    }
+}
+
+.message__text {
+    line-height: calc(30 / 18);
+    color: $black;
+    text-align: center;
+    margin-top: 1.7rem;
+
+    @include sp {
+        font-size: 1.8rem;
+        text-align: left;
+        margin-top: 0.6rem;
+    }
+}
+
+.semicircle {
+    margin: 0 auto;
+    margin-top: 3.4rem;
+    text-align: center;
+    width: 85.8rem;
+    max-width: 85.8rem;
+
+        @include sp {
+            width: 33.5rem;
+            max-width: 40rem;
+        }
+    
+
+    @include sp {
+        margin-top: 2.1rem;
+    }
+}
+
+.message__list {
+    margin-top: 1.5rem;
+
+    @include sp {
+        margin-top: 2.5rem;
+    }
+}
+
+.message__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.message__item-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: calc(50 /25);
+    color: $red;
+    text-align: right;
+    flex: 1;
+
+    @include sp {
+        font-size: 2rem;
+        line-height: calc(50 / 20);
+    }
+
+    @media screen and (max-width: 360px) {
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+    }
+}
+
+.dot-message {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50px;
+    background-color: $red;
+    flex-shrink: 0;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 0.3rem;
+        height: 7rem;
+        background-color: $red;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    }
+
+    .message__item:first-child .dot-message::after {
+        height: 6rem; 
+    }
+
+
+.dot-top {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 1.8rem;
+        left: 50%;
+        width: 4.2rem;
+        height: 4.4rem;
+        background-image: url(../../../img/arrow.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translateX(-50%);
+    }
+}
+
+.message__item-text {
+    font-size: 2.3rem;
+    line-height: calc(50 / 23);
+    text-align: left;
+    flex: 1;
+
+    @include sp {
+        font-size: 2rem;
+        line-height: calc(50 / 20);
+    }
+
+    @media screen and (max-width: 360px) {
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+    }
+}
+
+/* ===========================
+promotion
+=========================== */
+.promotion {
+    padding: 6.8rem 0 6rem;
+    background-color: $red;
+    color: $white;
+
+    @include sp {
+        padding: 4.8rem 0 4rem;
+    }
+}
+
+.promotion__title {
+    font-size: 3rem;
+    line-height: calc(50 / 30);
+    text-align: center;
+    font-weight: 700;
+
+    @include sp {
+        font-size: 2.5rem;
+        line-height: calc(40 / 25);
+    }
+}
+
+.promotion__text {
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+    text-align: center;
+}
+
+.promotion__text:first-of-type {
+    margin-top: 3rem;
+
+    @include sp {
+        margin-top: 1.4rem;
+    }
+}
