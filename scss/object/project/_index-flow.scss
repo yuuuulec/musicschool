@@ -92,7 +92,7 @@
     left: 50%;
     width: 3.5rem;
     height: 5rem;
-    background-image: url("/04/img/arrow-down.svg");
+    background-image: url("../../../img/arrow-down.svg");
     background-repeat: no-repeat;
     background-size: contain;
     transform: translateX(-50%);
@@ -102,7 +102,6 @@
         top: 12.5rem;
     }
 }
-
 
 .flow__heading {
     color: $red;

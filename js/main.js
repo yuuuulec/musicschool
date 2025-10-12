@@ -9,10 +9,14 @@ $(function () {
         $('.hamburger').removeClass('active');
         $('.header__nav').removeClass('active');
     });
-    $(".header__nav a").click(function () {
-        $(".hamburger").removeClass("active");
-        $(".header__nav").removeClass("active");
+
+    $(window).on('resize', function () {
+        if (window.innerWidth > 768) { 
+            $('.hamburger').removeClass('active');
+            $('.header__nav').removeClass('active');
+        }
     });
+    
 });
 
 //ヘッダー　スクロール
