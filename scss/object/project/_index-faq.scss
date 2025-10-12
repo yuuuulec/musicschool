@@ -2,7 +2,7 @@
 @use "../component/component" as *;
 
 .faq {
-    padding: 0 0 6.4rem;
+    padding: 0 0 7rem;
 
     @include sp {
         padding-bottom: 4.3rem;
@@ -59,7 +59,7 @@
     display: flex;
     width: 100%;
     position: relative;
-    padding: 2rem 0 1.2rem 2rem;
+    padding: 2rem 0 1rem 2rem;
 
     &::after {
         content: "";
@@ -134,7 +134,7 @@
     position: relative;
     display: flex;
     color: $red;
-    padding: 1.7rem 0 1.2rem 2rem;
+    padding: 2rem 0 1rem 2rem;
     background-color: rgba(203, 0, 0, 0.098);
     width: 100%;
 
