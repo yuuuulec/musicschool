@@ -116,13 +116,14 @@
     width: 25rem;
     max-width: 25rem;
     margin-inline: auto;
-    transition: all 0.8s ease;
+    transition: background-color 0.8s ease, color 0.8s ease;
     list-style: dots;
     margin-top: 4rem;
 
     a {
-        display: inline-block;
+        display: block;
         color: inherit;
+        opacity: 1;
     }
 
     @include sp {
@@ -140,7 +141,7 @@
         color: $red;
 
         a {
-            color: inherit;
+            color: $red;
         }
     }
 }
