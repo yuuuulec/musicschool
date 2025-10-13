@@ -195,6 +195,13 @@ textarea {
     }
 }
 
+input,
+textarea {
+    -webkit-appearance: none;
+    border-radius: 0;
+    outline: none;
+}
+
 .contact-form__form-item--submit {
     display: block;
     font-size: 2.5rem;
