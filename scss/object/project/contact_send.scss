@@ -2,12 +2,12 @@
 @use "../component/component" as *;
 
 .contact-send {
-    padding: 6.7rem 0 18rem;
+    padding: 6.7rem 0 9rem;
     text-align: center;
 
 
     @include sp {
-        padding: 4.7rem 0 3.9rem;
+        padding: 4.7rem 0 5rem;
     }
 }
 
@@ -19,6 +19,7 @@
     @include sp {
         font-size: 1.6rem;
         line-height: calc(30 / 16);
+        text-align: left;
     }
 }
 
