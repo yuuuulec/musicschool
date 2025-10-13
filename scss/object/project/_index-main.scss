@@ -131,6 +131,7 @@
     @include sp {
         font-size: 2rem;
         line-height: calc(50 / 20);
+        max-width: 11.5rem;
     }
 
     @media screen and (max-width: 360px) {
