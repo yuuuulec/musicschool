@@ -1,4 +1,4 @@
-// main.js（安全版）
+
 
 // =========================
 // ハンバーガーメニュー
@@ -187,13 +187,17 @@ function initVoiceSwiper() {
 
 // DOM読み込み後にSwiper初期化
 $(function () {
-    let voiceSwiper = initVoiceSwiper();
+    if (typeof Swiper !== "undefined") {
+        let voiceSwiper = initVoiceSwiper();
 
-    // リサイズ時に再初期化
-    $(window).on('resize', function () {
-        if (voiceSwiper) {
-            voiceSwiper.destroy(true, true);
-        }
-        voiceSwiper = initVoiceSwiper();
-    });
+        $(window).on('resize', function () {
+            if (voiceSwiper) {
+                voiceSwiper.destroy(true, true);
+            }
+            voiceSwiper = initVoiceSwiper();
+        });
+    } else {
+        console.error("Swiper が定義されていません。CDN読み込みを確認してください。");
+    }
 });
+
