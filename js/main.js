@@ -41,77 +41,15 @@ $(function () {
         }
     }
 
-    $(window).on('scroll', checkScroll);
-    $(window).on('resize', checkScroll);
-    checkScroll();
-});
-
-
-function initFloatingBtns() {
-    const fv = $('.fv');
-    const $floatBtns = $('.c-to-top, .c-contact__btn');
-
-    $floatBtns.hide();
-
-    function checkFloatingBtns() {
-        const fvExists = fv.length > 0;
-
-        const fvHeight = fvExists ? fv.outerHeight() : 0;
-        const scroll = $(window).scrollTop();
-
-        if (fvExists) {
-
-            if (scroll > fvHeight) {
-                $floatBtns.fadeIn(300);
-            } else {
-                $floatBtns.fadeOut(300);
-            }
-        } else {
-            const displayPx = 300;
-            if (scroll > displayPx) {
-                $floatBtns.fadeIn(300);
-            } else {
-                $floatBtns.fadeOut(300);
-            }
-        }
-    }
-
-    $(window).off('scroll resize load', checkFloatingBtns);
     $(window).on('scroll resize load', checkFloatingBtns);
+    checkFloatingBtns();
 
-    $('.c-to-top a').off('click').on('click', function (e) {
+    $('.c-to-top a').on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({ scrollTop: 0 }, 600);
     });
-}
-
-$(window).on('load', function () {
-    initFloatingBtns();
 });
 
-
-$(function () {
-    initFloatingBtns();
-});
-
-$(document).on('pjax:end', function () {
-    initFloatingBtns();
-});
-
-
-$(window).on('scroll resize load', checkFloatingBtns);
-checkFloatingBtns();
-
-$('.c-to-top a').on('click', function (e) {
-    e.preventDefault();
-    $('html, body').animate({ scrollTop: 0 }, 600);
-});
-
-
-
-
-
-//アコーディオン
 // =========================
 // アコーディオン（FAQ）
 // =========================
