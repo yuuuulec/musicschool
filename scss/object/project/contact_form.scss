@@ -138,13 +138,13 @@ label {
         &::after {
             content: "✔";
             position: absolute;
-            top: -0.6rem;
+            top: -0.3rem;
             left: 0.3rem;
             margin: auto;
             pointer-events: none;
             color: $black;
             opacity: 0;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             line-height: calc(33 / 15);
             transition: opacity 0.3s ease
         }
@@ -187,6 +187,13 @@ label {
         height: 19rem;
         min-height: 19rem;
     }
+}
+
+input,
+textarea {
+    -webkit-appearance: none;
+    border-radius: 0;
+    outline: none;
 }
 
 .contact-form__form-item--submit {
