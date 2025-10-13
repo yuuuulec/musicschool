@@ -26,10 +26,11 @@
 }
 
 .price__title {
-    padding: 1.8rem 6.5rem 1.3rem;
+    padding: 1.8rem 0 1.3rem;
     background-color: $red;
     height: 6rem;
     width: 21rem;
+    text-align: center;
 
     @include sp {
         padding: 1.8rem 6.5rem;
@@ -42,6 +43,7 @@
     height: 6rem;
     align-items: center;
     width: 21rem;
+    text-align: center;
 
     @include sp {
         padding: 1.8rem 3rem;
