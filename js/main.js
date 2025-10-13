@@ -116,17 +116,17 @@ function initVoiceSwiper() {
 }
 
 // DOM読み込み後にSwiper初期化
-$(function () {
-    if (typeof Swiper !== "undefined") {
+document.addEventListener('DOMContentLoaded', function() {
+    const voiceInner = document.querySelector('.voice__inner'); // スライダー要素を取得
+
+    if (typeof Swiper !== "undefined" && voiceInner) { // Swiperが定義されていて要素がある場合のみ
         let voiceSwiper = initVoiceSwiper();
 
-        $(window).on('resize', function () {
-            if (voiceSwiper) {
-                voiceSwiper.destroy(true, true);
-            }
-            voiceSwiper = initVoiceSwiper();
+        window.addEventListener('resize', function() {
+            if (voiceSwiper) voiceSwiper.destroy(true, true); // 前のSwiperを破棄
+            voiceSwiper = initVoiceSwiper(); // 再初期化
         });
     } else {
-        console.error("Swiper が定義されていません。CDN読み込みを確認してください。");
+        console.warn("Swiperが未定義か、スライダー要素が見つかりません");
     }
 });
