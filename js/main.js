@@ -40,8 +40,6 @@ $(function () {
             scroll > displayPx ? $floatBtns.fadeIn(300) : $floatBtns.fadeOut(300);
         }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     $(window).on('scroll', checkScroll);
     $(window).on('resize', checkScroll);
@@ -57,19 +55,19 @@ function initFloatingBtns() {
 
     function checkFloatingBtns() {
         const fvExists = fv.length > 0;
-        
+
         const fvHeight = fvExists ? fv.outerHeight() : 0;
         const scroll = $(window).scrollTop();
 
         if (fvExists) {
-           
+
             if (scroll > fvHeight) {
-                $floatBtns.fadeIn(300); 
+                $floatBtns.fadeIn(300);
             } else {
-                $floatBtns.fadeOut(300); 
+                $floatBtns.fadeOut(300);
             }
         } else {
-            const displayPx = 300; 
+            const displayPx = 300;
             if (scroll > displayPx) {
                 $floatBtns.fadeIn(300);
             } else {
@@ -99,32 +97,24 @@ $(function () {
 $(document).on('pjax:end', function () {
     initFloatingBtns();
 });
-=======
-}
-=======
->>>>>>> d0296a421d9a8f960cc6882ddfa9db5ee5291d34
 
-    $(window).on('scroll resize load', checkFloatingBtns);
-    checkFloatingBtns();
 
-    $('.c-to-top a').on('click', function (e) {
-        e.preventDefault();
-        $('html, body').animate({ scrollTop: 0 }, 600);
-    });
+$(window).on('scroll resize load', checkFloatingBtns);
+checkFloatingBtns();
+
+$('.c-to-top a').on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, 600);
 });
 
-<<<<<<< HEAD
->>>>>>> develop01
 
 
 
 
 //アコーディオン
-=======
 // =========================
 // アコーディオン（FAQ）
 // =========================
->>>>>>> d0296a421d9a8f960cc6882ddfa9db5ee5291d34
 $(function () {
     const $toggles = $(".js-faq-toggle");
     const $answers = $(".faq__answer");
