@@ -118,6 +118,12 @@
     justify-content: center;
     gap: 2.9rem;
     margin-top: 2rem;
+
+    @include sp {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    }
 }
 
 .message__item-title {
@@ -131,12 +137,14 @@
     @include sp {
         font-size: 2rem;
         line-height: calc(50 / 20);
-        max-width: 11.5rem;
+        flex: none;
+        width: 11.5rem;
     }
 
     @media screen and (max-width: 360px) {
         font-size: 1.6rem;
         line-height: calc(30 / 16);
+        width: 10rem;
     }
 }
 
@@ -194,6 +202,9 @@
     @include sp {
         font-size: 2rem;
         line-height: calc(50 / 20);
+        flex: none;
+        width: 10rem;
+
     }
 
     @media screen and (max-width: 360px) {
