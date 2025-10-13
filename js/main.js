@@ -1,4 +1,8 @@
-//ハンバーガーメニュー
+// main.js（安全版）
+
+// =========================
+// ハンバーガーメニュー
+// =========================
 $(function () {
     $('.hamburger').click(function () {
         $(this).toggleClass('active');
@@ -16,33 +20,29 @@ $(function () {
             $('.header__nav').removeClass('active');
         }
     });
-    
 });
 
-//ヘッダー　スクロール
-const fv = $('.fv');
-const $floatBtns = $('.c-to-top, .c-contact__btn');
-$floatBtns.hide(); // 初期非表示
+// =========================
+// ヘッダー & フローティングボタン
+// =========================
+$(function () {
+    const fv = $('.fv');
+    const $floatBtns = $('.c-to-top, .c-contact__btn');
+    $floatBtns.hide(); // 初期非表示
 
-function checkFloatingBtns() {
-    const fvExists = fv.length > 0;
-    const fvHeight = fvExists ? fv.outerHeight() : 0;
-    const scroll = $(window).scrollTop();
+    function checkFloatingBtns() {
+        const fvExists = fv.length > 0;
+        const fvHeight = fvExists ? fv.outerHeight() : 0;
+        const scroll = $(window).scrollTop();
 
-    if (fvExists) {
-        if (scroll > fvHeight) {
-            $floatBtns.fadeIn(300);
+        if (fvExists) {
+            scroll > fvHeight ? $floatBtns.fadeIn(300) : $floatBtns.fadeOut(300);
         } else {
-            $floatBtns.fadeOut(300);
-        }
-    } else {
-        const displayPx = 300;
-        if (scroll > displayPx) {
-            $floatBtns.fadeIn(300);
-        } else {
-            $floatBtns.fadeOut(300);
+            const displayPx = 300;
+            scroll > displayPx ? $floatBtns.fadeIn(300) : $floatBtns.fadeOut(300);
         }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     $(window).on('scroll', checkScroll);
@@ -103,21 +103,30 @@ $(document).on('pjax:end', function () {
 });
 =======
 }
+=======
+>>>>>>> d0296a421d9a8f960cc6882ddfa9db5ee5291d34
 
-$(window).off('scroll resize load', checkFloatingBtns);
-$(window).on('scroll resize load', checkFloatingBtns);
+    $(window).off('scroll resize load', checkFloatingBtns);
+    $(window).on('scroll resize load', checkFloatingBtns);
 
-$('.c-to-top a').off('click').on('click', function (e) {
-    e.preventDefault();
-    $('html, body').animate({ scrollTop: 0 }, 600);
+    $('.c-to-top a').off('click').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 600);
+    });
 });
 
+<<<<<<< HEAD
 >>>>>>> develop01
 
 
 
 
 //アコーディオン
+=======
+// =========================
+// アコーディオン（FAQ）
+// =========================
+>>>>>>> d0296a421d9a8f960cc6882ddfa9db5ee5291d34
 $(function () {
     $(".js-faq-toggle").attr("aria-expanded", "false");
     $(".faq__answer").hide();
@@ -146,8 +155,9 @@ $(function () {
     });
 });
 
-
-//生徒さんたちの声　スライダー
+// =========================
+// 生徒さんたちの声スライダー（Swiper）
+// =========================
 function getSpaceBetween() {
     const baseWidth = 1080;
     const baseSpace = 35;
@@ -157,7 +167,6 @@ function getSpaceBetween() {
     return Math.min(baseSpace, Math.max(baseSpace * ratio, 10));
 }
 
-// Swiper 初期化関数
 function initVoiceSwiper() {
     return new Swiper('.voice__inner', {
         loop: true,
@@ -176,10 +185,15 @@ function initVoiceSwiper() {
     });
 }
 
-let voiceSwiper = initVoiceSwiper();
+// DOM読み込み後にSwiper初期化
+$(function () {
+    let voiceSwiper = initVoiceSwiper();
 
-// リサイズ時に再初期化
-window.addEventListener('resize', () => {
-    voiceSwiper.destroy(true, true);
-    voiceSwiper = initVoiceSwiper();
+    // リサイズ時に再初期化
+    $(window).on('resize', function () {
+        if (voiceSwiper) {
+            voiceSwiper.destroy(true, true);
+        }
+        voiceSwiper = initVoiceSwiper();
+    });
 });
