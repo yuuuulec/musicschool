@@ -152,7 +152,7 @@
         content: "";
         position: absolute;
         display: inline-block;
-        width: 0.3rem;
+        width: 0.3px;
         height: 7rem;
         background-color: $red;
         bottom: 0;
@@ -171,7 +171,6 @@
 
     &::before {
         content: "";
-
         position: absolute;
         bottom: 1.8rem;
         left: 50%;
