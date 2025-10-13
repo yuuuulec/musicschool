@@ -1,5 +1,3 @@
-
-
 // =========================
 // ハンバーガーメニュー
 // =========================
@@ -15,7 +13,7 @@ $(function () {
     });
 
     $(window).on('resize', function () {
-        if (window.innerWidth > 768) { 
+        if (window.innerWidth > 768) {
             $('.hamburger').removeClass('active');
             $('.header__nav').removeClass('active');
         }
@@ -23,12 +21,12 @@ $(function () {
 });
 
 // =========================
-// ヘッダー & フローティングボタン
+// フローティングボタン
 // =========================
 $(function () {
     const fv = $('.fv');
     const $floatBtns = $('.c-to-top, .c-contact__btn');
-    $floatBtns.hide(); // 初期非表示
+    $floatBtns.hide();
 
     function checkFloatingBtns() {
         const fvExists = fv.length > 0;
@@ -106,10 +104,10 @@ $(document).on('pjax:end', function () {
 =======
 >>>>>>> d0296a421d9a8f960cc6882ddfa9db5ee5291d34
 
-    $(window).off('scroll resize load', checkFloatingBtns);
     $(window).on('scroll resize load', checkFloatingBtns);
+    checkFloatingBtns();
 
-    $('.c-to-top a').off('click').on('click', function (e) {
+    $('.c-to-top a').on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({ scrollTop: 0 }, 600);
     });
@@ -128,27 +126,32 @@ $(document).on('pjax:end', function () {
 // =========================
 >>>>>>> d0296a421d9a8f960cc6882ddfa9db5ee5291d34
 $(function () {
-    $(".js-faq-toggle").attr("aria-expanded", "false");
-    $(".faq__answer").hide();
+    const $toggles = $(".js-faq-toggle");
+    const $answers = $(".faq__answer");
+
+    // 初期状態：全て閉じる
+    $toggles.attr("aria-expanded", "false");
+    $answers.hide();
 
     function toggleFaq($toggle, $answer) {
         const isOpen = $answer.is(":visible");
+
         if (!isOpen) {
-            $answer.css("display", "flex").hide().slideDown(400);
-            $toggle.attr("aria-expanded", true);
+            $answer.stop(true, true).slideDown(400);
+            $toggle.attr("aria-expanded", "true");
         } else {
-            $answer.slideUp(400);
-            $toggle.attr("aria-expanded", false);
+            $answer.stop(true, true).slideUp(400);
+            $toggle.attr("aria-expanded", "false");
         }
     }
 
-    $(".js-faq-toggle").on("click", function () {
+    $toggles.on("click", function () {
         const $this = $(this);
         const $answer = $this.next(".faq__answer");
         toggleFaq($this, $answer);
     });
 
-    $(".faq__answer").on("click", function () {
+    $answers.on("click", function () {
         const $answer = $(this);
         const $toggle = $answer.prev(".js-faq-toggle");
         toggleFaq($toggle, $answer);
@@ -163,7 +166,6 @@ function getSpaceBetween() {
     const baseSpace = 35;
     const currentWidth = window.innerWidth;
     const ratio = currentWidth / baseWidth;
-
     return Math.min(baseSpace, Math.max(baseSpace * ratio, 10));
 }
 
@@ -200,4 +202,3 @@ $(function () {
         console.error("Swiper が定義されていません。CDN読み込みを確認してください。");
     }
 });
-
