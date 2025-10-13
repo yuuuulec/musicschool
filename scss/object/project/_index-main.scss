@@ -126,6 +126,13 @@
     }
 }
 
+.message__item:nth-child(1) .message__item-title {
+    @include sp {
+        position: relative;
+        right: 1.1rem; 
+    }
+}
+
 .message__item-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -138,7 +145,7 @@
         font-size: 2rem;
         line-height: calc(50 / 20);
         flex: none;
-        width: 11.5rem;
+        width: 10.5rem;
     }
 
     @media screen and (max-width: 360px) {
@@ -147,6 +154,7 @@
         width: 10rem;
     }
 }
+
 
 .dot-message {
     display: inline-block;
